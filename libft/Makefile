@@ -12,6 +12,8 @@
 
 NAME = libft.a
 SRCS = ./
+HEAD = -I libft.h
+CC = gcc -Wall -Wextra -Werror
 RM = /bin/rm -f
 
 FILES = ft_abs ft_atoi ft_atoll ft_bzero ft_intlen ft_isalnum ft_isalpha ft_isascii \
@@ -25,25 +27,25 @@ ft_strlcat ft_strlen ft_strmap ft_strmapi ft_strncat ft_strncmp ft_strncpy ft_st
 ft_strnew ft_strnlen ft_strnstr ft_strplen ft_strrchr ft_strsplit ft_strstr ft_strsub \
 ft_strtrim ft_tolower ft_toupper get_next_line
 
-HEAD = -I libft.h
-CFLAGS = -Wall -Wextra -Werror
-
 CFILES = $(patsubst %, $(SRCS)%.c, $(FILES))
 OFILES = $(patsubst %, %.o, $(FILES))
 
-.PHONY: all clean fclean re
+.PHONY: all $(NAME) clean fclean re
 
 all : $(NAME)
+
+%.o : %.c $(HED)
+	$(CC) -c $< -o $@ -I $(HEAD)
 
 $(NAME) : $(OFILES)
 	ar rc $(NAME) $(OFILES)
 	ranlib $(NAME)
 
 %.o: %.c
-	gcc $(CFLAGS) $(INCLUDE) $< -c -o $@
+	$(CC) $(INCLUDE) $< -c -o $@
 
 $(OFILES) :
-	gcc $(CFLAGS) -c $(CFILES) $(HEAD)
+	$(CC) -c $(CFILES) $(HEAD)
 
 clean :
 	$(RM) $(OFILES)
