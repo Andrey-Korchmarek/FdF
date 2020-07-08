@@ -1,23 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   fdf.h                                              :+:      :+:    :+:   */
+/*   read_map.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mashley <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/08 14:11:24 by mashley           #+#    #+#             */
-/*   Updated: 2020/07/08 14:11:31 by mashley          ###   ########.fr       */
+/*   Created: 2020/07/08 14:28:06 by mashley           #+#    #+#             */
+/*   Updated: 2020/07/08 14:28:10 by mashley          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FDF_FDF_H
-#define FDF_FDF_H
-# include <unistd.h>
-# include <stdlib.h>
-# include <fcntl.h>
-# include <string.h>
-# include <stdio.h>
+#include "../fdf.h"
 
-void    read_map(char *file);
+void    read_map(char *file)
+{
+    int     n;
+    int     fd;
+    char    **line;
 
-#endif
+    fd = open(file, O_RDONLY);
+    n = get_next_line(fd, line);
+    close(fd);
+    return ;
+}
