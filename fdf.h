@@ -17,6 +17,22 @@
 # include <fcntl.h>
 # include <string.h>
 # include <stdio.h>
+# include <math.h>
+
+#include "libft/libft.h"
+#include "minilibx_macos/mlx.h"
+#include "minilibx_macos/mlx_int.h"
+#include "minilibx_macos/mlx_new_window.h"
+
+typedef struct
+{
+    int     width;
+    int     height;
+    int     **z_matrix;
+
+    void    *mlx_ptr;
+    void    *win_ptr;
+}           fdf;
 
 void    read_map(char *file);
 
