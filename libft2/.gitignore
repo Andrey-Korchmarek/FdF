@@ -56,11 +56,5 @@ dkms.conf
 .idea/
 cmake-build-debug/
 CMakeLists.txt
-jraleman.c
-AntonKaravaev.c
-main.c
 test.txt
-36000.txt
-a.out
-test_gnl
-clang
+cfiles.txt
