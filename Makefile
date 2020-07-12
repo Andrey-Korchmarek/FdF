@@ -11,11 +11,12 @@
 # **************************************************************************** #
 
 FRAMEWORK=-framework OpenGL -framework AppKit
-
+NAME = a.out
 all:
 	@make -C libft/ all
 	@make -C minilibx_macos/ all
-	gcc *.c libft/libft.a ./minilibx_macos/libmlx.a $(FRAMEWORK)
+	@gcc *.c libft/libft.a ./minilibx_macos/libmlx.a $(FRAMEWORK)
+	./$(NAME)
 
 clean:
 	@make -C libft/ clean
