@@ -7,4 +7,7 @@ file(GLOB SRCS "*.c")
 file(GLOB HEAD *.h)
 
 add_library(minix ${SRCS} ${HEAD})
-target_include_directories(minix PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
+target_include_directories(mlx PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
+#find_package(OpenGL REQUIRED)
+#include_directories(${OpenGL_INCLUDE_DIR})
+target_link_libraries(mlx ${OpenGL_LIBRARIES})

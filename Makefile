@@ -11,6 +11,7 @@
 # **************************************************************************** #
 
 NAME = fdf
+FRAEMWORKS=-framework OpenGL -framework AppKit
 CCFL = gcc -Wall -Wextra -Werror
 SRCS = main.c ./srcs/*.c
 OBJ = $(patsubst %.c,%.o,$(SRCS))

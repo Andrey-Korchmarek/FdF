@@ -55,7 +55,7 @@ dkms.conf
 .DS_Store
 .idea/
 cmake-build-debug/
-CMakeLists.txt
+CMakeLists1.txt
 jraleman.c
 AntonKaravaev.c
 main.c
