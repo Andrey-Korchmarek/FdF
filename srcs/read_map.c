@@ -14,12 +14,17 @@
 
 void    read_map(char *file)
 {
-    int     n;
+    int     height;
     int     fd;
-    char    **line;
+    char    *line;
 
-    fd = open(file, O_RDONLY);
-    n = get_next_line(fd, line);
+    fd = open(file, O_RDONLY, 0);
+    height = 0;
+    while(get_next_line(fd, &line))
+    {
+        height++;
+        free(line);
+    }
     close(fd);
     return ;
 }
