@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   libft21.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mashley <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -15,9 +15,12 @@
 # define SHRINKER ( 1.247 )
 # define INTMIN ( -2147483648 )
 # define SIZE_TMAX ( 18446744073709551615ULL )
+# define BUFF_SIZE 1000
+# define MAX_FD 12000
 # include <string.h>
 # include <stdlib.h>
 # include <unistd.h>
+# include <limits.h>
 
 typedef struct		s_list
 {
@@ -99,5 +102,6 @@ int					ft_tolower(int c);
 int					ft_toupper(int c);
 char				*ft_strjoinfree(char const *s1, char const *s2,
 									int frees1, int frees2);
+int                 get_next_line(const int fd, char **line);
 
 #endif
