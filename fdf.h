@@ -1,0 +1,25 @@
+//
+// Created by Akihiko Pearl on 7/12/20.
+//
+
+#ifndef FDF_H
+# define FDF_H
+#include <stdio.h>
+#include <stdlib.h>
+#include "libft/libft.h"
+#include "minilibx_macos/mlx.h"
+
+typedef struct
+{
+    int width;
+    int height;
+    int **z_matrix;
+
+    void *mlx_ptr;
+    void *win_ptr;
+}           fdf;
+
+void read_file(char *file_name, fdf *data);
+void bresenham(float x, float y, float x1, float y1, fdf *data);
+
+#endif

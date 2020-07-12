@@ -1,17 +1,26 @@
-int main(int argc, char *argv[])
-{
-    int fd;
+//
+// Created by Akihiko Pearl on 7/12/20.
+//
 
-    if (argc != 2)
-    {
-        write(2, "usage: ./fdf [target_file.fdf]\n", 31);//сообщение
-        return (1);
-    }
-    fd = open(argv[1], O_RDONLY);
-    if (fd < 0 || read_file(fd, &(env.map)) != 0) //(read(fd, stack[0], 0) < 0)
-    {
-        write(2, "An error occurred reading the file... Is it valid?\n", 51);
-        return (1);
-    }
-    return(0);
+#include "fdf.h"
+int deal_key(int key, void *data)
+{
+    printf("%d", key);
+    return (0);
 }
+
+int main(int argc, char **argv)
+{
+    fdf *data;
+
+    data = (fdf*)malloc(sizeof(fdf));
+//    read_file(argv[1], data);
+    data->mlx_ptr = mlx_init();
+    data->win_ptr = mlx_new_window(data->mlx_ptr, 800, 800, "FDF");
+
+    bresenham(10, 10, 500, 300, data);
+    mlx_key_hook(data->win_ptr, deal_key, NULL);
+    mlx_loop(data->mlx_ptr);
+}
+
+// gcc *.c ../../libft/libft.a ../../minilibx_macos/libmlx.a -framework OpenGL -framework AppKit

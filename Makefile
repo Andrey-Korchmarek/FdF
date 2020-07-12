@@ -3,47 +3,26 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: mashley <marvin@42.fr>                     +#+  +:+       +#+         #
+#    By: apearl <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2020/07/08 12:34:51 by mashley           #+#    #+#              #
-#    Updated: 2020/07/08 12:34:58 by mashley          ###   ########.fr        #
+#    Created: 2020/07/12 14:33:57 by apearl            #+#    #+#              #
+#    Updated: 2020/07/12 14:43:11 by apearl           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = fdf
-CCFL = gcc -Wall -Wextra -Werror
-SRCS = main.c ./srcs/*.c
-OBJ = $(patsubst %.c,%.o,$(SRCS))
-INCL = -I. -Ilibft -Iminilibx_macos
-LIBRARIES = -Llibft -Lminilibx_macos -lft -lmlx -lm
-MINILIBX_DIR = ./minilibx_macos
-LIBFT_DIR = ./libft
+FRAMEWORK=-framework OpenGL -framework AppKit
 
-.PHONY: all $(NAME) clean fclean re
-
-all: $(NAME)
-
-$(NAME): libftt minilibx $(OBJ)
-	@$(CCFL) $(LIBRARIES) $(INCL) $(OBJ)
-	@mv ./a.out $(NAME)
-
-%.o: %.c
-	@$(CCFL) $(INCL) $< -c -o $@
+all:
+	@make -C libft/ all
+	@make -C minilibx_macos/ all
+	gcc *.c libft/libft.a ./minilibx_macos/libmlx.a $(FRAMEWORK)
 
 clean:
-	@/bin/rm -f *.o
-	@$(MAKE) -C $(MINILIBX_DIR) clean
-	@$(MAKE) -C $(LIBFT_DIR) clean
-
-minilibx:
-	@$(MAKE) -C $(MINILIBX_DIR)
-
-libftt:
-	@$(MAKE) -C $(LIBFT_DIR)
+	@make -C libft/ clean
+	@make -C minilibx_macos/ clean
 
 fclean: clean
-	@/bin/rm -f $(NAME)
-	@/bin/rm -f $(MINILIBX_DIR)/libmlx.a
-	@$(MAKE) -C $(LIBFT_DIR) fclean
+	/bin/rm -f $(NAME)
+	@make -C libft/ fclean
 
-re: fclean $(NAME)
+re: fclean all
