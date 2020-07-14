@@ -6,12 +6,12 @@
 #    By: mashley <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/07/08 12:34:51 by mashley           #+#    #+#              #
-#    Updated: 2020/07/12 17:58:47 by mashley          ###   ########.fr        #
+#    Updated: 2020/07/14 19:55:23 by mashley          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = fdf
-FRAEMWORKS=-framework OpenGL -framework AppKit
+FRAMEWORKS=-framework OpenGL -framework AppKit
 CCFL = gcc -Wall -Wextra -Werror
 SRCS = main.c ./srcs/*.c
 OBJ = $(patsubst %.c,%.o,$(SRCS))
@@ -25,7 +25,7 @@ LIBFT_DIR = ./libft
 all:
 	@make -C libft/ all
 	@make -C minilibx_macos/ all
-	gcc $(SRC) -o $(NAME) $(FLAGS) $(INCLUDES) $(FRAEMWORKS)
+	gcc $(SRC) -o $(NAME) $(FLAGS) $(INCLUDES) $(FRA0MEWORKS)
 
 $(NAME): libftt minilibx $(OBJ)
 	@$(CCFL) $(LIBRARIES) $(INCL) $(OBJ)
@@ -52,8 +52,8 @@ fclean: clean
 
 re: fclean $(NAME)
 
-# push:
-#     @git add .
-#     git status -s
-#     @git commit -m "make push"
-#     @git push origin master
+push:
+	@git add .
+	git status -s
+	@git commit -m "make push"
+	@git push origin master
