@@ -56,4 +56,4 @@ push:
 	@git add .
 	git status -s
 	@git commit -m "make push"
-	@git push origin master
+	@git push origin autopush
