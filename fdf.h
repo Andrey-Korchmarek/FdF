@@ -20,9 +20,9 @@
 # include <math.h>
 
 #include "libft/libft.h"
-#include "minilibx_macos/mlx.h"
-#include "minilibx_macos/mlx_int.h"
-#include "minilibx_macos/mlx_new_window.h"
+//#include "minilibx_macos/mlx.h"
+//#include "minilibx_macos/mlx_int.h"
+//#include "minilibx_macos/mlx_new_window.h"
 
 typedef struct
 {

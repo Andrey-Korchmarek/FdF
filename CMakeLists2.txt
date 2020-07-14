@@ -1,0 +1,29 @@
+cmake_minimum_required(VERSION 3.16)
+project(FdF C)
+
+set(CMAKE_C_STANDARD 11)
+
+include_directories(.)
+
+file(GLOB SOURCES ./srcs/*.c)
+
+add_executable(${CMAKE_PROJECT_NAME}
+        ${SOURCES}
+        fdf.h
+        main.c)
+
+link_directories(libft minilibx_macos)
+#add_subdirectory(libft)
+#target_link_libraries(FdF lib)
+
+#add_subdirectory(minilibx_macos)
+
+find_library(COCOA_Framework Cocoa)
+find_library(OpenGL_Framework OpenGL1)
+find_library(IOKit_Framework IOKit)
+find_library(CoreVideo_Framework CoreVideo)
+
+target_link_libraries(FdF
+        lib mlx
+        ${COCOA_Framework} ${OpenGL_Framework}
+        ${IOKit_Framework} ${CoreVideo_Framework})

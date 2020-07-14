@@ -1,13 +1,11 @@
 cmake_minimum_required(VERSION 3.16)
-project(minix)
+project(minilibx_macos C)
 
-set(CMAKE_C_STANDARD 11)
+set(CMAKE_C_STANDARD 99)
 
-file(GLOB SRCS "*.c")
+include_directories(.)
+
+file(GLOB SRCS "*.c" *.m font.xcf)
 file(GLOB HEAD *.h)
 
-add_library(minix ${SRCS} ${HEAD})
-target_include_directories(mlx PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
-#find_package(OpenGL REQUIRED)
-#include_directories(${OpenGL_INCLUDE_DIR})
-target_link_libraries(mlx ${OpenGL_LIBRARIES})
+add_library(mlx STATIC ${SRCS} ${HEAD})
