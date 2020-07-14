@@ -55,5 +55,5 @@ re: fclean $(NAME)
 push:
 	@git add .
 	git status -s
-	@git commit -m "make push"
+	@git commit -m "make push $m"
 	@git push origin autopush
