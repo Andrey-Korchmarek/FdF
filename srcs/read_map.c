@@ -23,6 +23,7 @@ void    read_map(char *file)
     while(get_next_line(fd, &line))
     {
         height++;
+        line = NULL;
         free(line);
     }
     close(fd);
