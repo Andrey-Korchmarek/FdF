@@ -13,4 +13,4 @@ target_link_libraries(FdF lib)
 add_library(mlx STATIC IMPORTED)
 set_property(TARGET mlx PROPERTY
         IMPORTED_LOCATION ./minilibx_macos/libmlx.a)
-target_link_libraries(${TARGET} mlx)git
+target_link_libraries(${TARGET} mlx)
