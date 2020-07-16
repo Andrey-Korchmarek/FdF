@@ -5,7 +5,7 @@ set(CMAKE_CXX_STANDARD 11)
 
 FILE(GLOB SOURCES ./srcs/*.c )
 
-add_executable(FdF ${SOURCES} fdf.h main.c)
+add_executable(FdF ${SOURCES} main.c fdf.h)
 
 add_subdirectory(libft)
 target_link_libraries(FdF lib)

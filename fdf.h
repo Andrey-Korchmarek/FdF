@@ -19,7 +19,7 @@
 # include <stdio.h>
 # include <math.h>
 
-#include "libft/libft.h"
+# include "libft/libft.h"
 //#include "minilibx_macos/mlx.h"
 //#include "minilibx_macos/mlx_int.h"
 //#include "minilibx_macos/mlx_new_window.h"
@@ -54,6 +54,8 @@ typedef struct
     void		*win_ptr;
 }				t_dot;
 
-void    read_map(char *file);
+fdf	read_map(char *file);
+int get_width(char *file);
+int	get_height(char *file);
 
 #endif
