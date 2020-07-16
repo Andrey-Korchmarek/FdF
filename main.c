@@ -21,6 +21,6 @@ int main(int argc, char **argv)
         write(2, "usage: ./fdf [target_file.fdf]\n", 31);//сообщение
         return (1);
     }
-	read_map(argv[1]);
+	karta = read_map(argv[1]);
     return (0);
 }

@@ -57,5 +57,6 @@ typedef struct
 fdf	read_map(char *file);
 int get_width(char *file);
 int	get_height(char *file);
+void game_over(int error);
 
 #endif
