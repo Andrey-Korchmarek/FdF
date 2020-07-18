@@ -12,7 +12,9 @@ int	get_height(char *file)
 	width = 0;
 	while(get_next_line(fd, &line))
 	{
-		if (width && ft_strcount(line, ' ') != width)
+		ft_putnbr(ft_strcount(line, ' '));
+		ft_putchar(10);
+		if ((width != 0) && (ft_strcount(line, ' ') != width))
 			game_over(2);
 		height++;
 		width = ft_strcount(line, ' ');
