@@ -3,6 +3,7 @@ project(FdF)
 
 set(CMAKE_CXX_STANDARD 11)
 
+include_directories(./srcs)
 FILE(GLOB SOURCES ./srcs/*.c )
 
 add_executable(FdF ${SOURCES} main.c fdf.h)

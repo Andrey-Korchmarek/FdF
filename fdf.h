@@ -12,6 +12,7 @@
 
 #ifndef FDF_FDF_H
 #define FDF_FDF_H
+#define TEST
 # include <unistd.h>
 # include <stdlib.h>
 # include <fcntl.h>

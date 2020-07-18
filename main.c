@@ -16,11 +16,12 @@ int main(int argc, char **argv)
 {
     fdf karta;
 
+#ifdef TEST
+    ft_putnbr(ft_strlen("Some error :("));
+    ft_putchar(10);
+#endif
     if (argc != 2)
-    {
-        write(2, "usage: ./fdf [target_file.fdf]\n", 31);//сообщение
-        return (1);
-    }
+    	game_over(1);
 	karta = read_map(argv[1]);
     return (0);
 }
