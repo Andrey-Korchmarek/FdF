@@ -3,31 +3,39 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mashley <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: vinograd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/17 12:08:05 by mashley           #+#    #+#             */
-/*   Updated: 2019/09/19 19:52:03 by mashley          ###   ########.fr       */
+/*   Created: 2019/05/06 15:23:25 by vinograd          #+#    #+#             */
+/*   Updated: 2019/05/09 18:34:47 by vinograd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strtrim(char const *s)
+static int		length(char const *s)
+{
+	char const *p;
+
+	while ((*s == ' ' || *s == '\t' || *s == '\n') && *s)
+		s++;
+	p = s;
+	while (*s != '\0')
+		s++;
+	if (p != s)
+		s--;
+	while (*s == ' ' || *s == '\t' || *s == '\n')
+		s--;
+	return ((s - p) + 1);
+}
+
+char			*ft_strtrim(char const *s)
 {
 	char	*str;
-	size_t	start;
-	size_t	finish;
 
-	if (!s)
+	if (s == NULL)
 		return (NULL);
-	start = 0;
-	while (ft_isspace(s[start]))
-		start++;
-	finish = ft_strlen(s);
-	while (finish && ft_isspace(s[finish - 1]))
-		finish--;
-	if (!finish)
-		return (ft_strnew(0));
-	str = ft_strsub(s, start, (finish - start));
+	while ((*s == ' ' || *s == '\t' || *s == '\n') && *s)
+		s++;
+	str = ft_strsub(s, 0, length(s));
 	return (str);
 }

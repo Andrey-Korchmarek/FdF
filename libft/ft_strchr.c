@@ -3,27 +3,23 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mashley <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: vinograd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/10 11:19:20 by mashley           #+#    #+#             */
-/*   Updated: 2019/09/16 16:29:38 by mashley          ###   ########.fr       */
+/*   Created: 2019/05/01 16:50:06 by vinograd          #+#    #+#             */
+/*   Updated: 2019/05/03 14:16:10 by vinograd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-char	*ft_strchr(const char *str, int c)
+char	*ft_strchr(const char *s, int c)
 {
-	size_t i;
-
-	i = 0;
-	while (str[i] != '\0')
+	while (*s)
 	{
-		if (str[i] == c)
-			return ((char*)(str + i));
-		i++;
+		if (*s == c)
+			return ((char*)s);
+		s++;
 	}
-	if ((char)c == '\0')
-		return ((char*)(str + i));
-	return (NULL);
+	if (*s == c)
+		return ((char*)s);
+	else
+		return (0);
 }

@@ -44,7 +44,7 @@
 
 #ifndef MLX_H
 
-#define	MLX_H
+# define	MLX_H
 
 
 void	*mlx_init();
@@ -75,7 +75,7 @@ int	mlx_pixel_put(void *mlx_ptr, void *win_ptr, int x, int y, int color);
 ** Image stuff
 */
 
-void	*mlx_new_image(void *mlx_ptr,int width,int height);
+void	*mlx_new_image(void *mlx_ptr, int width, int height);
 /*
 **  return void *0 if failed
 */

@@ -3,61 +3,88 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mashley <mashley@student.42.fr>            +#+  +:+       +#+        */
+/*   By: vinograd <vinograd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/27 18:42:14 by mashley           #+#    #+#             */
-/*   Updated: 2019/09/28 14:43:26 by mashley          ###   ########.fr       */
+/*   Created: 2019/05/13 21:56:03 by vinograd          #+#    #+#             */
+/*   Updated: 2019/06/17 20:45:38 by vinograd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	gnl_ifstacknotempty(char **stack, char **line)
+static t_arr	*newlist(const int fd)
 {
-	char	*tmp;
+	t_arr	*new;
 
-	if ((tmp = ft_strchr(*stack, '\n')))
+	if (!(new = (t_arr *)malloc(sizeof(t_arr))))
+		return (NULL);
+	new->fd = fd;
+	new->rest = ft_strnew(BUFF_SIZE);
+	new->next = NULL;
+	return (new);
+}
+
+static char		*checkrest(char **p_n, char *rest)
+{
+	char *str;
+
+	if ((*p_n = ft_strchr(rest, '\n')) != NULL)
 	{
-		*tmp = '\0';
-		tmp++;
-		*line = ft_strjoinfree(*line, *stack, 1, 0);
-		*stack = ft_strdup(tmp);
-		return (1);
+		str = ft_strsub(rest, 0, *p_n - rest);
+		ft_strcpy(rest, ++(*p_n));
 	}
 	else
 	{
-		*line = ft_strjoinfree(*line, *stack, 1, 0);
-		if (*stack)
-		ft_strdel(stack);
-		return (0);
+		str = ft_strnew(ft_strlen(rest) + 1);
+		ft_strcat(str, rest);
+		ft_strclr(rest);
 	}
+	return (str);
 }
 
-int			get_next_line(const int fd, char **line)
+static int		get_line(const int fd, char **line, char *rest)
 {
-	static char	*stack[OPEN_MAX];
-	char		buf[BUFF_SIZE + 1];
-	int			ret;
-	char		*heap;
+	char			buf[BUFF_SIZE + 1];
+	char			*p_n;
+	char			*tmp;
+	int				rd;
 
-	if (!line || fd < 0 || (read(fd, stack[0], 0) < 0) || BUFF_SIZE < 1)
-		return (-1);
-	*line = ft_strnew(0);
-	if (stack[fd])
-		if (gnl_ifstacknotempty(&stack[fd], line))
-			return (1);
-	while ((ret = read(fd, buf, BUFF_SIZE)))
+	p_n = NULL;
+	rd = 1;
+	*line = checkrest(&p_n, rest);
+	while (p_n == 0 && ((rd = read(fd, buf, BUFF_SIZE)) != 0))
 	{
-		buf[ret] = '\0';
-		if ((heap = ft_strchr(buf, '\n')))
+		buf[rd] = '\0';
+		if ((p_n = ft_strchr(buf, '\n')) != NULL)
 		{
-			*heap = '\0';
-			heap++;
-			stack[fd] = ft_strdup(heap);
-			*line = ft_strjoinfree(*line, buf, 1, 0);
-			return (1);
+			ft_strcpy(rest, ++p_n);
+			ft_strclr(--p_n);
 		}
-		*line = ft_strjoinfree(*line, buf, 1, 0);
+		tmp = *line;
+		if (!(*line = ft_strjoin(tmp, buf)) || rd < 0)
+			return (-1);
+		ft_strdel(&tmp);
 	}
-	return (*line[0] ? 1 : 0);
+	return ((ft_strlen(*line) || ft_strlen(rest) || rd) ? 1 : 0);
+}
+
+int				get_next_line(const int fd, char **line)
+{
+	static t_arr	*list;
+	t_arr			*tmp;
+	int				ret;
+
+	if (fd < 0 || line == 0)
+		return (-1);
+	if (!list)
+		list = newlist(fd);
+	tmp = list;
+	while (tmp->fd != fd)
+	{
+		if (tmp->next == NULL)
+			tmp->next = newlist(fd);
+		tmp = tmp->next;
+	}
+	ret = get_line(fd, line, tmp->rest);
+	return (ret);
 }

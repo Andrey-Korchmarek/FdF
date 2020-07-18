@@ -3,96 +3,88 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strsplit.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mashley <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: vinograd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/17 12:11:01 by mashley           #+#    #+#             */
-/*   Updated: 2019/09/20 18:36:51 by mashley          ###   ########.fr       */
+/*   Created: 2019/04/30 14:26:17 by vinograd          #+#    #+#             */
+/*   Updated: 2019/05/09 17:34:01 by vinograd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdlib.h>
 
-static size_t	ft_count_words(char const *s, char c)
+static int		words(char const *str, char c)
 {
-	size_t words;
-	size_t i;
+	int i;
+	int words;
 
 	words = 0;
 	i = 0;
-	while (s[i])
+	while (str[i])
 	{
-		while (s[i] == c && s[i])
+		while (str[i] == c && str[i] != '\0')
 			i++;
-		if (s[i])
-		{
+		if (str[i])
 			words++;
-			while (s[i] && s[i] != c)
-				i++;
-		}
+		while (str[i] != c && str[i] != '\0')
+			i++;
 	}
 	return (words);
 }
 
-static char		*ft_get_word(char *word, char c)
+static char		**memory_giver(char const *str, char c)
 {
-	char	*start;
-	size_t	i;
+	char	**res;
+	int		letters;
+	int		i;
+	int		j;
 
-	start = word;
+	if ((res = (char **)malloc(sizeof(char*) * (words(str, c) + 1))) == NULL)
+		return (NULL);
 	i = 0;
-	while (word[i] && word[i] != c)
-		i++;
-	word[i] = '\0';
-	return (ft_strdup(start));
-}
-
-static void		ft_free_words(char **words, size_t i)
-{
-	while (i--)
-		ft_strdel(&(words[i]));
-	free(*words);
-}
-
-static char		**ft_get_words(char *s, char c, size_t words_count)
-{
-	char	**words;
-	char	*word;
-	size_t	i;
-
-	i = 0;
-	if ((words = (char**)ft_memalloc(sizeof(char*) * (words_count + 1))))
+	j = 0;
+	while (str[i])
 	{
-		while (i < words_count)
+		letters = 0;
+		while (str[i] == c && str[i])
+			i++;
+		while (str[i] != c && str[i] != '\0')
 		{
-			while (*s == c)
-				s++;
-			if (*s)
-			{
-				if (!(word = ft_get_word(s, c)))
-				{
-					ft_free_words(words, i);
-					return (NULL);
-				}
-				words[i++] = word;
-				s += (ft_strplen(word) + 1);
-			}
+			letters++;
+			i++;
 		}
-		words[i] = NULL;
+		if (letters > 0)
+			if ((res[j++] = (char *)malloc(sizeof(char) * letters + 1)) == NULL)
+				return (NULL);
 	}
-	return (words);
+	res[j] = 0;
+	return (res);
 }
 
-char			**ft_strsplit(char const *s, char c)
+char			**ft_strsplit(char const *str, char c)
 {
-	char	**words;
-	char	*line;
+	char	**res;
+	int		i;
+	int		j;
+	int		str_number;
+	int		size;
 
-	if (!s)
+	if (str == NULL)
 		return (NULL);
-	line = ft_strdup((char*)s);
-	if (!line)
+	size = words(str, c);
+	res = memory_giver(str, c);
+	if (res == NULL)
 		return (NULL);
-	words = ft_get_words(line, c, ft_count_words(line, c));
-	free(line);
-	return (words);
+	i = 0;
+	str_number = 0;
+	while (str_number < size)
+	{
+		while (str[i] == c && str[i])
+			i++;
+		j = 0;
+		while (str[i] != c && str[i])
+			res[str_number][j++] = str[i++];
+		res[str_number][j] = '\0';
+		str_number++;
+	}
+	return (res);
 }

@@ -3,54 +3,60 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mashley <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: Nik <Nik@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/17 12:20:19 by mashley           #+#    #+#             */
-/*   Updated: 2019/09/20 17:17:37 by mashley          ###   ########.fr       */
+/*   Created: 2019/04/30 15:32:09 by vinograd          #+#    #+#             */
+/*   Updated: 2019/06/28 18:14:47 by Nik              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static char	*ft_itoa_numb(int n, int len, int sign, unsigned long int ten)
+static int	size(int i)
 {
-	char	*numb;
-	int		i;
+	int size;
 
-	numb = (char*)malloc(sizeof(char) * (len + sign + 1));
-	if (!numb)
-		return (NULL);
-	i = 0;
-	if (sign)
-		numb[i++] = '-';
-	while (i < (len + sign))
+	if (i == 0)
+		return (2);
+	size = 1;
+	if (i < 0)
 	{
-		numb[i] = '0' + (n / ten);
-		n %= ten;
-		ten /= 10;
-		i++;
+		i /= 10;
+		size += 2;
+		i = -i;
 	}
-	numb[i] = '\0';
-	return (numb);
+	while (i > 0)
+	{
+		i /= 10;
+		size++;
+	}
+	return (size);
 }
 
-char		*ft_itoa(int n)
+char		*ft_itoa(int nbr)
 {
-	int					len;
-	int					sign;
-	unsigned long int	ten;
+	char	*str;
+	int		len;
+	int		sign;
 
-	if (n == INTMIN)
-		return (ft_strcpy(ft_strnew(11), "-2147483648"));
-	ten = 10;
-	len = 1;
-	sign = (n < 0) ? 1 : 0;
-	n = ft_abs(n);
-	while (n % ten != n)
+	if (nbr == -2147483648)
+		return (ft_strdup("-2147483648"));
+	len = size(nbr);
+	sign = 0;
+	if (nbr < 0)
 	{
-		len++;
-		ten *= 10;
+		sign = 1;
+		nbr = -nbr;
 	}
-	ten /= 10;
-	return (ft_itoa_numb(n, len, sign, ten));
+	if ((str = (char *)malloc(len)) == NULL)
+		return (NULL);
+	str[--len] = '\0';
+	while (--len >= sign)
+	{
+		str[len] = nbr % 10 + '0';
+		nbr /= 10;
+	}
+	if (sign)
+		str[0] = '-';
+	return (str);
 }

@@ -3,16 +3,27 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mashley <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: vinograd <vinograd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/10 16:30:28 by mashley           #+#    #+#             */
-/*   Updated: 2019/09/17 17:19:13 by mashley          ###   ########.fr       */
+/*   Created: 2019/04/17 17:23:37 by vinograd          #+#    #+#             */
+/*   Updated: 2019/06/04 17:54:47 by vinograd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-int	ft_atoi(const char *str)
+int		ft_atoi(const char *s)
 {
-	return ((int)ft_atoll(str));
+	int sign;
+	int res;
+	int i;
+
+	res = 0;
+	i = 0;
+	while ((s[i] > 8 && s[i] < 20) || s[i] == ' ')
+		i++;
+	sign = (s[i] == '-') ? -1 : 1;
+	if (s[i] == '+' || s[i] == '-')
+		i++;
+	while ((s[i] >= '0' && s[i] <= '9') && s[i] != '\0')
+		res = res * 10 + (s[i++] - '0');
+	return (res * sign);
 }
