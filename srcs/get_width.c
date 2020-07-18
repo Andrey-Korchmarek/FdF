@@ -12,5 +12,5 @@ int get_width(char *file)
 	line = NULL;
 	free(line);
 	close(fd);
-	return (width);
+	return (width + 1);
 }

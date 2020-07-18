@@ -25,5 +25,21 @@ int main(int argc, char **argv)
     if (argc != 2)
     	game_over(1);
 	karta = read_map(argv[1]);
+#ifdef TEST
+	int i = 0;
+	int j;
+
+	while (i < karta.height)
+	{
+		j = 0;
+		while (j < karta.width)
+		{
+			ptintf("%3d", karta.z_matrix[i][j]);
+			j++;
+		}
+		printf("\n");
+		i++;
+	}
+#endif
     return (0);
 }

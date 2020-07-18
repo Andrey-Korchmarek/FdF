@@ -12,7 +12,7 @@
 
 #ifndef FDF_FDF_H
 #define FDF_FDF_H
-#define TEST
+//#define TEST
 # include <unistd.h>
 # include <stdlib.h>
 # include <fcntl.h>
@@ -59,5 +59,6 @@ fdf	read_map(char *file);
 int get_width(char *file);
 int	get_height(char *file);
 void game_over(int error);
+void get_z_matrix(char *file, fdf *data);
 
 #endif
