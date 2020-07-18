@@ -1,6 +1,6 @@
 #include "../fdf.h"
 
-void get_z_matrix(char *file, fdf *data)
+fdf get_z_matrix(char *file, fdf data)
 {
 	int fd;
 	int x;
@@ -8,16 +8,17 @@ void get_z_matrix(char *file, fdf *data)
 
 	fd = open(file, O_RDONLY, 0);
 	x = 0;
-	while (x < *data->height)
+	while (x < data.height)
 	{
+		data.z_matrix[x] = (int *)malloc(sizeof(int) * (data.width + 1));
 		y = 0;
-		while (y < *data->width)
+		while (y < data.width)
 		{
-			*data->z_matrix[x][y] = 0;
+			data.z_matrix[x][y] = 0;
 			y++;
 		}
 		x++;
 	}
 	close(fd);
-	return ;
+	return (data);
 }

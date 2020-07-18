@@ -34,7 +34,7 @@ int main(int argc, char **argv)
 		j = 0;
 		while (j < karta.width)
 		{
-			ptintf("%3d", karta.z_matrix[i][j]);
+			printf("%3d", karta.z_matrix[i][j]);
 			j++;
 		}
 		printf("\n");

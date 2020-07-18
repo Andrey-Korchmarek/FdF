@@ -19,7 +19,7 @@ fdf	read_map(char *file)
     map.height = get_height(file);
 	map.width = get_width(file);
 	map.z_matrix = (int **)malloc(sizeof(int*) * (map.height + 1));
-	get_z_matrix(file, &map);
+	map = get_z_matrix(file, map);
 	map.mlx_ptr = NULL;
 	map.win_ptr = NULL;
 	return (map);

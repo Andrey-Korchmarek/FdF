@@ -6,7 +6,7 @@ set(CMAKE_CXX_STANDARD 11)
 include_directories(./srcs)
 FILE(GLOB SOURCES ./srcs/*.c )
 
-add_executable(FdF ${SOURCES} main.c fdf.h)
+add_executable(FdF ${SOURCES} srcs/get_z_matrix.c main.c fdf.h)
 
 add_subdirectory(libft)
 target_link_libraries(FdF lib)
