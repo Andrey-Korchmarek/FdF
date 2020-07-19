@@ -12,17 +12,19 @@
 
 #include "fdf.h"
 
-int main(int argc, char **argv)
+int	main(int argc, char **argv)
 {
-    fdf karta;
+	t_fdf	karta;
+#ifdef TEST
+	int i;
+	int j;
+#endif
 
-    if (argc != 2)
-    	game_over(1);
+	if (argc != 2)
+		game_over(1);
 	karta = read_map(argv[1]);
 #ifdef TEST
-	int i = 0;
-	int j;
-
+	i = 0;
 	while (i < karta.height)
 	{
 		j = 0;
@@ -35,5 +37,5 @@ int main(int argc, char **argv)
 		i++;
 	}
 #endif
-    return (0);
+	return (0);
 }
