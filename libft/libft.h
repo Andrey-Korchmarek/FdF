@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft21.h                                            :+:      :+:    :+:   */
+/*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mashley <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/09 11:54:16 by mashley           #+#    #+#             */
-/*   Updated: 2019/10/02 17:41:17 by mashley          ###   ########.fr       */
+/*   Created: 2020/07/19 19:14:01 by mashley           #+#    #+#             */
+/*   Updated: 2020/07/19 19:14:06 by mashley          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,10 +102,9 @@ int					ft_tolower(int c);
 int					ft_toupper(int c);
 char				*ft_strjoinfree(char const *s1, char const *s2,
 									int frees1, int frees2);
-int                 get_next_line(const int fd, char **line);
-
-int ft_strcount(const char *str, char chr);
-int	ft_issign(int c);
-int	ft_isdigit2(int c);
+int					get_next_line(const int fd, char **line);
+int					ft_strcount(const char *str, char chr);
+int					ft_issign(int c);
+int					ft_isdigit2(int c);
 
 #endif

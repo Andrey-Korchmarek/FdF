@@ -1,12 +1,24 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   get_z_matrix.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mashley <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/07/19 19:16:43 by mashley           #+#    #+#             */
+/*   Updated: 2020/07/19 19:16:46 by mashley          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../fdf.h"
 
-fdf get_z_matrix(char *file, fdf data)
+t_fdf	get_z_matrix(char *file, t_fdf data)
 {
-	int 	fd;
-	char 	*line;
+	int		fd;
+	char	*line;
 	char	**nums;
-	int 	x;
-	int 	y;
+	int		x;
+	int		y;
 
 	fd = open(file, O_RDONLY, 0);
 	x = 0;
@@ -24,7 +36,6 @@ fdf get_z_matrix(char *file, fdf data)
 		line = NULL;
 		x++;
 	}
-	line = NULL;
 	free(line);
 	close(fd);
 	return (data);

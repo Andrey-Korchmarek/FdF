@@ -12,14 +12,14 @@
 
 #include "../fdf.h"
 
-fdf	read_map(char *file)
+t_fdf	read_map(char *file)
 {
-    fdf		map;
-    int 	*param;
+	t_fdf	map;
+	int		*param;
 
-    param = (int *)malloc(sizeof(int) * 3);
-    param = get_height_and_width(file);
-    map.height = param[0];
+	param = (int *)malloc(sizeof(int) * 3);
+	param = get_height_and_width(file);
+	map.height = param[0];
 	map.width = param[1];
 	map.z_matrix = (int **)malloc(sizeof(int*) * (map.height + 1));
 	map = get_z_matrix(file, map);

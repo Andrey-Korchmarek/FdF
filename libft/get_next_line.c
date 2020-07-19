@@ -28,7 +28,7 @@ static int	gnl_ifstacknotempty(char **stack, char **line)
 	{
 		*line = ft_strjoinfree(*line, *stack, 1, 0);
 		if (*stack)
-		ft_strdel(stack);
+			ft_strdel(stack);
 		return (0);
 	}
 }
