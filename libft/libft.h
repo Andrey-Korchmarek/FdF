@@ -104,4 +104,6 @@ char				*ft_strjoinfree(char const *s1, char const *s2,
 									int frees1, int frees2);
 int                 get_next_line(const int fd, char **line);
 
+int ft_strcount(const char *str, char chr);
+
 #endif

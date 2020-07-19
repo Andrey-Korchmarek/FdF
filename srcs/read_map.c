@@ -14,18 +14,13 @@
 
 fdf	read_map(char *file)
 {
-    int     height;
-    int     fd;
-    char    *line;
+    fdf		map;
 
-    fd = open(file, O_RDONLY, 0);
-    height = 0;
-    while(get_next_line(fd, &line))
-    {
-        height++;
-        line = NULL;
-        free(line);
-    }
-    close(fd);
-    return ;
+    map.height = get_height(file);
+	map.width = get_width(file);
+	map.z_matrix = (int **)malloc(sizeof(int*) * (map.height + 1));
+	map = get_z_matrix(file, map);
+	map.mlx_ptr = NULL;
+	map.win_ptr = NULL;
+	return (map);
 }

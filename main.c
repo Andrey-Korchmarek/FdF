@@ -14,18 +14,32 @@
 
 int main(int argc, char **argv)
 {
-    int fd;
+    fdf karta;
 
+#ifdef TEST
+    ft_putnbr(ft_strlen("Some error :("));
+    ft_putchar(10);
+    ft_putnbr(ft_strcount("0 0 0 0 0 0 0 0 0 0", ' '));
+    ft_putchar(10);
+#endif
     if (argc != 2)
-    {
-        write(2, "usage: ./fdf [target_file.fdf]\n", 31);//сообщение
-        return (1);
-    }
-    fd = open(argv[1], O_RDONLY, 0);
-//    if (fd < 0 || read_file(fd, &(env.map)) != 0) //(read(fd, stack[0], 0) < 0)
-//    {
-//        write(2, "An error occurred reading the file... Is it valid?\n", 51);
-//        return (1);
-//    }
+    	game_over(1);
+	karta = read_map(argv[1]);
+#ifdef TEST
+	int i = 0;
+	int j;
+
+	while (i < karta.height)
+	{
+		j = 0;
+		while (j < karta.width)
+		{
+			printf("%3d", karta.z_matrix[i][j]);
+			j++;
+		}
+		printf("\n");
+		i++;
+	}
+#endif
     return (0);
 }
