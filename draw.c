@@ -61,6 +61,7 @@ void draw(fdf *data)
     int x;
     int y;
 
+    print_menu(*data);
     y = 0;
     while (y < data->height)
     {

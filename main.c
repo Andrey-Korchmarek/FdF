@@ -15,7 +15,16 @@ int deal_key(int button, fdf *data)
         data->shift_x -= 10;
     if (button == 124)
         data->shift_x += 10;
+    if (button == 3)
+        new_window(button, data);
+    if (button == 5)
+    {
+        mlx_destroy_window(data->mlx_ptr, data->win_ptr);
+        free(data);
+        exit(0);
+    }
     mlx_clear_window(data->mlx_ptr, data->win_ptr);
+
     draw(data);
     return (0);
 }
@@ -47,15 +56,30 @@ int		mouse_press(int button, int x, int y, fdf *data)
     return (0);
 }
 
+void	set_default(fdf *data)
+{
+    data->zoom = 20;
+//    param->z_scale = 1;
+//    param->is_isometric = 1;
+//    param->angle = 0.523599;
+    data->win_x = 2000;
+    data->win_y = 1000;
+    data->shift_x = data->win_x / 3;
+    data->shift_y = data->win_y / 3;
+    data->mlx_ptr = mlx_init();
+    data->win_ptr =\
+	mlx_new_window(data->mlx_ptr, data->win_x, data->win_y, "FDF");
+}
 int main(int argc, char **argv)
 {
     fdf *data;
 
     data = (fdf*)malloc(sizeof(fdf));
     read_file(argv[1], data);
-    data->mlx_ptr = mlx_init();
-    data->win_ptr = mlx_new_window(data->mlx_ptr, 1200, 1200, "FDF");
-    data->zoom = 20;
+    set_default(data);
+//    data->mlx_ptr = mlx_init();
+//   data->win_ptr = mlx_new_window(data->mlx_ptr, 1200, 1200, "FDF");
+//    data->zoom = 20;
 //    bresenham(10, 10, 500, 300, data);
     draw(data);
     mlx_key_hook(data->win_ptr, deal_key, data);

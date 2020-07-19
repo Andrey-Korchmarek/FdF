@@ -1,8 +1,8 @@
-https://github.com/VBrazhnik/FdF/wiki/How-to-perform-isometric-transformations%3F
-
-
 
 gcc *.c libft/libft.a minilibx_macos/libmlx.a -framework OpenGL -framework AppKit
+
+./a.out test_maps/42.fdf 
+
 int
 mlx_key_hook ( void *win_ptr, int (*funct_ptr)(), void *param );
 
@@ -35,6 +35,7 @@ https://github.com/nikGrape/FDF
 
 https://www.youtube.com/watch?v=10P59aOgi68
 
+https://github.com/VBrazhnik/FdF/wiki/How-to-perform-isometric-transformations%3F
 
 
 elearning video script upload
@@ -50,3 +51,5 @@ plan:
 2. https://github.com/pbondoer/42-FdF commit's
 
 https://github.com/mamedzavr/FdF/tree/master/srcs
+
+http://tmaplatform.ru/page/help/api/imagefield/!color

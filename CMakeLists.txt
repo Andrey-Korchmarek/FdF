@@ -114,7 +114,6 @@ add_executable(t9
         minilibx_macos/mlx_rgb.c
         minilibx_macos/mlx_shaders.c
         minilibx_macos/mlx_xpm.c
-        colorset.c
         fdf.h
         main.c
         read_file.c)
