@@ -56,8 +56,7 @@ typedef struct
 }				t_dot;
 
 fdf	read_map(char *file);
-int get_width(char *file);
-int	get_height(char *file);
+int	*get_height_and_width(char *file);
 void game_over(int error);
 fdf get_z_matrix(char *file, fdf data);
 int	ft_spdgcount(char *str);

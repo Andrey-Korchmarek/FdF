@@ -16,12 +16,6 @@ int main(int argc, char **argv)
 {
     fdf karta;
 
-#ifdef TEST
-    ft_putnbr(ft_strlen("Some error :("));
-    ft_putchar(10);
-    ft_putnbr(ft_strcount("0 0 0 0 0 0 0 0 0 0", ' '));
-    ft_putchar(10);
-#endif
     if (argc != 2)
     	game_over(1);
 	karta = read_map(argv[1]);

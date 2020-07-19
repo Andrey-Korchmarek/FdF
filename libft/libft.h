@@ -105,5 +105,7 @@ char				*ft_strjoinfree(char const *s1, char const *s2,
 int                 get_next_line(const int fd, char **line);
 
 int ft_strcount(const char *str, char chr);
+int	ft_issign(int c);
+int	ft_isdigit2(int c);
 
 #endif
