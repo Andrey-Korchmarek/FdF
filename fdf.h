@@ -7,7 +7,7 @@
 
 #include "libft/libft.h"
 #include "minilibx_macos/mlx.h"
-# define ZM data[0][0]
+
 typedef struct
 {
     int width;

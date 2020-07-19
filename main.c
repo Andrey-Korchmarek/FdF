@@ -7,24 +7,25 @@
 int deal_key(int button, fdf *data)
 {
 //    printf("%d\n", button);
-    if (button == 126)
+    if (button == 126) // up button
         data->shift_y -= 10;
-    if (button == 125)
+    if (button == 125) // down
         data->shift_y += 10;
-    if (button == 123)
+    if (button == 123) // left
         data->shift_x -= 10;
-    if (button == 124)
+    if (button == 124) // right
         data->shift_x += 10;
-    if (button == 3)
+    if (button == 3) // letter F
         new_window(button, data);
-    if (button == 5)
+    if (button == 69 || button == 78 || button == 67 || button == 75) //  + - * / from numpad of keyboard
+        new_window(button, data);
+    if (button == 53)
     {
         mlx_destroy_window(data->mlx_ptr, data->win_ptr);
         free(data);
         exit(0);
     }
     mlx_clear_window(data->mlx_ptr, data->win_ptr);
-
     draw(data);
     return (0);
 }
@@ -50,9 +51,10 @@ int		mouse_press(int button, int x, int y, fdf *data)
             if (data->shift_y  > 1)
                 data->shift_y  -= 50;
     }
+    if (button == 3)  //  F
+        new_window(button, data);
     mlx_clear_window(data->mlx_ptr, data->win_ptr);
     draw(data);
-
     return (0);
 }
 
@@ -74,6 +76,13 @@ int main(int argc, char **argv)
 {
     fdf *data;
 
+    if (argc != 2)
+    {
+        char *txt;
+        txt = "Use this command: ./fdf testmap.fdf";
+        ft_printf("%s\n", txt );
+        return (0);
+    }
     data = (fdf*)malloc(sizeof(fdf));
     read_file(argv[1], data);
     set_default(data);
