@@ -8,7 +8,7 @@ int get_width(char *file)
 
 	fd = open(file, O_RDONLY, 0);
 	get_next_line(fd, &line);
-	width = ft_strcount(line, ' ');
+	width = ft_spdgcount(line);
 	line = NULL;
 	free(line);
 	close(fd);
