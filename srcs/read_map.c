@@ -12,7 +12,7 @@
 
 #include "../fdf.h"
 
-void    read_map(char *file)
+fdf	read_map(char *file)
 {
     int     height;
     int     fd;

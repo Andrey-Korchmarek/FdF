@@ -54,6 +54,6 @@ typedef struct
     void		*win_ptr;
 }				t_dot;
 
-void    read_map(char *file);
+fdf		read_map(char *file);
 
 #endif
