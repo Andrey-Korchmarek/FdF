@@ -106,5 +106,7 @@ int					get_next_line(const int fd, char **line);
 int					ft_strcount(const char *str, char chr);
 int					ft_issign(int c);
 int					ft_isnumber(int c);
+int					ft_ishex(int c);
+int					ft_ispoint(int c);
 
 #endif

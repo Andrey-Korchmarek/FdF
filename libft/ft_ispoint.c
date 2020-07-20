@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ispoint.c                                      :+:      :+:    :+:   */
+/*   ft_ispoint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mashley <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/19 19:08:50 by mashley           #+#    #+#             */
-/*   Updated: 2020/07/19 19:08:54 by mashley          ###   ########.fr       */
+/*   Created: 2020/07/20 16:31:59 by mashley           #+#    #+#             */
+/*   Updated: 2020/07/20 16:32:08 by mashley          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isnumber(int c)
+int	ft_ispoint(int c)
 {
-	return (ft_issign(c) || ft_isdigit(c));
+	return (ft_isnumber(c) || c == ',' || ft_ishex(c));
 }
