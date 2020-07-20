@@ -1,18 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit2.c                                      :+:      :+:    :+:   */
+/*   ft_spnbrcount.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mashley <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/19 19:08:50 by mashley           #+#    #+#             */
-/*   Updated: 2020/07/19 19:08:54 by mashley          ###   ########.fr       */
+/*   Created: 2020/07/19 19:16:19 by mashley           #+#    #+#             */
+/*   Updated: 2020/07/19 19:16:24 by mashley          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../fdf.h"
 
-int	ft_isdigit2(int c)
+int	ft_spnbrcount(char *str)
 {
-	return (ft_issign(c) || ft_isdigit(c));
+	int i;
+	int count;
+
+	i = 0;
+	if (!(ft_isspace(str[i]) || ft_isnumber(str[i])))
+		game_over(2);
+	count = 0;
+	while (str[i + 1])
+	{
+		if (ft_isspace(str[i]) && ft_isnumber(str[i + 1]))
+			count++;
+		else if (!(ft_isspace(str[i + 1]) || ft_isnumber(str[i + 1])))
+			game_over(2);
+		i++;
+	}
+	return (count);
 }

@@ -23,13 +23,15 @@ int	*get_height_and_width(char *file)
 	param[1] = 0;
 	while (get_next_line(fd, &line))
 	{
-		if (param[1] != 0 && ft_spdgcount(line) != param[1])
+		if (param[1] != 0 && ft_spnbrcount(line) != param[1])
 			game_over(2);
 		param[0]++;
-		param[1] = ft_spdgcount(line);
+		param[1] = ft_spnbrcount(line);
 		line = NULL;
 		free(line);
 	}
+	line = NULL;
+	free(line);
 	close(fd);
 	return (param);
 }
