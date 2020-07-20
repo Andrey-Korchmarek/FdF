@@ -108,5 +108,6 @@ int					ft_issign(int c);
 int					ft_isnumber(int c);
 int					ft_ishex(int c);
 int					ft_ispoint(int c);
+int					ft_ismark(int c);
 
 #endif

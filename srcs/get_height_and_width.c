@@ -23,6 +23,10 @@ int	*get_height_and_width(char *file)
 	param[1] = 0;
 	while (get_next_line(fd, &line))
 	{
+//		ft_putnbr(ft_spnbrcount(line));
+//		ft_putchar(' ');
+//		ft_putnbr(param[1]);
+//		ft_putchar(10);
 		if (param[1] != 0 && ft_spnbrcount(line) != param[1])
 			game_over(2);
 		param[0]++;
