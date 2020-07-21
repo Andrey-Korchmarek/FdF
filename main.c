@@ -36,6 +36,19 @@ int	main(int argc, char **argv)
 		printf("\n");
 		i++;
 	}
+	printf("\n");
+	i = 0;
+	while (i < karta.height)
+	{
+		j = 0;
+		while (j < karta.width)
+		{
+			printf("%3d", karta.color[i][j]);
+			j++;
+		}
+		printf("\n");
+		i++;
+	}
 #endif
 	return (0);
 }

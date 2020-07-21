@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isnumber.c                                      :+:      :+:    :+:   */
+/*   ft_atoi_base.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mashley <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/21 15:22:20 by mashley           #+#    #+#             */
-/*   Updated: 2020/07/21 15:22:23 by mashley          ###   ########.fr       */
+/*   Created: 2020/07/21 16:21:53 by mashley           #+#    #+#             */
+/*   Updated: 2020/07/21 16:21:59 by mashley          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isnumber(int c)
+int ft_atoi_base(const char *str, int base)
 {
-	return (ft_issign(c) || ft_isdigit(c));
+	return (32);
 }

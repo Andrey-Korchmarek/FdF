@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isnumber.c                                      :+:      :+:    :+:   */
+/*   ft_ishexnumber.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mashley <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/21 15:22:20 by mashley           #+#    #+#             */
-/*   Updated: 2020/07/21 15:22:23 by mashley          ###   ########.fr       */
+/*   Created: 2020/07/21 15:20:56 by mashley           #+#    #+#             */
+/*   Updated: 2020/07/21 15:21:03 by mashley          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isnumber(int c)
+int	ft_ishexnumber(int c)
 {
-	return (ft_issign(c) || ft_isdigit(c));
+	return (ft_isnumber(c) || ft_ishex(c));
 }

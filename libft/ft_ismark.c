@@ -16,5 +16,3 @@ int	ft_ismark(int c)
 {
 	return (c == ',' || c == 'x');
 }
-
-

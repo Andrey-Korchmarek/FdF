@@ -26,11 +26,13 @@ t_fdf	get_z_matrix(char *file, t_fdf data)
 	{
 		get_next_line(fd, &line);
 		data.z_matrix[x] = (int *)malloc(sizeof(int) * (data.width + 1));
+		data.color[x] = (int *)malloc(sizeof(int) * (data.width + 1));
 		nums = ft_strsplit(line, ' ');
 		y = 0;
 		while (y < data.width)
 		{
-			data.z_matrix[x][y] = ft_atoi(nums[y]);
+			data.z_matrix[x][y] = ft_atoi(ft_strsplit(nums[y], ',')[0]);
+			data.color[x][y] = get_color(ft_strsplit(nums[y], ',')[1]);
 			y++;
 		}
 		line = NULL;

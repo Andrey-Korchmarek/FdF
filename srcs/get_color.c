@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isnumber.c                                      :+:      :+:    :+:   */
+/*   get_color.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mashley <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/21 15:22:20 by mashley           #+#    #+#             */
-/*   Updated: 2020/07/21 15:22:23 by mashley          ###   ########.fr       */
+/*   Created: 2020/07/21 16:02:40 by mashley           #+#    #+#             */
+/*   Updated: 2020/07/21 16:02:43 by mashley          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../fdf.h"
 
-int	ft_isnumber(int c)
+int	get_color(char *s)
 {
-	return (ft_issign(c) || ft_isdigit(c));
+	return (s ? ft_atoi_base(s, 16) : -1);
 }

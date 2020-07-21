@@ -22,6 +22,7 @@ t_fdf	read_map(char *file)
 	map.height = param[0];
 	map.width = param[1];
 	map.z_matrix = (int **)malloc(sizeof(int*) * (map.height + 1));
+	map.color = (int **)malloc(sizeof(int*) * (map.height + 1));
 	map = get_z_matrix(file, map);
 	map.mlx_ptr = NULL;
 	map.win_ptr = NULL;

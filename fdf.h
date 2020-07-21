@@ -27,6 +27,7 @@ typedef struct	s_fdf
 	int			width;
 	int			height;
 	int			**z_matrix;
+	int 		**color;
 	void		*mlx_ptr;
 	void		*win_ptr;
 }				t_fdf;
@@ -56,5 +57,6 @@ int				*get_height_and_width(char *file);
 void			game_over(int error);
 t_fdf			get_z_matrix(char *file, t_fdf data);
 int				ft_spnbrcount(char *str);
+int 			get_color(char *s);
 
 #endif

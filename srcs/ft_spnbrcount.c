@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_spnbrcount.c                                     :+:      :+:    :+:   */
+/*   ft_spnbrcount.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mashley <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/19 19:16:19 by mashley           #+#    #+#             */
-/*   Updated: 2020/07/19 19:16:24 by mashley          ###   ########.fr       */
+/*   Created: 2020/07/21 16:33:52 by mashley           #+#    #+#             */
+/*   Updated: 2020/07/21 16:33:55 by mashley          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,10 @@ int	ft_spnbrcount(char *str)
 	count = 0;
 	while (str[i + 1])
 	{
-		ft_putchar(str[i]);
-		ft_putchar(' ');
+#ifdef TEST
+//		ft_putchar(str[i]);
+//		ft_putchar(' ');
+#endif
 		if (ft_isspace(str[i]) && ft_isnumber(str[i + 1]))
 			count++;
 		else if (!(ft_isspace(str[i + 1]) || ft_ispoint(str[i + 1])))
