@@ -14,5 +14,5 @@
 
 int	get_color(char *s)
 {
-	return (s ? ft_atoi_base(s, 16) : -1);
+	return (s ? ft_atoi_base(s + 2, 16) : -1);
 }

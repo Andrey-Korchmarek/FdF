@@ -111,5 +111,6 @@ int					ft_ishexlow(int c);
 int					ft_ishex(int c);
 int					ft_ispoint(int c);
 int					ft_ismark(int c);
+int					ft_atoi_base(const char *str, int base);
 
 #endif
