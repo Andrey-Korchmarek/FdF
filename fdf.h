@@ -52,11 +52,12 @@ typedef struct	s_dot
 	void		*win_ptr;
 }				t_dot;
 
-t_fdf			read_map(char *file);
+void			read_map(char *file, t_fdf *map);
 int				*get_height_and_width(char *file);
 void			game_over(int error);
-t_fdf			get_z_matrix(char *file, t_fdf data);
+void			get_z_matrix(char *file, t_fdf *data);
 int				ft_spnbrcount(char *str);
-int 			get_color(char *s);
+int				get_color(char *s);
+void			ft_free_fdf(t_fdf *data);
 
 #endif

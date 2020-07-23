@@ -1,28 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_width.c                                        :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mashley <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/19 19:16:38 by mashley           #+#    #+#             */
-/*   Updated: 2020/07/19 19:16:41 by mashley          ###   ########.fr       */
+/*   Created: 2020/07/08 14:12:28 by mashley           #+#    #+#             */
+/*   Updated: 2020/07/08 14:12:59 by mashley          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../fdf.h"
+#include "fdf.h"
 
-int	get_width(char *file)
+int	main(int argc, char **argv)
 {
-	int		width;
-	int		fd;
-	char	*line;
+	t_fdf	karta;
 
-	fd = open(file, O_RDONLY, 0);
-	get_next_line(fd, &line);
-	width = ft_spnbrcount(line);
-	free(line);
-	line = NULL;
-	close(fd);
-	return (width + 1);
+	if (argc != 2)
+		game_over(1);
+	karta = read_map(argv[1]);
+	ft_free_fdf(karta);
+	return (0);
 }

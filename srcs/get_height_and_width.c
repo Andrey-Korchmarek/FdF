@@ -27,11 +27,10 @@ int	*get_height_and_width(char *file)
 			game_over(2);
 		param[0]++;
 		param[1] = ft_spnbrcount(line);
-		line = NULL;
 		free(line);
 	}
-	line = NULL;
 	free(line);
+	line = NULL;
 	close(fd);
 	return (param);
 }
