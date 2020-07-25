@@ -22,7 +22,7 @@ int	main(int argc, char **argv)
 
 	if (argc != 2)
 		game_over(1);
-	karta = read_map(argv[1]);
+	read_map(argv[1], &karta);
 #ifdef TEST
 	i = 0;
 	while (i < karta.height)
@@ -43,12 +43,13 @@ int	main(int argc, char **argv)
 		j = 0;
 		while (j < karta.width)
 		{
-			printf("%3d", karta.color[i][j]);
+			printf("%3d ", karta.color[i][j]);
 			j++;
 		}
 		printf("\n");
 		i++;
 	}
 #endif
+	//ft_free_fdf(&karta);
 	return (0);
 }

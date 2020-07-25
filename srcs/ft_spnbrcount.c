@@ -25,10 +25,6 @@ int	ft_spnbrcount(char *str)
 	count = 0;
 	while (str[i + 1])
 	{
-#ifdef TEST
-//		ft_putchar(str[i]);
-//		ft_putchar(' ');
-#endif
 		if (ft_isspace(str[i]) && ft_isnumber(str[i + 1]))
 			count++;
 		else if (!(ft_isspace(str[i + 1]) || ft_ispoint(str[i + 1])))

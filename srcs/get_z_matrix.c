@@ -12,33 +12,41 @@
 
 #include "../fdf.h"
 
-t_fdf	get_z_matrix(char *file, t_fdf data)
+void	get_z_matrix(char *file, t_fdf *data)
 {
 	int		fd;
 	char	*line;
 	char	**nums;
+	char 	**parts;
 	int		x;
 	int		y;
 
 	fd = open(file, O_RDONLY, 0);
 	x = 0;
-	while (x < data.height)
+	while (x < (*data).height)
 	{
 		get_next_line(fd, &line);
-		data.z_matrix[x] = (int *)malloc(sizeof(int) * (data.width + 1));
-		data.color[x] = (int *)malloc(sizeof(int) * (data.width + 1));
+		(*data).z_matrix[x] = (int *)malloc(sizeof(int) * ((*data).width + 1));
+		(*data).color[x] = (int *)malloc(sizeof(int) * ((*data).width + 1));
 		nums = ft_strsplit(line, ' ');
 		y = 0;
-		while (y < data.width)
+		while (y < (*data).width)
 		{
-			data.z_matrix[x][y] = ft_atoi(ft_strsplit(nums[y], ',')[0]);
-			data.color[x][y] = get_color(ft_strsplit(nums[y], ',')[1]);
+			parts = ft_strsplit(nums[y], ',');
+			(*data).z_matrix[x][y] = ft_atoi(parts[0]);
+			(*data).color[x][y] = get_color(parts[1]);
+			free(parts[0]);
+			parts[0] = NULL;
+			free(parts[1]);
+			parts[1] = NULL;
+			free(parts);
+			parts = NULL;
 			y++;
 		}
-		line = NULL;
+//		ft_free_matrix(&nums);
 		x++;
 	}
-	free(line);
+//	ft_strdel(&line);
 	close(fd);
-	return (data);
+	return ;
 }
