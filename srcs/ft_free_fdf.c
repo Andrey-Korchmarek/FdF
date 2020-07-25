@@ -17,18 +17,32 @@ void	ft_free_fdf(t_fdf *data)
 	int i;
 
 	i = 0;
+<<<<<<< HEAD
 	while (((*data).z_matrix)[i])
 	{
 		free(((*data).z_matrix)[i]);
 		((*data).z_matrix)[i] = NULL;
+=======
+	while ((*data).z_matrix[i])
+	{
+		free((*data).z_matrix[i]);
+		(*data).z_matrix[i] = NULL;
+>>>>>>> 85a04fc2200002a6cfea480b0046465653b2f218
 		i++;
 	}
 	free((*data).z_matrix);
 	(*data).z_matrix = NULL;
+<<<<<<< HEAD
 	while (((*data).color)[i])
 	{
 		free(((*data).color)[i]);
 		((*data).color)[i] = NULL;
+=======
+	while ((*data).color[i])
+	{
+		free((*data).color[i]);
+		(*data).color[i] = NULL;
+>>>>>>> 85a04fc2200002a6cfea480b0046465653b2f218
 		i++;
 	}
 	free((*data).color);
