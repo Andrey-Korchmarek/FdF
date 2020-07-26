@@ -14,9 +14,10 @@
 
 void	read_map(char *file, t_fdf *map)
 {
-	int		*param;
+	int		param[2];
 
-	param = get_height_and_width(file);
+	param[0] = get_height_and_width(file, 0);
+	param[1] = get_height_and_width(file, 1);
 	(*map).height = param[0];
 	(*map).width = param[1];
 	(*map).z_matrix = (int **)malloc(sizeof(int*) * ((*map).height + 1));

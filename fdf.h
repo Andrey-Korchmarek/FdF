@@ -21,6 +21,7 @@
 # include <stdio.h>
 # include <math.h>
 # include "libft/libft.h"
+# include "minilibx_macos/mlx.h"
 
 typedef struct	s_fdf
 {
@@ -53,7 +54,7 @@ typedef struct	s_dot
 }				t_dot;
 
 void			read_map(char *file, t_fdf *map);
-int				*get_height_and_width(char *file);
+int				get_height_and_width(char *file, int key);
 void			game_over(int error);
 void			get_z_matrix(char *file, t_fdf *data);
 int				ft_spnbrcount(char *str);

@@ -12,7 +12,7 @@
 
 #include "../fdf.h"
 
-int	*get_height_and_width(char *file)
+int	get_height_and_width(char *file, int key)
 {
 	int		param[2];
 	int		fd;
@@ -32,5 +32,7 @@ int	*get_height_and_width(char *file)
 	free(line);
 	line = NULL;
 	close(fd);
-	return (param);
+	if (key)
+		return (param[1]);
+	return (param[0]);
 }

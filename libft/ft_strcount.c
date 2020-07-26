@@ -15,13 +15,15 @@
 int	ft_strcount(const char *str, char chr)
 {
 	int count;
+	int i;
 
 	count = 0;
-	while (*str)
+	i = 0;
+	while (str[i])
 	{
-		if (*str == chr)
+		if (str[i] == chr)
 			count++;
-		*str++;
+		i++;
 	}
 	return (count);
 }

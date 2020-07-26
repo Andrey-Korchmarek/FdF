@@ -113,10 +113,7 @@ int					ft_ispoint(int c);
 int					ft_ismark(int c);
 //int					ft_atoi_base(const char *str, int base);
 int		ft_atoi_base(const char *str, size_t *pos, int base);
-<<<<<<< HEAD
 void				ft_free_array(int ***as);
 void				ft_free_matrix(char ***as);
-=======
->>>>>>> 85a04fc2200002a6cfea480b0046465653b2f218
 
 #endif
