@@ -8,4 +8,4 @@ include_directories(.)
 file(GLOB SRCS "*.c")
 file(GLOB HEAD *.h)
 
-add_library(lib STATIC ${SRCS} ft_ismark.c ${HEAD})
+add_library(lib STATIC ${SRCS} ${HEAD})

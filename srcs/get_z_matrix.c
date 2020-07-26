@@ -43,7 +43,6 @@ void	get_z_matrix(char *file, t_fdf *data)
 			parts = NULL;
 			y++;
 		}
-//<<<<<<< HEAD
 //		ft_free_matrix(&nums);
 		x++;
 	}
@@ -54,14 +53,14 @@ void	get_z_matrix(char *file, t_fdf *data)
 	free(line);
 	line = NULL;
 	x = 0;
-	while (nums[x])
-	{
-		free(nums[x]);
-		nums[x] = NULL;
-		x++;
-	}
-	free(nums);
-	nums = NULL;
+//	while (nums[x])
+//	{
+//		free(nums[x]);
+//		nums[x] = NULL;
+//		x++;
+//	}
+//	free(nums);
+//	nums = NULL;
 //>>>>>>> 85a04fc2200002a6cfea480b0046465653b2f218
 	close(fd);
 	return ;
