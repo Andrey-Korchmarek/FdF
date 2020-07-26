@@ -21,7 +21,8 @@ static int	gnl_ifstacknotempty(char **stack, char **line)
 		*tmp = '\0';
 		tmp++;
 		*line = ft_strjoinfree(*line, *stack, 1, 0);
-		if (*stack) {
+		if (*stack)
+		{
 			free(*stack);
 			*stack = NULL;
 		}
@@ -32,7 +33,10 @@ static int	gnl_ifstacknotempty(char **stack, char **line)
 	{
 		*line = ft_strjoinfree(*line, *stack, 1, 0);
 		if (*stack)
-			ft_strdel(stack);
+		{
+			free(*stack);
+			*stack = NULL;
+		}
 		return (0);
 	}
 }
@@ -43,8 +47,6 @@ int			get_next_line(const int fd, char **line)
 	char		buf[BUFF_SIZE + 1];
 	int			ret;
 	char		*heap;
-
-	ft_bzero(stack, sizeof(char*) * OPEN_MAX);
 
 	if (!line || fd < 0 || (read(fd, stack[0], 0) < 0) || BUFF_SIZE < 1)
 	{
@@ -71,6 +73,7 @@ int			get_next_line(const int fd, char **line)
 			*line = ft_strjoinfree(*line, buf, 1, 0);
 			if (stack[fd]) {
 				free(stack[fd]);
+				stack[fd] = NULL;
 			}
 			return (1);
 		}

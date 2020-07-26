@@ -33,6 +33,6 @@ int	get_height_and_width(char *file, int key)
 	line = NULL;
 	close(fd);
 	if (key)
-		return (param[1]);
+		return (param[1] + 1);
 	return (param[0]);
 }
