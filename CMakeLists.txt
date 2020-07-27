@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.16)
 project(FdF)
 
 set(CMAKE_CXX_STANDARD 11)
-set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wall -Werror -Wextra")
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -g -Wall -Werror -Wextra")
 set(LIBMLX ${CMAKE_SOURCE_DIR}/minilibx_macos/libmlx.a)
 
 find_library(OPENGL OpenGL)

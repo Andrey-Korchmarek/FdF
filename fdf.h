@@ -67,6 +67,6 @@ void			get_z_matrix(char *file, t_fdf *data);
 int				ft_spnbrcount(char *str);
 int				get_color(char *s);
 void			ft_free_fdf(t_fdf *data);
-void	set_default(t_fdf *data);
+void			set_default(t_fdf *data);
 
 #endif
