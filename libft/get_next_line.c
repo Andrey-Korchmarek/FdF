@@ -42,6 +42,11 @@ int			get_next_line(const int fd, char **line)
 
 	if (!line || fd < 0 || (read(fd, stack[0], 0) < 0) || BUFF_SIZE < 1)
 		return (-1);
+<<<<<<< HEAD
+=======
+	}
+
+>>>>>>> parent of 24bff67... window open
 	*line = ft_strnew(0);
 	if (stack[fd])
 		if (gnl_ifstacknotempty(&stack[fd], line))
@@ -55,6 +60,13 @@ int			get_next_line(const int fd, char **line)
 			heap++;
 			stack[fd] = ft_strdup(heap);
 			*line = ft_strjoinfree(*line, buf, 1, 0);
+<<<<<<< HEAD
+=======
+			if (stack[fd]) {
+				free(stack[fd]);
+				stack[fd] = NULL;
+			}
+>>>>>>> parent of 24bff67... window open
 			return (1);
 		}
 		*line = ft_strjoinfree(*line, buf, 1, 0);

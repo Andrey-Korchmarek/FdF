@@ -16,7 +16,6 @@ char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*str;
 
-	str = NULL;
 	if (!s1 || !s2)
 		return (NULL);
 	if (ft_strplen(s1) + ft_strplen(s2) + 1 == 0)

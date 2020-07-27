@@ -38,8 +38,6 @@ static char		*ft_get_word(char *word, char c)
 	char	*start;
 	size_t	i;
 
-
-	start = NULL;
 	start = word;
 	i = 0;
 	while (word[i] && word[i] != c)
@@ -51,23 +49,8 @@ static char		*ft_get_word(char *word, char c)
 static void		ft_free_words(char **words, size_t i)
 {
 	while (i--)
-	{
-		if (words[i])
-		{
-			free(words[i]);
-			words[i] = NULL;
-		}
-	}
-	if (words[i])
-	{
-		free(words[i]);
-		words[i] = NULL;
-	}
-	if (words)
-	{
-		free(words);
-		words = NULL;
-	}
+		ft_strdel(&(words[i]));
+	free(*words);
 }
 
 static char		**ft_get_words(char *s, char c, size_t words_count)
@@ -76,8 +59,6 @@ static char		**ft_get_words(char *s, char c, size_t words_count)
 	char	*word;
 	size_t	i;
 
-	word = NULL;
-	words = NULL;
 	i = 0;
 	if ((words = (char**)ft_memalloc(sizeof(char*) * (words_count + 1))))
 	{
@@ -106,18 +87,12 @@ char			**ft_strsplit(char const *s, char c)
 	char	**words;
 	char	*line;
 
-	words = NULL;
-	line = NULL;
 	if (!s)
 		return (NULL);
 	line = ft_strdup((char*)s);
 	if (!line)
 		return (NULL);
 	words = ft_get_words(line, c, ft_count_words(line, c));
-	if (line)
-	{
-		free(line);
-		line = NULL;
-	}
+	free(line);
 	return (words);
 }

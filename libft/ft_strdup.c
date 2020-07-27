@@ -17,7 +17,6 @@ char	*ft_strdup(const char *src)
 	char	*dup;
 	size_t	i;
 
-	dup = NULL;
 	if (ft_strplen(src) + 1 == 0)
 		return (NULL);
 

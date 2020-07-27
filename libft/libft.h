@@ -112,7 +112,7 @@ int					ft_ishex(int c);
 int					ft_ispoint(int c);
 int					ft_ismark(int c);
 //int					ft_atoi_base(const char *str, int base);
-int		ft_atoi_base(const char *str, int base);
+int		ft_atoi_base(const char *str, size_t *pos, int base);
 void				ft_free_array(int ***as);
 void				ft_free_matrix(char ***as);
 
