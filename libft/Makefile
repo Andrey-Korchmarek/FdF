@@ -27,7 +27,7 @@ ft_strlcat ft_strlen ft_strmap ft_strmapi ft_strncat ft_strncmp ft_strncpy ft_st
 ft_strnew ft_strnlen ft_strnstr ft_strplen ft_strrchr ft_strsplit ft_strstr ft_strsub \
 ft_strtrim ft_tolower ft_toupper get_next_line
 
-CFILES = $(patsubst %, $(SRCS)%.c, $(FILES))
+#CFILES = $(patsubst %, $(SRCS)%.c, $(FILES))
 OFILES = $(patsubst %, %.o, $(FILES))
 
 .PHONY: all $(NAME) clean fclean re

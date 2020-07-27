@@ -12,9 +12,8 @@
 
 #include "libft.h"
 
-int		ft_atoi_base(const char *str, size_t *pos, int base)
+int		ft_atoi_base(const char *str, int base)
 {
-	const char			*strbegin = str;
 	static const char	alphabet[] = "0123456789abcdef";
 	int					res;
 	const char			*char_pos;
@@ -34,7 +33,5 @@ int		ft_atoi_base(const char *str, size_t *pos, int base)
 		res = res * base + (char_pos - alphabet);
 		str += 1;
 	}
-	if (pos)
-		*pos = str - strbegin;
 	return (res * sign);
 }
