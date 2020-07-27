@@ -18,6 +18,8 @@ char	*ft_strmap(char const *s, char (*f)(char))
 	char	*result;
 	size_t	i;
 
+	tmp = NULL;
+	result = NULL;
 	if (!s || !f)
 		return (NULL);
 	if (ft_strplen((char*)s) + 1 == 0)

@@ -18,6 +18,7 @@ char	*ft_strtrim(char const *s)
 	size_t	start;
 	size_t	finish;
 
+	str = NULL;
 	if (!s)
 		return (NULL);
 	start = 0;

@@ -17,6 +17,7 @@ static char	*ft_itoa_numb(int n, int len, int sign, unsigned long int ten)
 	char	*numb;
 	int		i;
 
+	numb = NULL;
 	numb = (char*)malloc(sizeof(char) * (len + sign + 1));
 	if (!numb)
 		return (NULL);

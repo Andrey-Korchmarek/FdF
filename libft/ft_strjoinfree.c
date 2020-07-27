@@ -17,6 +17,7 @@ char	*ft_strjoinfree(char const *s1, char const *s2, int frees1, int frees2)
 	char	*str;
 	size_t	len;
 
+	str = NULL;
 	len = ft_strplen(s1) + ft_strplen(s2) + 1;
 	if (!s1 || !s2)
 		return (NULL);
@@ -30,6 +31,7 @@ char	*ft_strjoinfree(char const *s1, char const *s2, int frees1, int frees2)
 	if (s1 == s2 && (frees1 || frees2))
 	{
 		free((char*)s1);
+		s1 = NULL;
 		return (str);
 	}
 	if (frees1)
