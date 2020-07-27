@@ -29,8 +29,15 @@ typedef struct	s_fdf
 	int			height;
 	int			**z_matrix;
 	int 		**color;
+	int zoom;
+	int shift_x;
+	int shift_y;
+
 	void		*mlx_ptr;
 	void		*win_ptr;
+
+	int			win_x;
+	int			win_y;
 }				t_fdf;
 
 typedef struct	s_dot
@@ -60,5 +67,6 @@ void			get_z_matrix(char *file, t_fdf *data);
 int				ft_spnbrcount(char *str);
 int				get_color(char *s);
 void			ft_free_fdf(t_fdf *data);
+void	set_default(t_fdf *data);
 
 #endif

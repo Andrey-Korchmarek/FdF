@@ -28,7 +28,7 @@ int	ft_spnbrcount(char *str)
 		if (ft_isspace(str[i]) && ft_isnumber(str[i + 1]))
 			count++;
 		else if (!(ft_isspace(str[i + 1]) || ft_ispoint(str[i + 1])))
-			game_over(2);
+			game_over(3);
 		i++;
 	}
 	return (count);
