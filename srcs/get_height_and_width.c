@@ -18,6 +18,7 @@ int	get_height_and_width(char *file, int key)
 	int		fd;
 	char	*line;
 
+	line = NULL;
 	fd = open(file, O_RDONLY, 0);
 	param[0] = 0;
 	param[1] = 0;
@@ -28,6 +29,7 @@ int	get_height_and_width(char *file, int key)
 		param[0]++;
 		param[1] = ft_spnbrcount(line);
 		free(line);
+		line = NULL;
 	}
 	free(line);
 	line = NULL;

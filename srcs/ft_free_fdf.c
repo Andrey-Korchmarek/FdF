@@ -18,7 +18,7 @@ void	ft_free_fdf(t_fdf *data)
 
 	i = 0;
 //<<<<<<< HEAD
-	while (((*data).z_matrix)[i])
+	while (i < (*data).height)
 	{
 		free(((*data).z_matrix)[i]);
 		((*data).z_matrix)[i] = NULL;
@@ -32,8 +32,9 @@ void	ft_free_fdf(t_fdf *data)
 	}
 	free((*data).z_matrix);
 	(*data).z_matrix = NULL;
+	i = 0;
 //<<<<<<< HEAD
-	while (((*data).color)[i])
+	while (i < (*data).height)
 	{
 		free(((*data).color)[i]);
 		((*data).color)[i] = NULL;
@@ -47,7 +48,5 @@ void	ft_free_fdf(t_fdf *data)
 	}
 	free((*data).color);
 	(*data).color = NULL;
-	free(data);
-	data = NULL;
 	return ;
 }

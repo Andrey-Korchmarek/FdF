@@ -18,6 +18,7 @@ int	get_width(char *file)
 	int		fd;
 	char	*line;
 
+	line = NULL;
 	fd = open(file, O_RDONLY, 0);
 	get_next_line(fd, &line);
 	width = ft_spnbrcount(line);
