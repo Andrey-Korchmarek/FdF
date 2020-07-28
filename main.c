@@ -52,8 +52,8 @@ int	main(int argc, char **argv)
 #endif
 //	karta.mlx_ptr = mlx_init();
 //	karta.win_ptr = mlx_new_window(karta.mlx_ptr, 1000, 1000, "FDF");
-	set_default(&karta);
-	mlx_loop(karta.mlx_ptr);
+//	set_default(&karta);
+//	mlx_loop(karta.mlx_ptr);
 //    bresenham(10, 10, 500, 300, karta);
 	ft_free_fdf(&karta);
 	return (0);

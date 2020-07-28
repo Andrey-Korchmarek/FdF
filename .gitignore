@@ -56,3 +56,4 @@ dkms.conf
 .idea/
 fdf
 cmake-build-debug/
+!minilibx_macos/libmlx.a
