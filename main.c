@@ -15,6 +15,7 @@
 int	main(int argc, char **argv)
 {
 	t_fdf	karta;
+	int 	fd;
 #ifdef TEST
 	int i;
 	int j;
@@ -22,6 +23,9 @@ int	main(int argc, char **argv)
 
 	if (argc != 2)
 		game_over(1);
+	if (!(fd = ft_open_read(argv[1])))
+		game_over(5);
+	close(fd);
 	read_map(argv[1], &karta);
 #ifdef TEST
 	i = 0;
