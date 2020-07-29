@@ -1,1 +1,0 @@
-draw.c ft_free_fdf.c ft_spnbrcount.c game_over.c get_color.c get_height_and_width.c get_width.c get_z_matrix.c print.c read_map.c set_default.c 
