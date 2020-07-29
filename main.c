@@ -50,11 +50,14 @@ int	main(int argc, char **argv)
 		i++;
 	}
 #endif
+//	set_default(&karta);
 //	karta.mlx_ptr = mlx_init();
 //	karta.win_ptr = mlx_new_window(karta.mlx_ptr, 1000, 1000, "FDF");
-//	set_default(&karta);
-//	mlx_loop(karta.mlx_ptr);
-//    bresenham(10, 10, 500, 300, karta);
+//	mlx_loop(&karta.mlx_ptr);
+//	draw(&karta);
+//	mlx_key_hook(&karta.win_ptr, deal_key, data);
+//	mlx_mouse_hook(&karta.win_ptr, mouse_press, data);
+//	bresenham(10, 10, 500, 300, karta);
 	ft_free_fdf(&karta);
 	return (0);
 }

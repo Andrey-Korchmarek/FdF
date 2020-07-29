@@ -1,8 +1,5 @@
-//
-// Created by Akihiko Pearl on 7/12/20.
-//
-#include "fdf.h"
-#include "math.h"
+
+#include "../fdf.h"
 
 #define MAX1(a, b) (a > b ? a : b)
 #define MOD(a) ((a < 0) ? -a : a)
@@ -15,7 +12,7 @@ void isometric(float *x, float *y, int z)
     *y = (*x + *y) * sin(0.523599) - z;
 
 }
-void bresenham(float x, float y, float x1, float y1, fdf *data)
+void bresenham(float x, float y, float x1, float y1, t_fdf *data)
 {
     float x_step;
     float y_step;
@@ -32,7 +29,8 @@ void bresenham(float x, float y, float x1, float y1, fdf *data)
     y1 *= data->zoom;
 
 
-    data->color = (z || z1) ? 0xFFFF00 : 0xFFFFFF;
+    (*data).color[(int)y][(int)x] = z ? 0xFFFF00 : 0xFFFFFF;
+	(*data).color[(int)y1][(int)x1] = z1 ? 0xFFFF00 : 0xFFFFFF;
 
     isometric(&x, &y, z);
     isometric(&x1, &y1, z1);
@@ -50,13 +48,13 @@ void bresenham(float x, float y, float x1, float y1, fdf *data)
     y_step /= max;
     while ((int)(x - x1) || (int)(y-y1))
     {
-        mlx_pixel_put(data->mlx_ptr, data->win_ptr, x, y, data->color);
+        mlx_pixel_put(data->mlx_ptr, data->win_ptr, x, y, (*data).color[(int)y][(int)x]);
         x += x_step;
         y += y_step;
     }
 }
 
-void draw(fdf *data)
+void draw(t_fdf *data)
 {
     int x;
     int y;

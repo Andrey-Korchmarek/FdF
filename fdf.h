@@ -68,5 +68,9 @@ int				ft_spnbrcount(char *str);
 int				get_color(char *s);
 void			ft_free_fdf(t_fdf *data);
 void			set_default(t_fdf *data);
+void bresenham(float x, float y, float x1, float y1, t_fdf *data);
+void draw(t_fdf *data);
+void isometric(float *x, float *y, int z);
+void	print_menu(t_fdf txt);
 
 #endif
