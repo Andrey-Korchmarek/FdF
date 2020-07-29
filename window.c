@@ -2,7 +2,7 @@
 // Created by Akihiko Pearl on 7/19/20.
 //
 
-#include "../fdf.h"
+#include "fdf.h"
 
 int		check_win_size(int key, fdf *data)
 {

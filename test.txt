@@ -1,6 +1,0 @@
-/usr/share/
-
-
-sudo ln -s /opt/clion-2020.1.1/bin/* /usr/local/bin
-
-

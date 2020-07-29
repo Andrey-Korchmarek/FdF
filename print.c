@@ -2,10 +2,9 @@
 // Created by Akihiko Pearl on 7/19/20.
 //
 
-#include "../fdf.h"
+#include "fdf.h"
 
-void	print_menu(t_fdf txt)
-{
+void	print_menu(fdf txt) {
     char *str;
 
     str = "keyboard -> button 'ESC': exit and force quit the mlx window";
