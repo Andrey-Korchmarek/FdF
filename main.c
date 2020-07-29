@@ -21,10 +21,6 @@ int	main(int argc, char **argv)
 {
 	t_fdf	karta;
 	int 	fd;
-#ifdef TEST
-	int i;
-	int j;
-#endif
 
 	if (argc != 2)
 		game_over(1);
@@ -41,5 +37,6 @@ int	main(int argc, char **argv)
 //	draw(karta);
 //	mlx_mouse_hook(&karta.win_ptr, mouse_press, data);
 	ft_free_fdf(&karta);
+	fd = deal_key(1);
 	return (0);
 }

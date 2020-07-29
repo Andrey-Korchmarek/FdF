@@ -21,6 +21,7 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <limits.h>
+# include <fcntl.h>
 
 typedef struct		s_list
 {
