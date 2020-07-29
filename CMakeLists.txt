@@ -18,11 +18,11 @@ FILE(GLOB SOURCES ./srcs/*.c )
 add_executable(FdF ${SOURCES} main.c fdf.h)
 
 add_subdirectory(libft)
-#target_link_libraries(FdF lib)
+target_link_libraries(FdF lib)
 
 add_library(mlx STATIC IMPORTED)
 set_property(TARGET mlx PROPERTY
         IMPORTED_LOCATION ${CMAKE_SOURCE_DIR}/minilibx_macos/libmlx.a)
 
-target_link_libraries(FdF lib mlx ${OPENGL} ${APPKIT})
+target_link_libraries(FdF mlx ${OPENGL} ${APPKIT})
 #target_link_libraries(FdF libft)

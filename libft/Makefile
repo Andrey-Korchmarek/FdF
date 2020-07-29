@@ -26,17 +26,17 @@ OFILES = $(patsubst %.c, %.o, $(FILES))
 all : $(NAME)
 
 %.o : %.c $(HED)
-	$(CC) -c $< -o $@ -I $(HEAD)
+	@$(CC) -c $< -o $@ -I $(HEAD)
 
 $(NAME) : $(OFILES)
 	ar rc $(NAME) $(OFILES)
 	ranlib $(NAME)
 
 %.o: %.c
-	$(CC) $(INCLUDE) $< -c -o $@
+	@$(CC) $(INCLUDE) $< -c -o $@
 
-$(OFILES) :
-	$(CC) -c $(CFILES) $(HEAD)
+# $(OFILES) :
+# 	$(CC) -c $(CFILES) $(HEAD)
 
 clean :
 	$(RM) $(OFILES)
