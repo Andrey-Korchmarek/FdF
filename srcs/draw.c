@@ -12,7 +12,7 @@ void isometric(float *x, float *y, int z)
     *y = (*x + *y) * sin(0.523599) - z;
 
 }
-void bresenham(float x, float y, float x1, float y1, t_fdf *data)
+void bresenham(float x, float y, float x1, float y1, t_fdf karta)
 {
     float x_step;
     float y_step;
@@ -20,25 +20,25 @@ void bresenham(float x, float y, float x1, float y1, t_fdf *data)
     int z;
     int z1;
 
-    z = data->z_matrix[(int)y][(int)x];
-    z1 = data->z_matrix[(int)y1][(int)x1];
+    z = karta.z_matrix[(int)y][(int)x];
+    z1 = karta.z_matrix[(int)y1][(int)x1];
 
-    x *= data->zoom;
-    y *= data->zoom;
-    x1 *= data->zoom;
-    y1 *= data->zoom;
+    x *= karta.zoom;
+    y *= karta.zoom;
+    x1 *= karta.zoom;
+    y1 *= karta.zoom;
 
 
-    (*data).color[(int)y][(int)x] = z ? 0xFFFF00 : 0xFFFFFF;
-	(*data).color[(int)y1][(int)x1] = z1 ? 0xFFFF00 : 0xFFFFFF;
+    karta.color[(int)y][(int)x] = z ? 0xFFFF00 : 0xFFFFFF;
+	karta.color[(int)y1][(int)x1] = z1 ? 0xFFFF00 : 0xFFFFFF;
 
     isometric(&x, &y, z);
     isometric(&x1, &y1, z1);
 
-    x += data->shift_x;
-    y += data->shift_y;
-    x1 += data->shift_x;
-    y1 += data->shift_y;
+    x += karta.shift_x;
+    y += karta.shift_y;
+    x1 += karta.shift_x;
+    y1 += karta.shift_y;
 
     x_step = x1 - x;
     y_step = y1 - y;
@@ -48,28 +48,28 @@ void bresenham(float x, float y, float x1, float y1, t_fdf *data)
     y_step /= max;
     while ((int)(x - x1) || (int)(y-y1))
     {
-        mlx_pixel_put(data->mlx_ptr, data->win_ptr, x, y, (*data).color[(int)y][(int)x]);
+        mlx_pixel_put(karta.mlx_ptr, karta.win_ptr, x, y, karta.color[(int)y][(int)x]);
         x += x_step;
         y += y_step;
     }
 }
 
-void draw(t_fdf *data)
+void draw(t_fdf karta)
 {
     int x;
     int y;
 
-    print_menu(*data);
+    print_menu(karta);
     y = 0;
-    while (y < data->height)
+    while (y < karta.height)
     {
         x = 0;
-        while (x < data->width)
+        while (x < karta.width)
         {
-            if (x < data->width - 1)
-                bresenham(x, y, x + 1, y, data);
-            if (y < data->height - 1)
-                bresenham(x, y, x, y + 1, data);
+            if (x < karta.width - 1)
+                bresenham(x, y, x + 1, y, karta);
+            if (y < karta.height - 1)
+                bresenham(x, y, x, y + 1, karta);
             x++;
         }
         y++;

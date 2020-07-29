@@ -37,13 +37,14 @@ int	main(int argc, char **argv)
 //	#endif
 //	set_default(&karta);
 
-	karta.mlx_ptr = mlx_init();
-	karta.win_ptr = mlx_new_window(karta.mlx_ptr, 1000, 1000, "FDF");
-
+//	karta.mlx_ptr = mlx_init();
+//	karta.win_ptr = mlx_new_window(karta.mlx_ptr, 1000, 1000, "FDF");
+//
 //	bresenham(10, 10, 500, 300, &karta);
-	mlx_key_hook(&karta.win_ptr, deal_key, NULL);//data  i.o NULL
-	mlx_loop(&karta.mlx_ptr);
-//	draw(&karta);
+//	mlx_key_hook(&karta.win_ptr, deal_key, NULL);//data  i.o NULL
+//	mlx_loop(&karta.mlx_ptr);
+//	draw(karta);
+
 
 //	mlx_mouse_hook(&karta.win_ptr, mouse_press, data);
 

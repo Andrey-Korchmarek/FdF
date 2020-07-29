@@ -21,7 +21,6 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <limits.h>
-# include <fcntl.h>
 
 typedef struct		s_list
 {
@@ -112,9 +111,10 @@ int					ft_ishexlow(int c);
 int					ft_ishex(int c);
 int					ft_ispoint(int c);
 int					ft_ismark(int c);
-int					ft_atoi_base(const char *str, int base);
+//int					ft_atoi_base(const char *str, int base);
+int		ft_atoi_base(const char *str, int base);
 void				ft_free_array(int ***as);
 void				ft_free_matrix(char ***as);
-int					ft_open_read(char *name);
+int                 ft_open_read(char *name);
 
 #endif
