@@ -14,12 +14,12 @@
 
 int	ft_open_read(char *name)
 {
-    int		fd;
-    char	*buf;
+	int		fd;
+	char	*buf;
 
-    buf = NULL;
-    fd = open(name, O_RDONLY, 0);
-    if (fd < 0 || read(fd, buf, 0) < 0)
-        return (0);
-    return (fd);
+	buf = NULL;
+	fd = open(name, O_RDONLY, 0);
+	if (fd < 0 || read(fd, buf, 0) < 0)
+		return (0);
+	return (fd);
 }
