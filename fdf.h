@@ -7,6 +7,11 @@
 
 #include "libft/libft.h"
 #include "minilibx_macos/mlx.h"
+typedef struct  s_map
+{
+    int **z_matrix;
+    int color;
+}               t_map;
 
 typedef struct
 {
@@ -23,6 +28,7 @@ typedef struct
 
     int			win_x;
     int			win_y;
+    struct s_map    map;
 }           fdf;
 
 void read_file(char *file_name, fdf *data);

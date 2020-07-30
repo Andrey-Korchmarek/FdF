@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: Nik <Nik@student.42.fr>                    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/03 18:26:04 by vinograd          #+#    #+#             */
-/*   Updated: 2019/09/27 15:09:00 by Nik              ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #ifndef LIBFT_H
 # define LIBFT_H
 # define BUFF_SIZE 10
@@ -19,6 +7,7 @@
 # include <fcntl.h>
 # include <stdarg.h>
 # include <wchar.h>
+# include <stdio.h>
 # define MAX(A, B) (A > B ? A : B)
 # define MIN(A, B) (A > B ? B : A)
 
@@ -134,20 +123,20 @@ char			*ft_stradd(char *str, char ch);
 ** Extra functions II
 */
 int				get_next_line(const int fd, char **line);
-int				ft_printf(const char *format, ...);
-char			*ft_sprintf(const char *format, ...);
-int				ft_arrayfree(char **arr);
-int				ft_arraylen(char **arr);
+//int				ft_printf(const char *format, ...);
+//char			*ft_sprintf(const char *format, ...);
+//int				ft_arrayfree(char **arr);
+//int				ft_arraylen(char **arr);
 /*
 ** Array int library
 */
-int				*arr_new(char *arr);
-int				arr_len(int *arr);
-int				arr_get(int *arr, int index);
-void			arr_set(int *arr, int index, int nbr);
-void			arr_del(int *arr, int index, ...);
-void			arr_print(int *arr);
-void			arr_add(int **arr, int index, int nbr);
-void			arr_cat(int **arr, char *addon);
+//int				*arr_new(char *arr);
+//int				arr_len(int *arr);
+//int				arr_get(int *arr, int index);
+//void			arr_set(int *arr, int index, int nbr);
+//void			arr_del(int *arr, int index, ...);
+//void			arr_print(int *arr);
+//void			arr_add(int **arr, int index, int nbr);
+//void			arr_cat(int **arr, char *addon);
 
 #endif

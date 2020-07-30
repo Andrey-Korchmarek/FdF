@@ -6,7 +6,6 @@
 
 int deal_key(int button, fdf *data)
 {
-//    printf("%d\n", button);
     if (button == 126) // up button
         data->shift_y -= 10;
     if (button == 125) // down
@@ -32,9 +31,6 @@ int deal_key(int button, fdf *data)
 
 int		mouse_press(int button, int x, int y, fdf *data)
 {
-//    x++;
-//    y++;
-//    printf("%d\n", button);
     if (button == 1 || button == 2)
     {
         if (button == 2)
@@ -60,7 +56,7 @@ int		mouse_press(int button, int x, int y, fdf *data)
 
 void	set_default(fdf *data)
 {
-    data->zoom = 20;
+    data->zoom = 8;
 //    param->z_scale = 1;
 //    param->is_isometric = 1;
 //    param->angle = 0.523599;
@@ -80,7 +76,7 @@ int main(int argc, char **argv)
     {
         char *txt;
         txt = "Use this command: ./fdf testmap.fdf";
-        ft_printf("%s\n", txt );
+        printf("%s\n", txt );
         return (0);
     }
     data = (fdf*)malloc(sizeof(fdf));

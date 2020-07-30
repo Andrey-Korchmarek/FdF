@@ -12,7 +12,7 @@ void isometric(float *x, float *y, int z)
 //    *x = (*x - *y) * cos(0.8);
 //   *y = (*x + *y) * sin(0.8) - z;
     *x = (*x - *y) * cos(0.523599);
-    *y = (*x + *y) * sin(0.523599) - z;
+    *y = (*x + *y) * sin(0.523599) - z * 3;
 
 }
 void bresenham(float x, float y, float x1, float y1, fdf *data)
