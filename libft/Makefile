@@ -1,7 +1,6 @@
 NAME=libft.a
 
 SRCS=*.c
-# SRCS=*.c ft_printf/*.c array_int/*.c
 
 OBJECTS=*.o
 
