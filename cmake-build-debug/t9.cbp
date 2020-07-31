@@ -8,47 +8,47 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/Users/apearl/Desktop/FdF/fdf4/cmake-build-debug"/>
+				<Option working_dir="/Users/mashley/Desktop/apearl/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/apearl/Desktop/FdF/fdf4/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/apearl/Desktop/FdF/fdf4/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/apearl/Desktop/FdF/fdf4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/apearl/Desktop/FdF/fdf4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/mashley/Desktop/apearl/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/mashley/Desktop/apearl/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/mashley/Desktop/apearl/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/mashley/Desktop/apearl/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/Users/apearl/Desktop/FdF/fdf4/cmake-build-debug"/>
+				<Option working_dir="/Users/mashley/Desktop/apearl/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/apearl/Desktop/FdF/fdf4/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/apearl/Desktop/FdF/fdf4/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/apearl/Desktop/FdF/fdf4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/apearl/Desktop/FdF/fdf4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/mashley/Desktop/apearl/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/mashley/Desktop/apearl/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/mashley/Desktop/apearl/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/mashley/Desktop/apearl/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/Users/apearl/Desktop/FdF/fdf4/cmake-build-debug"/>
+				<Option working_dir="/Users/mashley/Desktop/apearl/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/apearl/Desktop/FdF/fdf4/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/apearl/Desktop/FdF/fdf4/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/apearl/Desktop/FdF/fdf4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/apearl/Desktop/FdF/fdf4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/mashley/Desktop/apearl/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/mashley/Desktop/apearl/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/mashley/Desktop/apearl/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/mashley/Desktop/apearl/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="t9">
-				<Option output="/Users/apearl/Desktop/FdF/fdf4/cmake-build-debug/t9" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/apearl/Desktop/FdF/fdf4/cmake-build-debug"/>
+				<Option output="/Users/mashley/Desktop/apearl/cmake-build-debug/t9" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mashley/Desktop/apearl/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Users/apearl/Desktop/FdF/fdf4/."/>
-					<Add directory="/Users/apearl/Desktop/FdF/fdf4/libft"/>
-					<Add directory="/Users/apearl/Desktop/FdF/fdf4/libft/array_int"/>
-					<Add directory="/Users/apearl/Desktop/FdF/fdf4/libft/ft_printf"/>
-					<Add directory="/Users/apearl/Desktop/FdF/fdf4/minilibx_macos"/>
+					<Add directory="/Users/mashley/Desktop/apearl/."/>
+					<Add directory="/Users/mashley/Desktop/apearl/libft"/>
+					<Add directory="/Users/mashley/Desktop/apearl/libft/array_int"/>
+					<Add directory="/Users/mashley/Desktop/apearl/libft/ft_printf"/>
+					<Add directory="/Users/mashley/Desktop/apearl/minilibx_macos"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.0/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
@@ -56,24 +56,24 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/apearl/Desktop/FdF/fdf4/cmake-build-debug/Makefile&quot;  VERBOSE=1 t9"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/apearl/Desktop/FdF/fdf4/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/apearl/Desktop/FdF/fdf4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/apearl/Desktop/FdF/fdf4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/mashley/Desktop/apearl/cmake-build-debug/Makefile&quot;  VERBOSE=1 t9"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/mashley/Desktop/apearl/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/mashley/Desktop/apearl/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/mashley/Desktop/apearl/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="t9/fast">
-				<Option output="/Users/apearl/Desktop/FdF/fdf4/cmake-build-debug/t9" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/apearl/Desktop/FdF/fdf4/cmake-build-debug"/>
+				<Option output="/Users/mashley/Desktop/apearl/cmake-build-debug/t9" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mashley/Desktop/apearl/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Users/apearl/Desktop/FdF/fdf4/."/>
-					<Add directory="/Users/apearl/Desktop/FdF/fdf4/libft"/>
-					<Add directory="/Users/apearl/Desktop/FdF/fdf4/libft/array_int"/>
-					<Add directory="/Users/apearl/Desktop/FdF/fdf4/libft/ft_printf"/>
-					<Add directory="/Users/apearl/Desktop/FdF/fdf4/minilibx_macos"/>
+					<Add directory="/Users/mashley/Desktop/apearl/."/>
+					<Add directory="/Users/mashley/Desktop/apearl/libft"/>
+					<Add directory="/Users/mashley/Desktop/apearl/libft/array_int"/>
+					<Add directory="/Users/mashley/Desktop/apearl/libft/ft_printf"/>
+					<Add directory="/Users/mashley/Desktop/apearl/minilibx_macos"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.0/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
@@ -81,335 +81,335 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/apearl/Desktop/FdF/fdf4/cmake-build-debug/Makefile&quot;  VERBOSE=1 t9/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/apearl/Desktop/FdF/fdf4/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/apearl/Desktop/FdF/fdf4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/apearl/Desktop/FdF/fdf4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/mashley/Desktop/apearl/cmake-build-debug/Makefile&quot;  VERBOSE=1 t9/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/mashley/Desktop/apearl/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/mashley/Desktop/apearl/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/mashley/Desktop/apearl/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/apearl/Desktop/FdF/fdf4/colorset.c">
+		<Unit filename="/Users/mashley/Desktop/apearl/fdf.h">
 			<Option target="t9"/>
 		</Unit>
-		<Unit filename="/Users/apearl/Desktop/FdF/fdf4/fdf.h">
+		<Unit filename="/Users/mashley/Desktop/apearl/libft/array_int/arr_add.c">
 			<Option target="t9"/>
 		</Unit>
-		<Unit filename="/Users/apearl/Desktop/FdF/fdf4/libft/array_int/arr_add.c">
+		<Unit filename="/Users/mashley/Desktop/apearl/libft/array_int/arr_cat.c">
 			<Option target="t9"/>
 		</Unit>
-		<Unit filename="/Users/apearl/Desktop/FdF/fdf4/libft/array_int/arr_cat.c">
+		<Unit filename="/Users/mashley/Desktop/apearl/libft/array_int/arr_del.c">
 			<Option target="t9"/>
 		</Unit>
-		<Unit filename="/Users/apearl/Desktop/FdF/fdf4/libft/array_int/arr_del.c">
+		<Unit filename="/Users/mashley/Desktop/apearl/libft/array_int/arr_get.c">
 			<Option target="t9"/>
 		</Unit>
-		<Unit filename="/Users/apearl/Desktop/FdF/fdf4/libft/array_int/arr_get.c">
+		<Unit filename="/Users/mashley/Desktop/apearl/libft/array_int/arr_len.c">
 			<Option target="t9"/>
 		</Unit>
-		<Unit filename="/Users/apearl/Desktop/FdF/fdf4/libft/array_int/arr_len.c">
+		<Unit filename="/Users/mashley/Desktop/apearl/libft/array_int/arr_new.c">
 			<Option target="t9"/>
 		</Unit>
-		<Unit filename="/Users/apearl/Desktop/FdF/fdf4/libft/array_int/arr_new.c">
+		<Unit filename="/Users/mashley/Desktop/apearl/libft/array_int/arr_print.c">
 			<Option target="t9"/>
 		</Unit>
-		<Unit filename="/Users/apearl/Desktop/FdF/fdf4/libft/array_int/arr_print.c">
+		<Unit filename="/Users/mashley/Desktop/apearl/libft/array_int/arr_set.c">
 			<Option target="t9"/>
 		</Unit>
-		<Unit filename="/Users/apearl/Desktop/FdF/fdf4/libft/array_int/arr_set.c">
+		<Unit filename="/Users/mashley/Desktop/apearl/libft/array_int/array_int.h">
 			<Option target="t9"/>
 		</Unit>
-		<Unit filename="/Users/apearl/Desktop/FdF/fdf4/libft/array_int/array_int.h">
+		<Unit filename="/Users/mashley/Desktop/apearl/libft/array_int/check_arr_input.c">
 			<Option target="t9"/>
 		</Unit>
-		<Unit filename="/Users/apearl/Desktop/FdF/fdf4/libft/array_int/check_arr_input.c">
+		<Unit filename="/Users/mashley/Desktop/apearl/libft/ft_arrays.c">
 			<Option target="t9"/>
 		</Unit>
-		<Unit filename="/Users/apearl/Desktop/FdF/fdf4/libft/ft_arrays.c">
+		<Unit filename="/Users/mashley/Desktop/apearl/libft/ft_atoi.c">
 			<Option target="t9"/>
 		</Unit>
-		<Unit filename="/Users/apearl/Desktop/FdF/fdf4/libft/ft_atoi.c">
+		<Unit filename="/Users/mashley/Desktop/apearl/libft/ft_atoi_long.c">
 			<Option target="t9"/>
 		</Unit>
-		<Unit filename="/Users/apearl/Desktop/FdF/fdf4/libft/ft_atoi_long.c">
+		<Unit filename="/Users/mashley/Desktop/apearl/libft/ft_bzero.c">
 			<Option target="t9"/>
 		</Unit>
-		<Unit filename="/Users/apearl/Desktop/FdF/fdf4/libft/ft_bzero.c">
+		<Unit filename="/Users/mashley/Desktop/apearl/libft/ft_ftoa.c">
 			<Option target="t9"/>
 		</Unit>
-		<Unit filename="/Users/apearl/Desktop/FdF/fdf4/libft/ft_ftoa.c">
+		<Unit filename="/Users/mashley/Desktop/apearl/libft/ft_is_integer.c">
 			<Option target="t9"/>
 		</Unit>
-		<Unit filename="/Users/apearl/Desktop/FdF/fdf4/libft/ft_is_integer.c">
+		<Unit filename="/Users/mashley/Desktop/apearl/libft/ft_isalnum.c">
 			<Option target="t9"/>
 		</Unit>
-		<Unit filename="/Users/apearl/Desktop/FdF/fdf4/libft/ft_isalnum.c">
+		<Unit filename="/Users/mashley/Desktop/apearl/libft/ft_isalpha.c">
 			<Option target="t9"/>
 		</Unit>
-		<Unit filename="/Users/apearl/Desktop/FdF/fdf4/libft/ft_isalpha.c">
+		<Unit filename="/Users/mashley/Desktop/apearl/libft/ft_isascii.c">
 			<Option target="t9"/>
 		</Unit>
-		<Unit filename="/Users/apearl/Desktop/FdF/fdf4/libft/ft_isascii.c">
+		<Unit filename="/Users/mashley/Desktop/apearl/libft/ft_isdigit.c">
 			<Option target="t9"/>
 		</Unit>
-		<Unit filename="/Users/apearl/Desktop/FdF/fdf4/libft/ft_isdigit.c">
+		<Unit filename="/Users/mashley/Desktop/apearl/libft/ft_isprint.c">
 			<Option target="t9"/>
 		</Unit>
-		<Unit filename="/Users/apearl/Desktop/FdF/fdf4/libft/ft_isprint.c">
+		<Unit filename="/Users/mashley/Desktop/apearl/libft/ft_itoa.c">
 			<Option target="t9"/>
 		</Unit>
-		<Unit filename="/Users/apearl/Desktop/FdF/fdf4/libft/ft_itoa.c">
+		<Unit filename="/Users/mashley/Desktop/apearl/libft/ft_itoa_base.c">
 			<Option target="t9"/>
 		</Unit>
-		<Unit filename="/Users/apearl/Desktop/FdF/fdf4/libft/ft_itoa_base.c">
+		<Unit filename="/Users/mashley/Desktop/apearl/libft/ft_itoa_big.c">
 			<Option target="t9"/>
 		</Unit>
-		<Unit filename="/Users/apearl/Desktop/FdF/fdf4/libft/ft_itoa_big.c">
+		<Unit filename="/Users/mashley/Desktop/apearl/libft/ft_lstadd.c">
 			<Option target="t9"/>
 		</Unit>
-		<Unit filename="/Users/apearl/Desktop/FdF/fdf4/libft/ft_lstadd.c">
+		<Unit filename="/Users/mashley/Desktop/apearl/libft/ft_lstdel.c">
 			<Option target="t9"/>
 		</Unit>
-		<Unit filename="/Users/apearl/Desktop/FdF/fdf4/libft/ft_lstdel.c">
+		<Unit filename="/Users/mashley/Desktop/apearl/libft/ft_lstdelone.c">
 			<Option target="t9"/>
 		</Unit>
-		<Unit filename="/Users/apearl/Desktop/FdF/fdf4/libft/ft_lstdelone.c">
+		<Unit filename="/Users/mashley/Desktop/apearl/libft/ft_lstiter.c">
 			<Option target="t9"/>
 		</Unit>
-		<Unit filename="/Users/apearl/Desktop/FdF/fdf4/libft/ft_lstiter.c">
+		<Unit filename="/Users/mashley/Desktop/apearl/libft/ft_lstmap.c">
 			<Option target="t9"/>
 		</Unit>
-		<Unit filename="/Users/apearl/Desktop/FdF/fdf4/libft/ft_lstmap.c">
+		<Unit filename="/Users/mashley/Desktop/apearl/libft/ft_lstnew.c">
 			<Option target="t9"/>
 		</Unit>
-		<Unit filename="/Users/apearl/Desktop/FdF/fdf4/libft/ft_lstnew.c">
+		<Unit filename="/Users/mashley/Desktop/apearl/libft/ft_memalloc.c">
 			<Option target="t9"/>
 		</Unit>
-		<Unit filename="/Users/apearl/Desktop/FdF/fdf4/libft/ft_memalloc.c">
+		<Unit filename="/Users/mashley/Desktop/apearl/libft/ft_memccpy.c">
 			<Option target="t9"/>
 		</Unit>
-		<Unit filename="/Users/apearl/Desktop/FdF/fdf4/libft/ft_memccpy.c">
+		<Unit filename="/Users/mashley/Desktop/apearl/libft/ft_memchr.c">
 			<Option target="t9"/>
 		</Unit>
-		<Unit filename="/Users/apearl/Desktop/FdF/fdf4/libft/ft_memchr.c">
+		<Unit filename="/Users/mashley/Desktop/apearl/libft/ft_memcmp.c">
 			<Option target="t9"/>
 		</Unit>
-		<Unit filename="/Users/apearl/Desktop/FdF/fdf4/libft/ft_memcmp.c">
+		<Unit filename="/Users/mashley/Desktop/apearl/libft/ft_memcpy.c">
 			<Option target="t9"/>
 		</Unit>
-		<Unit filename="/Users/apearl/Desktop/FdF/fdf4/libft/ft_memcpy.c">
+		<Unit filename="/Users/mashley/Desktop/apearl/libft/ft_memdel.c">
 			<Option target="t9"/>
 		</Unit>
-		<Unit filename="/Users/apearl/Desktop/FdF/fdf4/libft/ft_memdel.c">
+		<Unit filename="/Users/mashley/Desktop/apearl/libft/ft_memdup.c">
 			<Option target="t9"/>
 		</Unit>
-		<Unit filename="/Users/apearl/Desktop/FdF/fdf4/libft/ft_memdup.c">
+		<Unit filename="/Users/mashley/Desktop/apearl/libft/ft_memmove.c">
 			<Option target="t9"/>
 		</Unit>
-		<Unit filename="/Users/apearl/Desktop/FdF/fdf4/libft/ft_memmove.c">
+		<Unit filename="/Users/mashley/Desktop/apearl/libft/ft_memset.c">
 			<Option target="t9"/>
 		</Unit>
-		<Unit filename="/Users/apearl/Desktop/FdF/fdf4/libft/ft_memset.c">
+		<Unit filename="/Users/mashley/Desktop/apearl/libft/ft_printf/color_redactor.c">
 			<Option target="t9"/>
 		</Unit>
-		<Unit filename="/Users/apearl/Desktop/FdF/fdf4/libft/ft_printf/color_redactor.c">
+		<Unit filename="/Users/mashley/Desktop/apearl/libft/ft_printf/digit_redactor.c">
 			<Option target="t9"/>
 		</Unit>
-		<Unit filename="/Users/apearl/Desktop/FdF/fdf4/libft/ft_printf/digit_redactor.c">
+		<Unit filename="/Users/mashley/Desktop/apearl/libft/ft_printf/flag_analazer.c">
 			<Option target="t9"/>
 		</Unit>
-		<Unit filename="/Users/apearl/Desktop/FdF/fdf4/libft/ft_printf/flag_analazer.c">
+		<Unit filename="/Users/mashley/Desktop/apearl/libft/ft_printf/ft_printf.c">
 			<Option target="t9"/>
 		</Unit>
-		<Unit filename="/Users/apearl/Desktop/FdF/fdf4/libft/ft_printf/ft_printf.c">
+		<Unit filename="/Users/mashley/Desktop/apearl/libft/ft_printf/ft_printf.h">
 			<Option target="t9"/>
 		</Unit>
-		<Unit filename="/Users/apearl/Desktop/FdF/fdf4/libft/ft_printf/ft_printf.h">
+		<Unit filename="/Users/mashley/Desktop/apearl/libft/ft_printf/ft_sprintf.c">
 			<Option target="t9"/>
 		</Unit>
-		<Unit filename="/Users/apearl/Desktop/FdF/fdf4/libft/ft_printf/ft_sprintf.c">
+		<Unit filename="/Users/mashley/Desktop/apearl/libft/ft_printf/specifier.c">
 			<Option target="t9"/>
 		</Unit>
-		<Unit filename="/Users/apearl/Desktop/FdF/fdf4/libft/ft_printf/specifier.c">
+		<Unit filename="/Users/mashley/Desktop/apearl/libft/ft_printf/str_redactor.c">
 			<Option target="t9"/>
 		</Unit>
-		<Unit filename="/Users/apearl/Desktop/FdF/fdf4/libft/ft_printf/str_redactor.c">
+		<Unit filename="/Users/mashley/Desktop/apearl/libft/ft_putchar.c">
 			<Option target="t9"/>
 		</Unit>
-		<Unit filename="/Users/apearl/Desktop/FdF/fdf4/libft/ft_putchar.c">
+		<Unit filename="/Users/mashley/Desktop/apearl/libft/ft_putchar_fd.c">
 			<Option target="t9"/>
 		</Unit>
-		<Unit filename="/Users/apearl/Desktop/FdF/fdf4/libft/ft_putchar_fd.c">
+		<Unit filename="/Users/mashley/Desktop/apearl/libft/ft_putendl.c">
 			<Option target="t9"/>
 		</Unit>
-		<Unit filename="/Users/apearl/Desktop/FdF/fdf4/libft/ft_putendl.c">
+		<Unit filename="/Users/mashley/Desktop/apearl/libft/ft_putendl_fd.c">
 			<Option target="t9"/>
 		</Unit>
-		<Unit filename="/Users/apearl/Desktop/FdF/fdf4/libft/ft_putendl_fd.c">
+		<Unit filename="/Users/mashley/Desktop/apearl/libft/ft_putnbr.c">
 			<Option target="t9"/>
 		</Unit>
-		<Unit filename="/Users/apearl/Desktop/FdF/fdf4/libft/ft_putnbr.c">
+		<Unit filename="/Users/mashley/Desktop/apearl/libft/ft_putnbr_fd.c">
 			<Option target="t9"/>
 		</Unit>
-		<Unit filename="/Users/apearl/Desktop/FdF/fdf4/libft/ft_putnbr_fd.c">
+		<Unit filename="/Users/mashley/Desktop/apearl/libft/ft_putstr.c">
 			<Option target="t9"/>
 		</Unit>
-		<Unit filename="/Users/apearl/Desktop/FdF/fdf4/libft/ft_putstr.c">
+		<Unit filename="/Users/mashley/Desktop/apearl/libft/ft_putstr_fd.c">
 			<Option target="t9"/>
 		</Unit>
-		<Unit filename="/Users/apearl/Desktop/FdF/fdf4/libft/ft_putstr_fd.c">
+		<Unit filename="/Users/mashley/Desktop/apearl/libft/ft_stradd.c">
 			<Option target="t9"/>
 		</Unit>
-		<Unit filename="/Users/apearl/Desktop/FdF/fdf4/libft/ft_stradd.c">
+		<Unit filename="/Users/mashley/Desktop/apearl/libft/ft_strcat.c">
 			<Option target="t9"/>
 		</Unit>
-		<Unit filename="/Users/apearl/Desktop/FdF/fdf4/libft/ft_strcat.c">
+		<Unit filename="/Users/mashley/Desktop/apearl/libft/ft_strchr.c">
 			<Option target="t9"/>
 		</Unit>
-		<Unit filename="/Users/apearl/Desktop/FdF/fdf4/libft/ft_strchr.c">
+		<Unit filename="/Users/mashley/Desktop/apearl/libft/ft_strclr.c">
 			<Option target="t9"/>
 		</Unit>
-		<Unit filename="/Users/apearl/Desktop/FdF/fdf4/libft/ft_strclr.c">
+		<Unit filename="/Users/mashley/Desktop/apearl/libft/ft_strcmp.c">
 			<Option target="t9"/>
 		</Unit>
-		<Unit filename="/Users/apearl/Desktop/FdF/fdf4/libft/ft_strcmp.c">
+		<Unit filename="/Users/mashley/Desktop/apearl/libft/ft_strcpy.c">
 			<Option target="t9"/>
 		</Unit>
-		<Unit filename="/Users/apearl/Desktop/FdF/fdf4/libft/ft_strcpy.c">
+		<Unit filename="/Users/mashley/Desktop/apearl/libft/ft_strdel.c">
 			<Option target="t9"/>
 		</Unit>
-		<Unit filename="/Users/apearl/Desktop/FdF/fdf4/libft/ft_strdel.c">
+		<Unit filename="/Users/mashley/Desktop/apearl/libft/ft_strdup.c">
 			<Option target="t9"/>
 		</Unit>
-		<Unit filename="/Users/apearl/Desktop/FdF/fdf4/libft/ft_strdup.c">
+		<Unit filename="/Users/mashley/Desktop/apearl/libft/ft_strequ.c">
 			<Option target="t9"/>
 		</Unit>
-		<Unit filename="/Users/apearl/Desktop/FdF/fdf4/libft/ft_strequ.c">
+		<Unit filename="/Users/mashley/Desktop/apearl/libft/ft_strindex.c">
 			<Option target="t9"/>
 		</Unit>
-		<Unit filename="/Users/apearl/Desktop/FdF/fdf4/libft/ft_strindex.c">
+		<Unit filename="/Users/mashley/Desktop/apearl/libft/ft_striter.c">
 			<Option target="t9"/>
 		</Unit>
-		<Unit filename="/Users/apearl/Desktop/FdF/fdf4/libft/ft_striter.c">
+		<Unit filename="/Users/mashley/Desktop/apearl/libft/ft_striteri.c">
 			<Option target="t9"/>
 		</Unit>
-		<Unit filename="/Users/apearl/Desktop/FdF/fdf4/libft/ft_striteri.c">
+		<Unit filename="/Users/mashley/Desktop/apearl/libft/ft_strjoin.c">
 			<Option target="t9"/>
 		</Unit>
-		<Unit filename="/Users/apearl/Desktop/FdF/fdf4/libft/ft_strjoin.c">
+		<Unit filename="/Users/mashley/Desktop/apearl/libft/ft_strjoin_free.c">
 			<Option target="t9"/>
 		</Unit>
-		<Unit filename="/Users/apearl/Desktop/FdF/fdf4/libft/ft_strjoin_free.c">
+		<Unit filename="/Users/mashley/Desktop/apearl/libft/ft_strlcat.c">
 			<Option target="t9"/>
 		</Unit>
-		<Unit filename="/Users/apearl/Desktop/FdF/fdf4/libft/ft_strlcat.c">
+		<Unit filename="/Users/mashley/Desktop/apearl/libft/ft_strlen.c">
 			<Option target="t9"/>
 		</Unit>
-		<Unit filename="/Users/apearl/Desktop/FdF/fdf4/libft/ft_strlen.c">
+		<Unit filename="/Users/mashley/Desktop/apearl/libft/ft_strlower.c">
 			<Option target="t9"/>
 		</Unit>
-		<Unit filename="/Users/apearl/Desktop/FdF/fdf4/libft/ft_strlower.c">
+		<Unit filename="/Users/mashley/Desktop/apearl/libft/ft_strmap.c">
 			<Option target="t9"/>
 		</Unit>
-		<Unit filename="/Users/apearl/Desktop/FdF/fdf4/libft/ft_strmap.c">
+		<Unit filename="/Users/mashley/Desktop/apearl/libft/ft_strmapi.c">
 			<Option target="t9"/>
 		</Unit>
-		<Unit filename="/Users/apearl/Desktop/FdF/fdf4/libft/ft_strmapi.c">
+		<Unit filename="/Users/mashley/Desktop/apearl/libft/ft_strncat.c">
 			<Option target="t9"/>
 		</Unit>
-		<Unit filename="/Users/apearl/Desktop/FdF/fdf4/libft/ft_strncat.c">
+		<Unit filename="/Users/mashley/Desktop/apearl/libft/ft_strncmp.c">
 			<Option target="t9"/>
 		</Unit>
-		<Unit filename="/Users/apearl/Desktop/FdF/fdf4/libft/ft_strncmp.c">
+		<Unit filename="/Users/mashley/Desktop/apearl/libft/ft_strncpy.c">
 			<Option target="t9"/>
 		</Unit>
-		<Unit filename="/Users/apearl/Desktop/FdF/fdf4/libft/ft_strncpy.c">
+		<Unit filename="/Users/mashley/Desktop/apearl/libft/ft_strnequ.c">
 			<Option target="t9"/>
 		</Unit>
-		<Unit filename="/Users/apearl/Desktop/FdF/fdf4/libft/ft_strnequ.c">
+		<Unit filename="/Users/mashley/Desktop/apearl/libft/ft_strnew.c">
 			<Option target="t9"/>
 		</Unit>
-		<Unit filename="/Users/apearl/Desktop/FdF/fdf4/libft/ft_strnew.c">
+		<Unit filename="/Users/mashley/Desktop/apearl/libft/ft_strnstr.c">
 			<Option target="t9"/>
 		</Unit>
-		<Unit filename="/Users/apearl/Desktop/FdF/fdf4/libft/ft_strnstr.c">
+		<Unit filename="/Users/mashley/Desktop/apearl/libft/ft_strrchr.c">
 			<Option target="t9"/>
 		</Unit>
-		<Unit filename="/Users/apearl/Desktop/FdF/fdf4/libft/ft_strrchr.c">
+		<Unit filename="/Users/mashley/Desktop/apearl/libft/ft_strsplit.c">
 			<Option target="t9"/>
 		</Unit>
-		<Unit filename="/Users/apearl/Desktop/FdF/fdf4/libft/ft_strsplit.c">
+		<Unit filename="/Users/mashley/Desktop/apearl/libft/ft_strstr.c">
 			<Option target="t9"/>
 		</Unit>
-		<Unit filename="/Users/apearl/Desktop/FdF/fdf4/libft/ft_strstr.c">
+		<Unit filename="/Users/mashley/Desktop/apearl/libft/ft_strsub.c">
 			<Option target="t9"/>
 		</Unit>
-		<Unit filename="/Users/apearl/Desktop/FdF/fdf4/libft/ft_strsub.c">
+		<Unit filename="/Users/mashley/Desktop/apearl/libft/ft_strtrim.c">
 			<Option target="t9"/>
 		</Unit>
-		<Unit filename="/Users/apearl/Desktop/FdF/fdf4/libft/ft_strtrim.c">
+		<Unit filename="/Users/mashley/Desktop/apearl/libft/ft_strupper.c">
 			<Option target="t9"/>
 		</Unit>
-		<Unit filename="/Users/apearl/Desktop/FdF/fdf4/libft/ft_strupper.c">
+		<Unit filename="/Users/mashley/Desktop/apearl/libft/ft_swap.c">
 			<Option target="t9"/>
 		</Unit>
-		<Unit filename="/Users/apearl/Desktop/FdF/fdf4/libft/ft_swap.c">
+		<Unit filename="/Users/mashley/Desktop/apearl/libft/ft_swapi.c">
 			<Option target="t9"/>
 		</Unit>
-		<Unit filename="/Users/apearl/Desktop/FdF/fdf4/libft/ft_swapi.c">
+		<Unit filename="/Users/mashley/Desktop/apearl/libft/ft_tolower.c">
 			<Option target="t9"/>
 		</Unit>
-		<Unit filename="/Users/apearl/Desktop/FdF/fdf4/libft/ft_tolower.c">
+		<Unit filename="/Users/mashley/Desktop/apearl/libft/ft_toupper.c">
 			<Option target="t9"/>
 		</Unit>
-		<Unit filename="/Users/apearl/Desktop/FdF/fdf4/libft/ft_toupper.c">
+		<Unit filename="/Users/mashley/Desktop/apearl/libft/ft_wdcounter.c">
 			<Option target="t9"/>
 		</Unit>
-		<Unit filename="/Users/apearl/Desktop/FdF/fdf4/libft/ft_wdcounter.c">
+		<Unit filename="/Users/mashley/Desktop/apearl/libft/get_next_line.c">
 			<Option target="t9"/>
 		</Unit>
-		<Unit filename="/Users/apearl/Desktop/FdF/fdf4/libft/get_next_line.c">
+		<Unit filename="/Users/mashley/Desktop/apearl/libft/libft.h">
 			<Option target="t9"/>
 		</Unit>
-		<Unit filename="/Users/apearl/Desktop/FdF/fdf4/libft/libft.h">
+		<Unit filename="/Users/mashley/Desktop/apearl/main.c">
 			<Option target="t9"/>
 		</Unit>
-		<Unit filename="/Users/apearl/Desktop/FdF/fdf4/main.c">
+		<Unit filename="/Users/mashley/Desktop/apearl/minilibx_macos/font.c">
 			<Option target="t9"/>
 		</Unit>
-		<Unit filename="/Users/apearl/Desktop/FdF/fdf4/minilibx_macos/font.c">
+		<Unit filename="/Users/mashley/Desktop/apearl/minilibx_macos/mlx.h">
 			<Option target="t9"/>
 		</Unit>
-		<Unit filename="/Users/apearl/Desktop/FdF/fdf4/minilibx_macos/mlx.h">
+		<Unit filename="/Users/mashley/Desktop/apearl/minilibx_macos/mlx_init_loop.m">
 			<Option target="t9"/>
 		</Unit>
-		<Unit filename="/Users/apearl/Desktop/FdF/fdf4/minilibx_macos/mlx_init_loop.m">
+		<Unit filename="/Users/mashley/Desktop/apearl/minilibx_macos/mlx_int.h">
 			<Option target="t9"/>
 		</Unit>
-		<Unit filename="/Users/apearl/Desktop/FdF/fdf4/minilibx_macos/mlx_int.h">
+		<Unit filename="/Users/mashley/Desktop/apearl/minilibx_macos/mlx_int_str_to_wordtab.c">
 			<Option target="t9"/>
 		</Unit>
-		<Unit filename="/Users/apearl/Desktop/FdF/fdf4/minilibx_macos/mlx_int_str_to_wordtab.c">
+		<Unit filename="/Users/mashley/Desktop/apearl/minilibx_macos/mlx_new_image.m">
 			<Option target="t9"/>
 		</Unit>
-		<Unit filename="/Users/apearl/Desktop/FdF/fdf4/minilibx_macos/mlx_new_image.m">
+		<Unit filename="/Users/mashley/Desktop/apearl/minilibx_macos/mlx_new_window.h">
 			<Option target="t9"/>
 		</Unit>
-		<Unit filename="/Users/apearl/Desktop/FdF/fdf4/minilibx_macos/mlx_new_window.h">
+		<Unit filename="/Users/mashley/Desktop/apearl/minilibx_macos/mlx_new_window.m">
 			<Option target="t9"/>
 		</Unit>
-		<Unit filename="/Users/apearl/Desktop/FdF/fdf4/minilibx_macos/mlx_new_window.m">
+		<Unit filename="/Users/mashley/Desktop/apearl/minilibx_macos/mlx_rgb.c">
 			<Option target="t9"/>
 		</Unit>
-		<Unit filename="/Users/apearl/Desktop/FdF/fdf4/minilibx_macos/mlx_shaders.c">
+		<Unit filename="/Users/mashley/Desktop/apearl/minilibx_macos/mlx_shaders.c">
 			<Option target="t9"/>
 		</Unit>
-		<Unit filename="/Users/apearl/Desktop/FdF/fdf4/minilibx_macos/mlx_xpm.c">
+		<Unit filename="/Users/mashley/Desktop/apearl/minilibx_macos/mlx_xpm.c">
 			<Option target="t9"/>
 		</Unit>
-		<Unit filename="/Users/apearl/Desktop/FdF/fdf4/read_file.c">
+		<Unit filename="/Users/mashley/Desktop/apearl/read_file.c">
 			<Option target="t9"/>
 		</Unit>
-		<Unit filename="/Users/apearl/Desktop/FdF/fdf4/CMakeLists.txt">
+		<Unit filename="/Users/mashley/Desktop/apearl/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

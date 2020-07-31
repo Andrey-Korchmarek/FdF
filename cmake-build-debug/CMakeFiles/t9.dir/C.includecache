@@ -6,3 +6,27 @@
 
 #IncludeRegexTransform: 
 
+/Users/mashley/Desktop/apearl/minilibx_macos/mlx_int.h
+
+/Users/mashley/Desktop/apearl/minilibx_macos/mlx_rgb.c
+
+/Users/mashley/Desktop/apearl/minilibx_macos/mlx_xpm.c
+OpenGL/gl3.h
+-
+stdlib.h
+-
+stdio.h
+-
+sys/mman.h
+-
+unistd.h
+-
+fcntl.h
+-
+string.h
+-
+mlx_int.h
+/Users/mashley/Desktop/apearl/minilibx_macos/mlx_int.h
+mlx_rgb.c
+/Users/mashley/Desktop/apearl/minilibx_macos/mlx_rgb.c
+

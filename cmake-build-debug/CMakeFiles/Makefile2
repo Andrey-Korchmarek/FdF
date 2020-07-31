@@ -44,55 +44,102 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/apearl/Desktop/FdF/fdf4
+CMAKE_SOURCE_DIR = /Users/mashley/Desktop/apearl
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/apearl/Desktop/FdF/fdf4/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/mashley/Desktop/apearl/cmake-build-debug
 
 #=============================================================================
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/t9.dir/all
+all: CMakeFiles/FdF.dir/all
+all: libft/all
 
 .PHONY : all
 
 # The main recursive "preinstall" target.
-preinstall:
+preinstall: libft/preinstall
 
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/t9.dir/clean
+clean: CMakeFiles/FdF.dir/clean
+clean: libft/clean
 
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/t9.dir
+# Directory level rules for directory libft
+
+# Recursive "all" directory target.
+libft/all: libft/CMakeFiles/lib.dir/all
+
+.PHONY : libft/all
+
+# Recursive "preinstall" directory target.
+libft/preinstall:
+
+.PHONY : libft/preinstall
+
+# Recursive "clean" directory target.
+libft/clean: libft/CMakeFiles/lib.dir/clean
+
+.PHONY : libft/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/FdF.dir
 
 # All Build rule for target.
-CMakeFiles/t9.dir/all:
-	$(MAKE) -f CMakeFiles/t9.dir/build.make CMakeFiles/t9.dir/depend
-	$(MAKE) -f CMakeFiles/t9.dir/build.make CMakeFiles/t9.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/apearl/Desktop/FdF/fdf4/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100 "Built target t9"
-.PHONY : CMakeFiles/t9.dir/all
+CMakeFiles/FdF.dir/all: libft/CMakeFiles/lib.dir/all
+	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/depend
+	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/mashley/Desktop/apearl/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6 "Built target FdF"
+.PHONY : CMakeFiles/FdF.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/t9.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/apearl/Desktop/FdF/fdf4/cmake-build-debug/CMakeFiles 100
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/t9.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/apearl/Desktop/FdF/fdf4/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/t9.dir/rule
+CMakeFiles/FdF.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/mashley/Desktop/apearl/cmake-build-debug/CMakeFiles 81
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/FdF.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/mashley/Desktop/apearl/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/FdF.dir/rule
 
 # Convenience name for target.
-t9: CMakeFiles/t9.dir/rule
+FdF: CMakeFiles/FdF.dir/rule
 
-.PHONY : t9
+.PHONY : FdF
 
 # clean rule for target.
-CMakeFiles/t9.dir/clean:
-	$(MAKE) -f CMakeFiles/t9.dir/build.make CMakeFiles/t9.dir/clean
-.PHONY : CMakeFiles/t9.dir/clean
+CMakeFiles/FdF.dir/clean:
+	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/clean
+.PHONY : CMakeFiles/FdF.dir/clean
+
+#=============================================================================
+# Target rules for target libft/CMakeFiles/lib.dir
+
+# All Build rule for target.
+libft/CMakeFiles/lib.dir/all:
+	$(MAKE) -f libft/CMakeFiles/lib.dir/build.make libft/CMakeFiles/lib.dir/depend
+	$(MAKE) -f libft/CMakeFiles/lib.dir/build.make libft/CMakeFiles/lib.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/mashley/Desktop/apearl/cmake-build-debug/CMakeFiles --progress-num=7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81 "Built target lib"
+.PHONY : libft/CMakeFiles/lib.dir/all
+
+# Build rule for subdir invocation for target.
+libft/CMakeFiles/lib.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/mashley/Desktop/apearl/cmake-build-debug/CMakeFiles 75
+	$(MAKE) -f CMakeFiles/Makefile2 libft/CMakeFiles/lib.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/mashley/Desktop/apearl/cmake-build-debug/CMakeFiles 0
+.PHONY : libft/CMakeFiles/lib.dir/rule
+
+# Convenience name for target.
+lib: libft/CMakeFiles/lib.dir/rule
+
+.PHONY : lib
+
+# clean rule for target.
+libft/CMakeFiles/lib.dir/clean:
+	$(MAKE) -f libft/CMakeFiles/lib.dir/build.make libft/CMakeFiles/lib.dir/clean
+.PHONY : libft/CMakeFiles/lib.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

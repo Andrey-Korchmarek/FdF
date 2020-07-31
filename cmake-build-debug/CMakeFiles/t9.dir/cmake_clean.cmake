@@ -1,5 +1,4 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/t9.dir/colorset.c.o"
   "CMakeFiles/t9.dir/libft/array_int/arr_add.c.o"
   "CMakeFiles/t9.dir/libft/array_int/arr_cat.c.o"
   "CMakeFiles/t9.dir/libft/array_int/arr_del.c.o"
@@ -96,6 +95,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/t9.dir/minilibx_macos/mlx_int_str_to_wordtab.c.o"
   "CMakeFiles/t9.dir/minilibx_macos/mlx_new_image.m.o"
   "CMakeFiles/t9.dir/minilibx_macos/mlx_new_window.m.o"
+  "CMakeFiles/t9.dir/minilibx_macos/mlx_rgb.c.o"
   "CMakeFiles/t9.dir/minilibx_macos/mlx_shaders.c.o"
   "CMakeFiles/t9.dir/minilibx_macos/mlx_xpm.c.o"
   "CMakeFiles/t9.dir/read_file.c.o"

@@ -6,5 +6,5 @@ C_FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacO
 
 C_DEFINES = 
 
-C_INCLUDES = -I/Users/apearl/Desktop/FdF/fdf4/. -I/Users/apearl/Desktop/FdF/fdf4/libft -I/Users/apearl/Desktop/FdF/fdf4/libft/array_int -I/Users/apearl/Desktop/FdF/fdf4/libft/ft_printf -I/Users/apearl/Desktop/FdF/fdf4/minilibx_macos 
+C_INCLUDES = -I/Users/mashley/Desktop/apearl/. -I/Users/mashley/Desktop/apearl/libft -I/Users/mashley/Desktop/apearl/libft/array_int -I/Users/mashley/Desktop/apearl/libft/ft_printf -I/Users/mashley/Desktop/apearl/minilibx_macos 
 
