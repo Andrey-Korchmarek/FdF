@@ -17,7 +17,7 @@ void	get_z_matrix(char *file, t_fdf *data)
 	int		fd;
 	char	*line;
 	char	**nums;
-	char 	**parts;
+	char	**parts;
 	int		x;
 	int		y;
 
@@ -26,16 +26,12 @@ void	get_z_matrix(char *file, t_fdf *data)
 	while (x < (*data).height)
 	{
 		get_next_line(fd, &line);
-		(*data).z_matrix[x] = (int *)malloc(sizeof(int) * ((*data).width + 1));
+		data->z_matrix[x] = (int *)malloc(sizeof(int) * ((*data).width + 1));
 		(*data).color[x] = (int *)malloc(sizeof(int) * ((*data).width + 1));
-//		if (nums)
-//			ft_free_matrix(&nums);
 		nums = ft_strsplit(line, ' ');
 		y = 0;
 		while (y < (*data).width)
 		{
-//			if (parts)
-//				ft_free_matrix(&parts);
 			parts = ft_strsplit(nums[y], ',');
 			(*data).z_matrix[x][y] = ft_atoi(parts[0]);
 			(*data).color[x][y] = get_color(parts[1]);

@@ -28,6 +28,36 @@ int	main(int argc, char **argv)
 		game_over(5);
 	close(fd);
 	read_map(argv[1], &karta);
+#ifdef TEST
+	int i;
+	int j;
+
+	i = 0;
+	while (i < karta.height)
+	{
+		j = 0;
+		while (j < karta.width)
+		{
+			printf("%3d", karta.z_matrix[i][j]);
+			j++;
+		}
+		printf("\n");
+		i++;
+	}
+	printf("\n");
+	i = 0;
+	while (i < karta.height)
+	{
+		j = 0;
+		while (j < karta.width)
+		{
+			printf("%3d ", karta.color[i][j]);
+			j++;
+		}
+		printf("\n");
+		i++;
+	}
+#endif
 	set_default(&karta);
 	karta.mlx_ptr = mlx_init();
 	karta.win_ptr = mlx_new_window(karta.mlx_ptr, 1000, 1000, "FDF");
