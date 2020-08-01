@@ -12,7 +12,7 @@
 
 #include "fdf.h"
 
-int		deal_key(int button, fdf *data)
+int		deal_key(int button, t_fdf *data)
 {
 	if (button == 126)
 		data->shift_y -= 10;
@@ -37,7 +37,7 @@ int		deal_key(int button, fdf *data)
 	return (0);
 }
 
-int		mouse_press(int button, int x, int y, fdf *data)
+int		mouse_press(int button, int x, int y, t_fdf *data)
 {
 	if (button == 1 || button == 2)
 	{
@@ -64,7 +64,7 @@ int		mouse_press(int button, int x, int y, fdf *data)
 	return (0);
 }
 
-void	set_default(fdf *data)
+void	set_default(t_fdf *data)
 {
 	data->zoom = 40;
 	data->win_x = 2000;
@@ -78,7 +78,7 @@ void	set_default(fdf *data)
 
 int		main(int argc, char **argv)
 {
-	fdf		*data;
+	t_fdf	*data;
 	char	*txt;
 
 	if (argc != 2)
@@ -87,7 +87,7 @@ int		main(int argc, char **argv)
 		printf("%s\n", txt);
 		return (0);
 	}
-	data = (fdf*)malloc(sizeof(fdf));
+	data = (t_fdf*)malloc(sizeof(t_fdf));
 	read_file(argv[1], data);
 	set_default(data);
 	draw(data);

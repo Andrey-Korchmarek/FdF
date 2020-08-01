@@ -1,6 +1,6 @@
 #include "fdf.h"
 
-int		check_win_size(int key, fdf *data)
+int		check_win_size(int key, t_fdf *data)
 {
 	if ((key == 0 && data->win_y <= 500) || (key == 6 && data->win_x <= 500))
 		return (1);
@@ -9,7 +9,7 @@ int		check_win_size(int key, fdf *data)
 	return (0);
 }
 
-void	full_screen(fdf *data)
+void	full_screen(t_fdf *data)
 {
 	static int old_x;
 	static int old_y;
@@ -23,7 +23,7 @@ void	full_screen(fdf *data)
 	data->win_y = (data->win_y == 1400) ? old_y : 1400;
 }
 
-void	change_window_size(int key, fdf *data)
+void	change_window_size(int key, t_fdf *data)
 {
 	if (check_win_size(key, data))
 		return ;
@@ -39,7 +39,7 @@ void	change_window_size(int key, fdf *data)
 		full_screen(data);
 }
 
-void	new_window(int key, fdf *data)
+void	new_window(int key, t_fdf *data)
 {
 	change_window_size(key, data);
 	mlx_destroy_window(data->mlx_ptr, data->win_ptr);

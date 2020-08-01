@@ -1,6 +1,6 @@
 #include "fdf.h"
 
-void	print_menu(fdf txt)
+void	print_menu(t_fdf txt)
 {
 	char *str;
 

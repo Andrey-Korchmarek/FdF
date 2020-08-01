@@ -10,7 +10,7 @@ void	isometric(float *x, float *y, int z)
 	*y = (*x + *y) * sin(0.523599) - z * 3;
 }
 
-void	bresenham(float x, float y, float x1, float y1, fdf *data)
+void	bresenham(float x, float y, float x1, float y1, t_fdf *data)
 {
 	float	x_step;
 	float	y_step;
@@ -36,7 +36,7 @@ void	bresenham(float x, float y, float x1, float y1, fdf *data)
 	max = MAX1(MOD(x_step), MOD(y_step));
 	x_step /= max;
 	y_step /= max;
-	while ((int)(x - x1) || (int)(y-y1))
+	while ((int)(x - x1) || (int)(y - y1))
 	{
 		mlx_pixel_put(data->mlx_ptr, data->win_ptr, x, y, data->color);
 		x += x_step;
@@ -44,7 +44,7 @@ void	bresenham(float x, float y, float x1, float y1, fdf *data)
 	}
 }
 
-void	draw(fdf *data)
+void	draw(t_fdf *data)
 {
 	int x;
 	int y;

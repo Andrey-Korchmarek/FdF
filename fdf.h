@@ -1,20 +1,16 @@
-//
-// Created by Akihiko Pearl on 7/12/20.
-//
-
 #ifndef FDF_H
 # define FDF_H
 
-#include "libft/libft.h"
-#include "minilibx_macos/mlx.h"
+# include "libft/libft.h"
+# include "minilibx_macos/mlx.h"
 
-typedef struct s_map
+typedef	struct		s_map
 {
 	int				**z_matrix;
 	int				color;
 }					t_map;
 
-typedef struct
+typedef	struct		s_fdf
 {
 	int				width;
 	int				height;
@@ -30,9 +26,9 @@ typedef struct
 	int				win_x;
 	int				win_y;
 	struct s_map	map;
-}					fdf;
+}					t_fdf;
 
-typedef struct	s_dot
+typedef struct		s_dot
 {
 	float			x;
 	float			y;
@@ -51,13 +47,14 @@ typedef struct	s_dot
 	void			*win_ptr;
 }					t_dot;
 
-void				read_file(char *file_name, fdf *data);
-void				bresenham(float x, float y, float x1, float y1, fdf *data);
-void				draw(fdf *data);
-int					mouse_press(int button, int x, int y, fdf *data);
-void				print_menu(fdf txt);
-int					deal_key(int button, fdf *data);
-void				new_window(int key, fdf *data);
+void				read_file(char *file_name, t_fdf *data);
+void				bresenham(float x, float y, float x1,
+						float y1, t_fdf *data);
+void				draw(t_fdf *data);
+int					mouse_press(int button, int x, int y, t_fdf *data);
+void				print_menu(t_fdf txt);
+int					deal_key(int button, t_fdf *data);
+void				new_window(int key, t_fdf *data);
 void				draw_line(t_dot start, t_dot end);
 
 #endif
