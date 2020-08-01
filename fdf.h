@@ -3,6 +3,10 @@
 
 # include "libft/libft.h"
 # include "minilibx_macos/mlx.h"
+# include "math.h"
+
+# define MAX1(a, b) (a > b ? a : b)
+# define MOD(a) ((a < 0) ? -a : a)
 
 typedef	struct		s_map
 {
