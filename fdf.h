@@ -65,7 +65,6 @@ int				get_height_and_width(char *file, int key);
 void			game_over(int error);
 void			get_z_matrix(char *file, t_fdf *data);
 int				ft_spnbrcount(char *str);
-int				get_color(char *s);
 void			ft_free_fdf(t_fdf *data);
 void			set_default(t_fdf *data);
 void			bresenham(float x, float y, float x1, float y1, t_fdf karta);
