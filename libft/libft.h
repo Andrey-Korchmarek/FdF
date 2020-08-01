@@ -104,5 +104,28 @@ void			ft_strlower(char *str);
 char			*ft_strjoin_free(char *s1, char *s2, int indx);
 char			*ft_stradd(char *str, char ch);
 int				get_next_line(const int fd, char **line);
+//////////////////////////////////////////////////////////////////////
+int					ft_intlen(int nbr);
+int					ft_isalnum(int c);
+int					ft_isalpha(int c);
+int					ft_isascii(int c);
+int					ft_ischar(char a, char b);
+int					ft_isdigit(int c);
+int					ft_islower(int c);
+int					ft_isprint(int c);
+int					ft_isspace(int c);
+int					ft_isupper(int c);
+int					ft_strcount(const char *str, char chr);
+int					ft_issign(int c);
+int					ft_isnumber(int c);
+int					ft_ishexup(int c);
+int					ft_ishexlow(int c);
+int					ft_ishex(int c);
+int					ft_ispoint(int c);
+int					ft_ismark(int c);
+void				ft_free_array(int ***as);
+void				ft_free_matrix(char ***as);
+//int                 ft_open_read(char *name);
+int					ft_atoi_base(const char *str, int base);
 
 #endif

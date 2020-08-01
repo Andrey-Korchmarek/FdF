@@ -20,7 +20,7 @@ typedef	struct		s_fdf
 	int				height;
 	int				**z_matrix;
 	int				zoom;
-	int				color;
+	int				**color;
 	int				shift_x;
 	int				shift_y;
 
@@ -59,6 +59,14 @@ int					mouse_press(int button, int x, int y, t_fdf *data);
 void				print_menu(t_fdf txt);
 int					deal_key(int button, t_fdf *data);
 void				new_window(int key, t_fdf *data);
-void				draw_line(t_dot start, t_dot end);
+/////////////////////////////////////////////////////
+void				draw_line(t_dot *start, t_dot *end, t_fdf *data);
+t_dot				*get_dot(int x, int y, t_fdf *data);
+void				read_map(char *file, t_fdf *map);
+void				get_z_matrix(char *file, t_fdf *data);
+int					get_height_and_width(char *file);
+int					ft_spnbrcount(char *str);
+void				game_over(int error);
+void				ft_free_fdf(t_fdf *data);
 
 #endif

@@ -88,11 +88,12 @@ int		main(int argc, char **argv)
 		return (0);
 	}
 	data = (t_fdf*)malloc(sizeof(t_fdf));
-	read_file(argv[1], data);
+	read_map(argv[1], data);
 	set_default(data);
 	draw(data);
 	mlx_key_hook(data->win_ptr, deal_key, data);
 	mlx_mouse_hook(data->win_ptr, mouse_press, data);
 	mlx_loop(data->mlx_ptr);
+	ft_free_fdf(data);
 	return (0);
 }
