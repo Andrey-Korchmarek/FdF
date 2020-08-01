@@ -21,6 +21,8 @@ static int	gnl_ifstacknotempty(char **stack, char **line)
 		*tmp = '\0';
 		tmp++;
 		*line = ft_strjoinfree(*line, *stack, 1, 0);
+		if (*stack)
+			ft_strdel(stack);
 		*stack = ft_strdup(tmp);
 		return (1);
 	}
@@ -60,7 +62,7 @@ int			get_next_line(const int fd, char **line)
 		*line = ft_strjoinfree(*line, buf, 1, 0);
 	}
 	if (*line[0])
-    		return (1);
-    	ft_strdel(&stack);
-    	return (0);
+			return (1);
+	ft_strdel(&stack);
+	return (0);
 }

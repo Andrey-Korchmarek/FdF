@@ -22,6 +22,8 @@ static	void	get_z_color(char *line, int x, t_fdf *data)
 	y = 0;
 	while (y < (*data).width)
 	{
+		if (str)
+			ft_free_matrix(&str);
 		str = ft_strsplit(nums[y], ',');
 		data->z_matrix[x][y] = ft_atoi(str[0]);
 		data->color[x][y] = (str[1] ? ft_atoi_base(str[1] + 2, 16) : -1);
@@ -47,9 +49,9 @@ void			get_z_matrix(char *file, t_fdf *data)
 		data->z_matrix[x] = (int *)malloc(sizeof(int) * ((*data).width + 1));
 		data->color[x] = (int *)malloc(sizeof(int) * ((*data).width + 1));
 		get_z_color(line, x, data);
+		ft_strdel(&line);
 		x++;
 	}
-
 	ft_strdel(&line);
 	close(fd);
 	return ;
