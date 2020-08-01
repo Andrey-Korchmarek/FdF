@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mashley <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/08/01 13:01:12 by mashley           #+#    #+#             */
+/*   Updated: 2020/08/01 13:01:18 by mashley          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "fdf.h"
 
 int		deal_key(int button, fdf *data)
@@ -82,6 +94,5 @@ int		main(int argc, char **argv)
 	mlx_key_hook(data->win_ptr, deal_key, data);
 	mlx_mouse_hook(data->win_ptr, mouse_press, data);
 	mlx_loop(data->mlx_ptr);
-
 	return (0);
 }
