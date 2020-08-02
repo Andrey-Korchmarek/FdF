@@ -15,6 +15,7 @@ void	draw_line(t_dot *start, t_dot *end, t_fdf *data)
 	end->x *= data->zoom;
 	end->y *= data->zoom;
 	color = (start->z >= end->z) ? start->color : end->color;
+	color = (color == -1) ? 0xFFFFFF : color;
 #
 	start->x += data->shift_x;
 	start->y += data->shift_y;

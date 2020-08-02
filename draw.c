@@ -50,21 +50,18 @@ void	draw(t_fdf *data)
 	int y;
 
 	print_menu(*data);
-	x = 0;
 	y = 0;
-	draw_line(get_dot(x, y, data), get_dot(1, 1,data), data);
-//	y = 0;
-//	while (y < data->height)
-//	{
-//		x = 0;
-//		while (x < data->width)
-//		{
-//			if (x < data->width - 1)
-//				bresenham(x, y, x + 1, y, data);
-//			if (y < data->height - 1)
-//				bresenham(x, y, x, y + 1, data);
-//			x++;
-//		}
-//		y++;
-//	}
+	while (y < data->height)
+	{
+		x = 0;
+		while (x < data->width)
+		{
+			if (x < data->width - 1)
+				bresenham(x, y, x + 1, y, data);
+			if (y < data->height - 1)
+				bresenham(x, y, x, y + 1, data);
+			x++;
+		}
+		y++;
+	}
 }
