@@ -66,7 +66,7 @@ int		mouse_press(int button, int x, int y, t_fdf *data)
 
 void	set_default(t_fdf *data)
 {
-	data->zoom = 40;
+	data->zoom = 20;
 	data->win_x = 2000;
 	data->win_y = 1000;
 	data->shift_x = data->win_x / 3;
@@ -90,6 +90,7 @@ int		main(int argc, char **argv)
 	data = (t_fdf*)malloc(sizeof(t_fdf));
 	read_map(argv[1], data);
 	set_default(data);
+	print_menu(*data);
 	draw(data);
 	mlx_key_hook(data->win_ptr, deal_key, data);
 	mlx_mouse_hook(data->win_ptr, mouse_press, data);

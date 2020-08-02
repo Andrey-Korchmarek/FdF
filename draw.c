@@ -46,20 +46,29 @@ void	bresenham(float x, float y, float x1, float y1, t_fdf *data)
 
 void	draw(t_fdf *data)
 {
-	int x;
-	int y;
+	int		x;
+	int		y;
+	t_dot	*start;
+	t_dot	*end;
 
-	print_menu(*data);
+//	print_menu(*data);
 	y = 0;
 	while (y < data->height)
 	{
 		x = 0;
 		while (x < data->width)
 		{
-			if (x < data->width - 1)
-				bresenham(x, y, x + 1, y, data);
-			if (y < data->height - 1)
-				bresenham(x, y, x, y + 1, data);
+			start = get_dot(x, y, data);
+			if (x < data->width)
+			{
+				end = get_dot(x +1, y, data);
+				draw_line(start, end, data);
+			}
+			if (y < data->height)
+			{
+				end = get_dot(x, y + 1, data);
+				draw_line(start, end, data);
+			}
 			x++;
 		}
 		y++;

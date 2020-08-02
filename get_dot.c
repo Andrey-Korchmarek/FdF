@@ -11,8 +11,8 @@ t_dot	*get_dot(int x, int y, t_fdf *data)
 	point = (t_dot*)malloc(sizeof(t_dot));
 	point->x = (float)x;
 	point->y = (float)y;
-	point->z = (float)data->z_matrix[x][y];
-	point->color = data->color[x][y];
+	point->z = (float)data->z_matrix[y][x];
+	point->color = data->color[y][x];
 
 	point->shift_x = data->shift_x;
 	point->shift_y = data->shift_y;

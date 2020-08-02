@@ -14,12 +14,8 @@
 
 void	read_map(char *file, t_fdf *map)
 {
-	int		param[2];
-
-	param[0] = get_height_and_width(file);
-	param[1] = get_height_and_width(file);
-	map->height = param[0];
-	map->width = param[1];
+	map->height = get_height_and_width(file);
+	map->width = get_height_and_width(file);
 //	ft_putnbr(map->height);
 //	ft_putchar('\n');
 //	ft_putnbr(map->width);
@@ -29,5 +25,4 @@ void	read_map(char *file, t_fdf *map)
 	get_z_matrix(file, map);
 	map->mlx_ptr = NULL;
 	map->win_ptr = NULL;
-	return ;
 }

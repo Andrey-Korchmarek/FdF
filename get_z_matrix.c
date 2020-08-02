@@ -12,22 +12,22 @@
 
 #include "../fdf.h"
 
-static	void	get_z_color(char *line, int x, t_fdf *data)
+static	void	get_z_color(char *line, int i, t_fdf *data)
 {
 	char	**nums;
 	char	**str;
-	int		y;
+	int		j;
 
 	nums = ft_strsplit(line, ' ');
-	y = 0;
-	while (y < (*data).width)
+	j = 0;
+	while (j < (*data).width)
 	{
 		if (str)
 			ft_free_matrix(&str);
-		str = ft_strsplit(nums[y], ',');
-		data->z_matrix[x][y] = ft_atoi(str[0]);
-		data->color[x][y] = (str[1] ? ft_atoi_base(str[1] + 2, 16) : -1);
-		y++;
+		str = ft_strsplit(nums[j], ',');
+		data->z_matrix[i][j] = ft_atoi(str[0]);
+		data->color[i][j] = (str[1] ? ft_atoi_base(str[1] + 2, 16) : -1);
+		j++;
 	}
 	if (str)
 		ft_free_matrix(&str);
@@ -39,20 +39,19 @@ void			get_z_matrix(char *file, t_fdf *data)
 {
 	int		fd;
 	char	*line;
-	int		x;
+	int		i;
 
 	fd = open(file, O_RDONLY, 0);
-	x = 0;
-	while (x < (*data).height)
+	i = 0;
+	while (i < (*data).height)
 	{
 		get_next_line(fd, &line);
-		data->z_matrix[x] = (int *)malloc(sizeof(int) * ((*data).width + 1));
-		data->color[x] = (int *)malloc(sizeof(int) * ((*data).width + 1));
-		get_z_color(line, x, data);
+		data->z_matrix[i] = (int *)malloc(sizeof(int) * ((*data).width + 1));
+		data->color[i] = (int *)malloc(sizeof(int) * ((*data).width + 1));
+		get_z_color(line, i, data);
 		ft_strdel(&line);
-		x++;
+		i++;
 	}
 	ft_strdel(&line);
 	close(fd);
-	return ;
 }
