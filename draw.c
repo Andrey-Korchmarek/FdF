@@ -48,27 +48,17 @@ void	draw(t_fdf *data)
 {
 	int		x;
 	int		y;
-	t_dot	*start;
-	t_dot	*end;
 
-//	print_menu(*data);
 	y = 0;
 	while (y < data->height)
 	{
 		x = 0;
 		while (x < data->width)
 		{
-			start = get_dot(x, y, data);
-			if (x < data->width)
-			{
-				end = get_dot(x +1, y, data);
-				draw_line(start, end, data);
-			}
-			if (y < data->height)
-			{
-				end = get_dot(x, y + 1, data);
-				draw_line(start, end, data);
-			}
+			if (x < data->width - 1)
+				draw_line(get_dot(x, y, data), get_dot(x + 1, y, data), data);
+			if (y < data->height - 1)
+				draw_line(get_dot(x, y, data), get_dot(x, y + 1, data), data);
 			x++;
 		}
 		y++;
