@@ -90,7 +90,6 @@ int		main(int argc, char **argv)
 	data = (t_fdf*)malloc(sizeof(t_fdf));
 	read_map(argv[1], data);
 	set_default(data);
-	print_menu(*data);
 	draw(data);
 	mlx_key_hook(data->win_ptr, deal_key, data);
 	mlx_mouse_hook(data->win_ptr, mouse_press, data);

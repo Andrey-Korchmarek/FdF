@@ -7,8 +7,8 @@ void	draw_line(t_dot *start, t_dot *end, t_fdf *data)
 {
 	float	x_step;
 	float	y_step;
-	int	max;
-	int	color;
+	int		max;
+	int		color;
 
 	start->x *= data->zoom;
 	start->y *= data->zoom;
@@ -16,12 +16,10 @@ void	draw_line(t_dot *start, t_dot *end, t_fdf *data)
 	end->y *= data->zoom;
 	color = (start->z >= end->z) ? start->color : end->color;
 	color = (color == -1) ? 0xFFFFFF : color;
-#
 	start->x += data->shift_x;
 	start->y += data->shift_y;
 	end->x += data->shift_x;
 	end->y += data->shift_y;
-#
 	x_step = end->x - start->x;
 	y_step = end->y - start->y;
 	max = MAX1(MOD(x_step), MOD(y_step));
@@ -33,5 +31,4 @@ void	draw_line(t_dot *start, t_dot *end, t_fdf *data)
 		start->x += x_step;
 		start->y += y_step;
 	}
-	return ;
 }

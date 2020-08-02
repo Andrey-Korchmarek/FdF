@@ -406,33 +406,6 @@ print_menu.c.s:
 	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/print_menu.c.s
 .PHONY : print_menu.c.s
 
-read_file.o: read_file.c.o
-
-.PHONY : read_file.o
-
-# target to build an object file
-read_file.c.o:
-	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/read_file.c.o
-.PHONY : read_file.c.o
-
-read_file.i: read_file.c.i
-
-.PHONY : read_file.i
-
-# target to preprocess a source file
-read_file.c.i:
-	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/read_file.c.i
-.PHONY : read_file.c.i
-
-read_file.s: read_file.c.s
-
-.PHONY : read_file.s
-
-# target to generate assembly for a file
-read_file.c.s:
-	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/read_file.c.s
-.PHONY : read_file.c.s
-
 read_map.o: read_map.c.o
 
 .PHONY : read_map.o
@@ -527,9 +500,6 @@ help:
 	@echo "... print_menu.o"
 	@echo "... print_menu.i"
 	@echo "... print_menu.s"
-	@echo "... read_file.o"
-	@echo "... read_file.i"
-	@echo "... read_file.s"
 	@echo "... read_map.o"
 	@echo "... read_map.i"
 	@echo "... read_map.s"

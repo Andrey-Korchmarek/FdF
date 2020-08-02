@@ -16,10 +16,6 @@ void	read_map(char *file, t_fdf *map)
 {
 	map->height = get_height_and_width(file);
 	map->width = get_height_and_width(file);
-//	ft_putnbr(map->height);
-//	ft_putchar('\n');
-//	ft_putnbr(map->width);
-//	ft_putchar('\n');
 	map->z_matrix = (int **)malloc(sizeof(int*) * (map->height + 1));
 	map->color = (int **)malloc(sizeof(int*) * (map->height + 1));
 	get_z_matrix(file, map);
