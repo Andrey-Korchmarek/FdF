@@ -106,7 +106,6 @@ void			ft_strlower(char *str);
 char			*ft_strjoin_free(char *s1, char *s2, int indx);
 char			*ft_stradd(char *str, char ch);
 int				get_next_line(const int fd, char **line);
-//////////////////////////////////////////////////////////////////////
 int					ft_intlen(int nbr);
 int					ft_isalnum(int c);
 int					ft_isalpha(int c);
@@ -139,5 +138,6 @@ void				*ft_memrcpy(void *dst, const void *src, size_t len);
 int					ft_intlen(int nbr);
 long long int		ft_atoll(const char *str);
 int					ft_abs(int n);
+int					gnl(const int fd, char **line);
 
 #endif

@@ -23,7 +23,7 @@ int	get_height_and_width(char *file)
 	fd = open(file, O_RDONLY, 0);
 	param[0] = 0;
 	param[1] = 0;
-	while (get_next_line(fd, &line))
+	while (gnl(fd, &line))
 	{
 		if (param[1] != 0 && ft_spnbrcount(line) != param[1])
 			game_over(4);

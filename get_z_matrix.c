@@ -45,7 +45,7 @@ void			get_z_matrix(char *file, t_fdf *data)
 	i = 0;
 	while (i < (*data).height)
 	{
-		get_next_line(fd, &line);
+		gnl(fd, &line);
 		data->z_matrix[i] = (int *)malloc(sizeof(int) * ((*data).width + 1));
 		data->color[i] = (int *)malloc(sizeof(int) * ((*data).width + 1));
 		get_z_color(line, i, data);
