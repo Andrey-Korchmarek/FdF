@@ -21,7 +21,7 @@ int	ft_spnbrcount(char *str)
 	while (ft_isspace(str[i]))
 		i++;
 	if (!(ft_isspace(str[i]) || ft_ispoint(str[i])))
-		game_over(2);
+		game_over(3);
 	count = 0;
 	while (str[i + 1])
 	{

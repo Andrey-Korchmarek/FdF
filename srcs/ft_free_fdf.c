@@ -34,9 +34,6 @@ void	ft_free_fdf(t_fdf *data)
 	}
 	free((*data).color);
 	(*data).color = NULL;
-	free(data->win_ptr);
 	data->win_ptr = NULL;
-	free(data->mlx_ptr);
 	data->mlx_ptr = NULL;
-	return ;
 }
