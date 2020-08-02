@@ -8,6 +8,8 @@
 # include <stdarg.h>
 # include <wchar.h>
 # include <stdio.h>
+# define INTMIN ( -2147483648 )
+# define SIZE_TMAX ( 18446744073709551615ULL )
 # define MAX(A, B) (A > B ? A : B)
 # define MIN(A, B) (A > B ? B : A)
 
@@ -35,7 +37,7 @@ int				ft_isdigit(int c);
 int				ft_isinteger(char *nbr);
 int				ft_isprint(int c);
 void			*ft_memccpy(void *restrict dst, const void *restrict src, \
-		int c, size_t n);
+					int c, size_t n);
 void			*ft_memchr(const void *s, int c, size_t n);
 int				ft_memcmp(const void *s1, const void *s2, size_t n);
 void			*ft_memcpy(void *restrict dst, void *restrict src, size_t n);
@@ -47,13 +49,13 @@ int				ft_strcmp(const char *s1, const char *s2);
 char			*ft_strcpy(char *dst, const char *src);
 char			*ft_strdup(char *s);
 size_t			ft_strlcat(char *restrict dst, const char \
-		*restrict src, size_t dstsize);
+					*restrict src, size_t dstsize);
 size_t			ft_strlen(char const *s);
 char			*ft_strncat(char *str1, const char *str2, size_t n);
 int				ft_strncmp(const char *s1, const char *s2, size_t n);
 char			*ft_strncpy(char *dest, char *src, unsigned int n);
 char			*ft_strnstr(const char *haystack, const char \
-		*needle, size_t len);
+					*needle, size_t len);
 char			*ft_strrchr(const char *s, int c);
 char			*ft_strstr(const char *haystach, const char *needle);
 int				ft_tolower(int c);
@@ -125,7 +127,17 @@ int					ft_ispoint(int c);
 int					ft_ismark(int c);
 void				ft_free_array(int ***as);
 void				ft_free_matrix(char ***as);
-//int                 ft_open_read(char *name);
+//int				ft_open_read(char *name);
 int					ft_atoi_base(const char *str, int base);
+size_t				ft_strplen(const char *str);
+size_t				ft_strnlen(const char *string, size_t max);
+char				*ft_strjoinfree(char const *s1, char const *s2,
+						int frees1, int frees2);
+void				*ft_realloc(void *ptr, size_t newsize);
+int					*ft_range(int min, int max);
+void				*ft_memrcpy(void *dst, const void *src, size_t len);
+int					ft_intlen(int nbr);
+long long int		ft_atoll(const char *str);
+int					ft_abs(int n);
 
 #endif

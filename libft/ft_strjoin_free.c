@@ -12,6 +12,11 @@ char	*ft_strjoin_free(char *s1, char *s2, int indx)
 		return (NULL);
 	ft_strcat(new, s1);
 	ft_strcat(new, s2);
+	if (s1 == s2 && (indx >= 1 && indx <= 3))
+	{
+		free(s1);
+		return (new);
+	}
 	if (indx == 1 || indx == 3)
 		free(s1);
 	if (indx == 2 || indx == 3)
