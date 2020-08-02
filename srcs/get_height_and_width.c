@@ -12,14 +12,12 @@
 
 #include "../fdf.h"
 
-int	get_height_and_width(char *file)
+int	get_height_and_width(char *file, int key)
 {
-	static	int	param[2];
-	int			fd;
-	char		*line;
+	int		param[2];
+	int		fd;
+	char	*line;
 
-	if (param[0])
-		return (param[1] + 1);
 	fd = open(file, O_RDONLY, 0);
 	param[0] = 0;
 	param[1] = 0;
@@ -34,5 +32,7 @@ int	get_height_and_width(char *file)
 	free(line);
 	line = NULL;
 	close(fd);
+	if (key)
+		return (param[1] + 1);
 	return (param[0]);
 }

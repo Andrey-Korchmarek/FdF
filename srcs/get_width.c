@@ -1,29 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   read_map.c                                         :+:      :+:    :+:   */
+/*   get_width.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mashley <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/08 14:28:06 by mashley           #+#    #+#             */
-/*   Updated: 2020/07/08 14:28:10 by mashley          ###   ########.fr       */
+/*   Created: 2020/07/19 19:16:38 by mashley           #+#    #+#             */
+/*   Updated: 2020/07/19 19:16:41 by mashley          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../fdf.h"
 
-void	read_map(char *file, t_fdf *map)
+int	get_width(char *file)
 {
-	int		param[2];
+	int		width;
+	int		fd;
+	char	*line;
 
-	param[0] = get_height_and_width(file, 0);
-	param[1] = get_height_and_width(file, 1);
-	(*map).height = param[0];
-	(*map).width = param[1];
-	(*map).z_matrix = (int **)malloc(sizeof(int*) * ((*map).height + 1));
-	(*map).color = (int **)malloc(sizeof(int*) * ((*map).height + 1));
-	get_z_matrix(file, map);
-	(*map).mlx_ptr = NULL;
-	(*map).win_ptr = NULL;
-	return ;
+	line = NULL;
+	fd = open(file, O_RDONLY, 0);
+	get_next_line(fd, &line);
+	width = ft_spnbrcount(line);
+	free(line);
+	line = NULL;
+	close(fd);
+	return (width + 1);
 }

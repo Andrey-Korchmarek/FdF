@@ -40,28 +40,28 @@ typedef struct	s_fdf
 	int			win_y;
 }				t_fdf;
 
-typedef struct	s_dot
-{
-	float		x;
-	float		y;
-	float		z;
-	int			is_last;
-
-	int			color;
-	int			scale;
-	int			z_scale;
-	int			shift_x;
-	int			shift_y;
-	int			is_isometric;
-	double		angle;
-	int			win_x;
-	int			win_y;
-	void		*mlx_ptr;
-	void		*win_ptr;
-}				t_dot;
+//typedef struct	s_dot
+//{
+//	float		x;
+//	float		y;
+//	float		z;
+//	int			is_last;
+//
+//	int			color;
+//	int			scale;
+//	int			z_scale;
+//	int			shift_x;
+//	int			shift_y;
+//	int			is_isometric;
+//	double		angle;
+//	int			win_x;
+//	int			win_y;
+//	void		*mlx_ptr;
+//	void		*win_ptr;
+//}				t_dot;
 
 void			read_map(char *file, t_fdf *map);
-int				get_height_and_width(char *file);
+int				get_height_and_width(char *file, int key);
 void			game_over(int error);
 void			get_z_matrix(char *file, t_fdf *data);
 int				ft_spnbrcount(char *str);
