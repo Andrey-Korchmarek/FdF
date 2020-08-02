@@ -86,7 +86,7 @@ int	main(int argc, char **argv)
 	mlx_loop(&karta.mlx_ptr);
 //	draw(karta);
 //	mlx_mouse_hook(&karta.win_ptr, mouse_press, data);
-	mlx_key_hook(karta.win_ptr, deal_key, &karta);
+	mlx_key_hook(karta.win_ptr, deal_key, NULL);
 	ft_free_fdf(&karta);
 	fd = 1;
 	return (0);

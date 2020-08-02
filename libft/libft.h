@@ -13,9 +13,9 @@
 #ifndef LIBFT_H
 # define LIBFT_H
 # define SHRINKER ( 1.247 )
-# define INTMIN ( -2147483648 )
-# define SIZE_TMAX ( 18446744073709551615ULL )
-# define BUFF_SIZE 1000
+# define INTMIN -2147483648
+# define SIZE_TMAX 18446744073709551615ULL
+# define BUFF_SIZE 100
 # define MAX_FD 12000
 # include <string.h>
 # include <stdlib.h>

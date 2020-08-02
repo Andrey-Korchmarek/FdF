@@ -54,5 +54,4 @@ void			get_z_matrix(char *file, t_fdf *data)
 	}
 	ft_strdel(&line);
 	close(fd);
-	return ;
 }

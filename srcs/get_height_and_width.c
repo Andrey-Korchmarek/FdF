@@ -12,27 +12,28 @@
 
 #include "../fdf.h"
 
-int	get_height_and_width(char *file, int key)
+int	get_height_and_width(char *file)
 {
-	int		param[2];
-	int		fd;
-	char	*line;
+	static	int	param[3];
+	int			fd;
+	char		*line;
 
+	if (param[0])
+		return (param[1] + 1);
 	fd = open(file, O_RDONLY, 0);
 	param[0] = 0;
 	param[1] = 0;
-	while (get_next_line(fd, &line))
+	while (get_next_line(fd, &line) == 1)
 	{
-		if (param[1] != 0 && ft_spnbrcount(line) != param[1])
+		if (param[1] != 0 && param[1] != ft_spnbrcount(line))
 			game_over(4);
 		param[0]++;
 		param[1] = ft_spnbrcount(line);
 		free(line);
+		line = NULL;
 	}
 	free(line);
 	line = NULL;
 	close(fd);
-	if (key)
-		return (param[1] + 1);
 	return (param[0]);
 }
