@@ -16,6 +16,8 @@ void	draw_line(t_dot *start, t_dot *end, t_fdf *data)
 	end->y *= data->zoom;
 	color = (start->z >= end->z) ? start->color : end->color;
 	color = (color == -1) ? 0xFFFFFF : color;
+	isometric(&start->x, &start->y, start->z);
+	isometric(&end->x, &end->y, end->z);
 	start->x += data->shift_x;
 	start->y += data->shift_y;
 	end->x += data->shift_x;

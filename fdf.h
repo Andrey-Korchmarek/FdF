@@ -55,6 +55,7 @@ int					mouse_press(int button, int x, int y, t_fdf *data);
 void				print_menu(t_fdf txt);
 int					deal_key(int button, t_fdf *data);
 void				new_window(int key, t_fdf *data);
+void				isometric(float *x, float *y, int z);
 //////////////////////////////////////////////////////
 void				draw_line(t_dot *start, t_dot *end, t_fdf *data);
 t_dot				*get_dot(int x, int y, t_fdf *data);
