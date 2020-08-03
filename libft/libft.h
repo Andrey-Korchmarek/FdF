@@ -12,15 +12,23 @@
 
 #ifndef LIBFT_H
 # define LIBFT_H
+<<<<<<< HEAD
 # define SHRINKER ( 1.247 )
+=======
+>>>>>>> master
 # define INTMIN -2147483648
 # define SIZE_TMAX 18446744073709551615ULL
 # define BUFF_SIZE 100
 # define MAX_FD 12000
+
 # include <string.h>
 # include <stdlib.h>
 # include <unistd.h>
 # include <limits.h>
+<<<<<<< HEAD
+=======
+# include <stdio.h>
+>>>>>>> master
 # include <fcntl.h>
 
 typedef struct		s_list
@@ -116,8 +124,12 @@ int					ft_atoi_base(const char *str, int base);
 void				ft_free_array(int ***as);
 void				ft_free_matrix(char ***as);
 int					ft_open_read(char *name);
+<<<<<<< HEAD
 
 char				*ft_stradd(char *str, char ch);
 char				*ft_strjoin_free(char *s1, char *s2, int indx);
+=======
+int					ft_wdcounter(char const *str, char c);
+>>>>>>> master
 
 #endif

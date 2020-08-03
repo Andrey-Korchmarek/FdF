@@ -42,7 +42,7 @@ int			get_next_line(const int fd, char **line)
 	int			ret;
 	char		*heap;
 
-	if (!line || fd < 0 || BUFF_SIZE < 1)//(read(fd, stack[0], 0) < 0) ||
+	if (!line || fd < 0 || BUFF_SIZE < 1)
 		return (-1);
 	*line = ft_strnew(0);
 	if (stack)
@@ -62,7 +62,11 @@ int			get_next_line(const int fd, char **line)
 		*line = ft_strjoinfree(*line, buf, 1, 0);
 	}
 	if (*line[0])
+<<<<<<< HEAD
 			return (1);
+=======
+		return (1);
+>>>>>>> master
 	ft_strdel(&stack);
 	return (0);
 }
