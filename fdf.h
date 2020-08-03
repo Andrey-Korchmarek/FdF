@@ -1,12 +1,23 @@
-//
-// Created by Akihiko Pearl on 7/12/20.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   fdf.h                                              :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mashley <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/08/03 17:51:05 by mashley           #+#    #+#             */
+/*   Updated: 2020/08/03 17:51:10 by mashley          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #ifndef FDF_H
 # define FDF_H
-
-#include "libft/libft.h"
-#include "minilibx_macos/mlx.h"
+# define TEST
+# include "libft/libft.h"
+# include "minilibx_macos/mlx.h"
+# include "math.h"
+# define MAX1(a, b) (a > b ? a : b)
+# define MOD(a) ((a < 0) ? -a : a)
 
 typedef struct
 {
