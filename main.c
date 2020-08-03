@@ -30,7 +30,7 @@ int deal_key(int button, fdf *data)
     return (0);
 }
 
-int		mouse_press(int button, int x, int y, fdf *data)
+int		mouse_press(int button, fdf *data)
 {
 //    x++;
 //    y++;

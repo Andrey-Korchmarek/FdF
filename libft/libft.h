@@ -12,11 +12,11 @@
 
 #ifndef LIBFT_H
 # define LIBFT_H
-//# define SHRINKER ( 1.247 )
-# define INTMIN ( -2147483648 )
-# define SIZE_TMAX ( 18446744073709551615ULL )
-# define BUFF_SIZE 1000
+# define INTMIN -2147483648
+# define SIZE_TMAX 18446744073709551615ULL
+# define BUFF_SIZE 100
 # define MAX_FD 12000
+
 # include <string.h>
 # include <stdlib.h>
 # include <unistd.h>
@@ -71,7 +71,7 @@ void				ft_putstr(char const *s);
 void				ft_putstr_fd(char const *s, int fd);
 int					*ft_range(int min, int max);
 void				*ft_realloc(void *ptr, size_t newsize);
-//size_t				ft_shrinking_gap(size_t gap);
+size_t				ft_shrinking_gap(size_t gap);
 char				*ft_strcat(char *dest, const char *src);
 char				*ft_strchr(const char *str, int c);
 void				ft_strclr(char *s);
@@ -113,9 +113,10 @@ int					ft_ishexlow(int c);
 int					ft_ishex(int c);
 int					ft_ispoint(int c);
 int					ft_ismark(int c);
-int		ft_atoi_base(const char *str, int base);
+int					ft_atoi_base(const char *str, int base);
 void				ft_free_array(int ***as);
 void				ft_free_matrix(char ***as);
-int                 ft_open_read(char *name);
-int		            ft_wdcounter(char const *str, char c);
+int					ft_open_read(char *name);
+int					ft_wdcounter(char const *str, char c);
+
 #endif

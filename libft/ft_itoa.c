@@ -46,7 +46,7 @@ char		*ft_itoa(int n)
 	len = 1;
 	sign = (n < 0) ? 1 : 0;
 	n = ft_abs(n);
-	while (n % ten != n)
+	while (n % (int)ten != n)
 	{
 		len++;
 		ten *= 10;

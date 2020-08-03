@@ -1,13 +1,13 @@
 #include "libft.h"
 
-void    ft_free_matrix(char ***as)
+void	ft_free_matrix(char ***as)
 {
 	int i;
 
 	if (!as || !(*as))
 		return ;
 	i = 0;
-	while((*as)[i])
+	while ((*as)[i])
 	{
 		free((*as)[i]);
 		(*as)[i] = NULL;
