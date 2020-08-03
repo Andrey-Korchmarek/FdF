@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.16)
-project(FdF)
+project(FdF C)
 
-set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_C_STANDARD 99)
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wall -Werror -Wextra")
 set(LIBMLX ${CMAKE_SOURCE_DIR}/minilibx_macos/libmlx.a)
 
@@ -11,7 +11,7 @@ find_library(APPKIT AppKit)
 include_directories(.)
 include_directories(libft)
 include_directories(minilibx_macos)
-FILE(GLOB SOURCES *.c )
+FILE(GLOB SOURCES *.c srcs/*.c)
 
 add_executable(FdF ${SOURCES} fdf.h )
 

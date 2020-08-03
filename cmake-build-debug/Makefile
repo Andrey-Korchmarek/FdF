@@ -136,222 +136,6 @@ lib/fast:
 	$(MAKE) -f libft/CMakeFiles/lib.dir/build.make libft/CMakeFiles/lib.dir/build
 .PHONY : lib/fast
 
-draw.o: draw.c.o
-
-.PHONY : draw.o
-
-# target to build an object file
-draw.c.o:
-	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/draw.c.o
-.PHONY : draw.c.o
-
-draw.i: draw.c.i
-
-.PHONY : draw.i
-
-# target to preprocess a source file
-draw.c.i:
-	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/draw.c.i
-.PHONY : draw.c.i
-
-draw.s: draw.c.s
-
-.PHONY : draw.s
-
-# target to generate assembly for a file
-draw.c.s:
-	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/draw.c.s
-.PHONY : draw.c.s
-
-draw_line.o: draw_line.c.o
-
-.PHONY : draw_line.o
-
-# target to build an object file
-draw_line.c.o:
-	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/draw_line.c.o
-.PHONY : draw_line.c.o
-
-draw_line.i: draw_line.c.i
-
-.PHONY : draw_line.i
-
-# target to preprocess a source file
-draw_line.c.i:
-	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/draw_line.c.i
-.PHONY : draw_line.c.i
-
-draw_line.s: draw_line.c.s
-
-.PHONY : draw_line.s
-
-# target to generate assembly for a file
-draw_line.c.s:
-	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/draw_line.c.s
-.PHONY : draw_line.c.s
-
-ft_free_fdf.o: ft_free_fdf.c.o
-
-.PHONY : ft_free_fdf.o
-
-# target to build an object file
-ft_free_fdf.c.o:
-	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/ft_free_fdf.c.o
-.PHONY : ft_free_fdf.c.o
-
-ft_free_fdf.i: ft_free_fdf.c.i
-
-.PHONY : ft_free_fdf.i
-
-# target to preprocess a source file
-ft_free_fdf.c.i:
-	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/ft_free_fdf.c.i
-.PHONY : ft_free_fdf.c.i
-
-ft_free_fdf.s: ft_free_fdf.c.s
-
-.PHONY : ft_free_fdf.s
-
-# target to generate assembly for a file
-ft_free_fdf.c.s:
-	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/ft_free_fdf.c.s
-.PHONY : ft_free_fdf.c.s
-
-ft_spnbrcount.o: ft_spnbrcount.c.o
-
-.PHONY : ft_spnbrcount.o
-
-# target to build an object file
-ft_spnbrcount.c.o:
-	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/ft_spnbrcount.c.o
-.PHONY : ft_spnbrcount.c.o
-
-ft_spnbrcount.i: ft_spnbrcount.c.i
-
-.PHONY : ft_spnbrcount.i
-
-# target to preprocess a source file
-ft_spnbrcount.c.i:
-	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/ft_spnbrcount.c.i
-.PHONY : ft_spnbrcount.c.i
-
-ft_spnbrcount.s: ft_spnbrcount.c.s
-
-.PHONY : ft_spnbrcount.s
-
-# target to generate assembly for a file
-ft_spnbrcount.c.s:
-	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/ft_spnbrcount.c.s
-.PHONY : ft_spnbrcount.c.s
-
-game_over.o: game_over.c.o
-
-.PHONY : game_over.o
-
-# target to build an object file
-game_over.c.o:
-	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/game_over.c.o
-.PHONY : game_over.c.o
-
-game_over.i: game_over.c.i
-
-.PHONY : game_over.i
-
-# target to preprocess a source file
-game_over.c.i:
-	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/game_over.c.i
-.PHONY : game_over.c.i
-
-game_over.s: game_over.c.s
-
-.PHONY : game_over.s
-
-# target to generate assembly for a file
-game_over.c.s:
-	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/game_over.c.s
-.PHONY : game_over.c.s
-
-get_dot.o: get_dot.c.o
-
-.PHONY : get_dot.o
-
-# target to build an object file
-get_dot.c.o:
-	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/get_dot.c.o
-.PHONY : get_dot.c.o
-
-get_dot.i: get_dot.c.i
-
-.PHONY : get_dot.i
-
-# target to preprocess a source file
-get_dot.c.i:
-	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/get_dot.c.i
-.PHONY : get_dot.c.i
-
-get_dot.s: get_dot.c.s
-
-.PHONY : get_dot.s
-
-# target to generate assembly for a file
-get_dot.c.s:
-	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/get_dot.c.s
-.PHONY : get_dot.c.s
-
-get_height_and_width.o: get_height_and_width.c.o
-
-.PHONY : get_height_and_width.o
-
-# target to build an object file
-get_height_and_width.c.o:
-	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/get_height_and_width.c.o
-.PHONY : get_height_and_width.c.o
-
-get_height_and_width.i: get_height_and_width.c.i
-
-.PHONY : get_height_and_width.i
-
-# target to preprocess a source file
-get_height_and_width.c.i:
-	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/get_height_and_width.c.i
-.PHONY : get_height_and_width.c.i
-
-get_height_and_width.s: get_height_and_width.c.s
-
-.PHONY : get_height_and_width.s
-
-# target to generate assembly for a file
-get_height_and_width.c.s:
-	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/get_height_and_width.c.s
-.PHONY : get_height_and_width.c.s
-
-get_z_matrix.o: get_z_matrix.c.o
-
-.PHONY : get_z_matrix.o
-
-# target to build an object file
-get_z_matrix.c.o:
-	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/get_z_matrix.c.o
-.PHONY : get_z_matrix.c.o
-
-get_z_matrix.i: get_z_matrix.c.i
-
-.PHONY : get_z_matrix.i
-
-# target to preprocess a source file
-get_z_matrix.c.i:
-	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/get_z_matrix.c.i
-.PHONY : get_z_matrix.c.i
-
-get_z_matrix.s: get_z_matrix.c.s
-
-.PHONY : get_z_matrix.s
-
-# target to generate assembly for a file
-get_z_matrix.c.s:
-	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/get_z_matrix.c.s
-.PHONY : get_z_matrix.c.s
-
 main.o: main.c.o
 
 .PHONY : main.o
@@ -379,86 +163,302 @@ main.c.s:
 	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/main.c.s
 .PHONY : main.c.s
 
-print_menu.o: print_menu.c.o
+srcs/draw.o: srcs/draw.c.o
 
-.PHONY : print_menu.o
-
-# target to build an object file
-print_menu.c.o:
-	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/print_menu.c.o
-.PHONY : print_menu.c.o
-
-print_menu.i: print_menu.c.i
-
-.PHONY : print_menu.i
-
-# target to preprocess a source file
-print_menu.c.i:
-	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/print_menu.c.i
-.PHONY : print_menu.c.i
-
-print_menu.s: print_menu.c.s
-
-.PHONY : print_menu.s
-
-# target to generate assembly for a file
-print_menu.c.s:
-	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/print_menu.c.s
-.PHONY : print_menu.c.s
-
-read_map.o: read_map.c.o
-
-.PHONY : read_map.o
+.PHONY : srcs/draw.o
 
 # target to build an object file
-read_map.c.o:
-	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/read_map.c.o
-.PHONY : read_map.c.o
+srcs/draw.c.o:
+	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/srcs/draw.c.o
+.PHONY : srcs/draw.c.o
 
-read_map.i: read_map.c.i
+srcs/draw.i: srcs/draw.c.i
 
-.PHONY : read_map.i
+.PHONY : srcs/draw.i
 
 # target to preprocess a source file
-read_map.c.i:
-	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/read_map.c.i
-.PHONY : read_map.c.i
+srcs/draw.c.i:
+	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/srcs/draw.c.i
+.PHONY : srcs/draw.c.i
 
-read_map.s: read_map.c.s
+srcs/draw.s: srcs/draw.c.s
 
-.PHONY : read_map.s
+.PHONY : srcs/draw.s
 
 # target to generate assembly for a file
-read_map.c.s:
-	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/read_map.c.s
-.PHONY : read_map.c.s
+srcs/draw.c.s:
+	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/srcs/draw.c.s
+.PHONY : srcs/draw.c.s
 
-window.o: window.c.o
+srcs/draw_line.o: srcs/draw_line.c.o
 
-.PHONY : window.o
+.PHONY : srcs/draw_line.o
 
 # target to build an object file
-window.c.o:
-	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/window.c.o
-.PHONY : window.c.o
+srcs/draw_line.c.o:
+	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/srcs/draw_line.c.o
+.PHONY : srcs/draw_line.c.o
 
-window.i: window.c.i
+srcs/draw_line.i: srcs/draw_line.c.i
 
-.PHONY : window.i
+.PHONY : srcs/draw_line.i
 
 # target to preprocess a source file
-window.c.i:
-	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/window.c.i
-.PHONY : window.c.i
+srcs/draw_line.c.i:
+	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/srcs/draw_line.c.i
+.PHONY : srcs/draw_line.c.i
 
-window.s: window.c.s
+srcs/draw_line.s: srcs/draw_line.c.s
 
-.PHONY : window.s
+.PHONY : srcs/draw_line.s
 
 # target to generate assembly for a file
-window.c.s:
-	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/window.c.s
-.PHONY : window.c.s
+srcs/draw_line.c.s:
+	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/srcs/draw_line.c.s
+.PHONY : srcs/draw_line.c.s
+
+srcs/ft_free_fdf.o: srcs/ft_free_fdf.c.o
+
+.PHONY : srcs/ft_free_fdf.o
+
+# target to build an object file
+srcs/ft_free_fdf.c.o:
+	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/srcs/ft_free_fdf.c.o
+.PHONY : srcs/ft_free_fdf.c.o
+
+srcs/ft_free_fdf.i: srcs/ft_free_fdf.c.i
+
+.PHONY : srcs/ft_free_fdf.i
+
+# target to preprocess a source file
+srcs/ft_free_fdf.c.i:
+	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/srcs/ft_free_fdf.c.i
+.PHONY : srcs/ft_free_fdf.c.i
+
+srcs/ft_free_fdf.s: srcs/ft_free_fdf.c.s
+
+.PHONY : srcs/ft_free_fdf.s
+
+# target to generate assembly for a file
+srcs/ft_free_fdf.c.s:
+	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/srcs/ft_free_fdf.c.s
+.PHONY : srcs/ft_free_fdf.c.s
+
+srcs/ft_spnbrcount.o: srcs/ft_spnbrcount.c.o
+
+.PHONY : srcs/ft_spnbrcount.o
+
+# target to build an object file
+srcs/ft_spnbrcount.c.o:
+	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/srcs/ft_spnbrcount.c.o
+.PHONY : srcs/ft_spnbrcount.c.o
+
+srcs/ft_spnbrcount.i: srcs/ft_spnbrcount.c.i
+
+.PHONY : srcs/ft_spnbrcount.i
+
+# target to preprocess a source file
+srcs/ft_spnbrcount.c.i:
+	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/srcs/ft_spnbrcount.c.i
+.PHONY : srcs/ft_spnbrcount.c.i
+
+srcs/ft_spnbrcount.s: srcs/ft_spnbrcount.c.s
+
+.PHONY : srcs/ft_spnbrcount.s
+
+# target to generate assembly for a file
+srcs/ft_spnbrcount.c.s:
+	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/srcs/ft_spnbrcount.c.s
+.PHONY : srcs/ft_spnbrcount.c.s
+
+srcs/game_over.o: srcs/game_over.c.o
+
+.PHONY : srcs/game_over.o
+
+# target to build an object file
+srcs/game_over.c.o:
+	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/srcs/game_over.c.o
+.PHONY : srcs/game_over.c.o
+
+srcs/game_over.i: srcs/game_over.c.i
+
+.PHONY : srcs/game_over.i
+
+# target to preprocess a source file
+srcs/game_over.c.i:
+	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/srcs/game_over.c.i
+.PHONY : srcs/game_over.c.i
+
+srcs/game_over.s: srcs/game_over.c.s
+
+.PHONY : srcs/game_over.s
+
+# target to generate assembly for a file
+srcs/game_over.c.s:
+	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/srcs/game_over.c.s
+.PHONY : srcs/game_over.c.s
+
+srcs/get_dot.o: srcs/get_dot.c.o
+
+.PHONY : srcs/get_dot.o
+
+# target to build an object file
+srcs/get_dot.c.o:
+	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/srcs/get_dot.c.o
+.PHONY : srcs/get_dot.c.o
+
+srcs/get_dot.i: srcs/get_dot.c.i
+
+.PHONY : srcs/get_dot.i
+
+# target to preprocess a source file
+srcs/get_dot.c.i:
+	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/srcs/get_dot.c.i
+.PHONY : srcs/get_dot.c.i
+
+srcs/get_dot.s: srcs/get_dot.c.s
+
+.PHONY : srcs/get_dot.s
+
+# target to generate assembly for a file
+srcs/get_dot.c.s:
+	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/srcs/get_dot.c.s
+.PHONY : srcs/get_dot.c.s
+
+srcs/get_height_and_width.o: srcs/get_height_and_width.c.o
+
+.PHONY : srcs/get_height_and_width.o
+
+# target to build an object file
+srcs/get_height_and_width.c.o:
+	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/srcs/get_height_and_width.c.o
+.PHONY : srcs/get_height_and_width.c.o
+
+srcs/get_height_and_width.i: srcs/get_height_and_width.c.i
+
+.PHONY : srcs/get_height_and_width.i
+
+# target to preprocess a source file
+srcs/get_height_and_width.c.i:
+	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/srcs/get_height_and_width.c.i
+.PHONY : srcs/get_height_and_width.c.i
+
+srcs/get_height_and_width.s: srcs/get_height_and_width.c.s
+
+.PHONY : srcs/get_height_and_width.s
+
+# target to generate assembly for a file
+srcs/get_height_and_width.c.s:
+	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/srcs/get_height_and_width.c.s
+.PHONY : srcs/get_height_and_width.c.s
+
+srcs/get_z_matrix.o: srcs/get_z_matrix.c.o
+
+.PHONY : srcs/get_z_matrix.o
+
+# target to build an object file
+srcs/get_z_matrix.c.o:
+	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/srcs/get_z_matrix.c.o
+.PHONY : srcs/get_z_matrix.c.o
+
+srcs/get_z_matrix.i: srcs/get_z_matrix.c.i
+
+.PHONY : srcs/get_z_matrix.i
+
+# target to preprocess a source file
+srcs/get_z_matrix.c.i:
+	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/srcs/get_z_matrix.c.i
+.PHONY : srcs/get_z_matrix.c.i
+
+srcs/get_z_matrix.s: srcs/get_z_matrix.c.s
+
+.PHONY : srcs/get_z_matrix.s
+
+# target to generate assembly for a file
+srcs/get_z_matrix.c.s:
+	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/srcs/get_z_matrix.c.s
+.PHONY : srcs/get_z_matrix.c.s
+
+srcs/print_menu.o: srcs/print_menu.c.o
+
+.PHONY : srcs/print_menu.o
+
+# target to build an object file
+srcs/print_menu.c.o:
+	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/srcs/print_menu.c.o
+.PHONY : srcs/print_menu.c.o
+
+srcs/print_menu.i: srcs/print_menu.c.i
+
+.PHONY : srcs/print_menu.i
+
+# target to preprocess a source file
+srcs/print_menu.c.i:
+	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/srcs/print_menu.c.i
+.PHONY : srcs/print_menu.c.i
+
+srcs/print_menu.s: srcs/print_menu.c.s
+
+.PHONY : srcs/print_menu.s
+
+# target to generate assembly for a file
+srcs/print_menu.c.s:
+	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/srcs/print_menu.c.s
+.PHONY : srcs/print_menu.c.s
+
+srcs/read_map.o: srcs/read_map.c.o
+
+.PHONY : srcs/read_map.o
+
+# target to build an object file
+srcs/read_map.c.o:
+	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/srcs/read_map.c.o
+.PHONY : srcs/read_map.c.o
+
+srcs/read_map.i: srcs/read_map.c.i
+
+.PHONY : srcs/read_map.i
+
+# target to preprocess a source file
+srcs/read_map.c.i:
+	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/srcs/read_map.c.i
+.PHONY : srcs/read_map.c.i
+
+srcs/read_map.s: srcs/read_map.c.s
+
+.PHONY : srcs/read_map.s
+
+# target to generate assembly for a file
+srcs/read_map.c.s:
+	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/srcs/read_map.c.s
+.PHONY : srcs/read_map.c.s
+
+srcs/window.o: srcs/window.c.o
+
+.PHONY : srcs/window.o
+
+# target to build an object file
+srcs/window.c.o:
+	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/srcs/window.c.o
+.PHONY : srcs/window.c.o
+
+srcs/window.i: srcs/window.c.i
+
+.PHONY : srcs/window.i
+
+# target to preprocess a source file
+srcs/window.c.i:
+	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/srcs/window.c.i
+.PHONY : srcs/window.c.i
+
+srcs/window.s: srcs/window.c.s
+
+.PHONY : srcs/window.s
+
+# target to generate assembly for a file
+srcs/window.c.s:
+	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/srcs/window.c.s
+.PHONY : srcs/window.c.s
 
 # Help Target
 help:
@@ -470,42 +470,42 @@ help:
 	@echo "... edit_cache"
 	@echo "... FdF"
 	@echo "... lib"
-	@echo "... draw.o"
-	@echo "... draw.i"
-	@echo "... draw.s"
-	@echo "... draw_line.o"
-	@echo "... draw_line.i"
-	@echo "... draw_line.s"
-	@echo "... ft_free_fdf.o"
-	@echo "... ft_free_fdf.i"
-	@echo "... ft_free_fdf.s"
-	@echo "... ft_spnbrcount.o"
-	@echo "... ft_spnbrcount.i"
-	@echo "... ft_spnbrcount.s"
-	@echo "... game_over.o"
-	@echo "... game_over.i"
-	@echo "... game_over.s"
-	@echo "... get_dot.o"
-	@echo "... get_dot.i"
-	@echo "... get_dot.s"
-	@echo "... get_height_and_width.o"
-	@echo "... get_height_and_width.i"
-	@echo "... get_height_and_width.s"
-	@echo "... get_z_matrix.o"
-	@echo "... get_z_matrix.i"
-	@echo "... get_z_matrix.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
-	@echo "... print_menu.o"
-	@echo "... print_menu.i"
-	@echo "... print_menu.s"
-	@echo "... read_map.o"
-	@echo "... read_map.i"
-	@echo "... read_map.s"
-	@echo "... window.o"
-	@echo "... window.i"
-	@echo "... window.s"
+	@echo "... srcs/draw.o"
+	@echo "... srcs/draw.i"
+	@echo "... srcs/draw.s"
+	@echo "... srcs/draw_line.o"
+	@echo "... srcs/draw_line.i"
+	@echo "... srcs/draw_line.s"
+	@echo "... srcs/ft_free_fdf.o"
+	@echo "... srcs/ft_free_fdf.i"
+	@echo "... srcs/ft_free_fdf.s"
+	@echo "... srcs/ft_spnbrcount.o"
+	@echo "... srcs/ft_spnbrcount.i"
+	@echo "... srcs/ft_spnbrcount.s"
+	@echo "... srcs/game_over.o"
+	@echo "... srcs/game_over.i"
+	@echo "... srcs/game_over.s"
+	@echo "... srcs/get_dot.o"
+	@echo "... srcs/get_dot.i"
+	@echo "... srcs/get_dot.s"
+	@echo "... srcs/get_height_and_width.o"
+	@echo "... srcs/get_height_and_width.i"
+	@echo "... srcs/get_height_and_width.s"
+	@echo "... srcs/get_z_matrix.o"
+	@echo "... srcs/get_z_matrix.i"
+	@echo "... srcs/get_z_matrix.s"
+	@echo "... srcs/print_menu.o"
+	@echo "... srcs/print_menu.i"
+	@echo "... srcs/print_menu.s"
+	@echo "... srcs/read_map.o"
+	@echo "... srcs/read_map.i"
+	@echo "... srcs/read_map.s"
+	@echo "... srcs/window.o"
+	@echo "... srcs/window.i"
+	@echo "... srcs/window.s"
 .PHONY : help
 
 
