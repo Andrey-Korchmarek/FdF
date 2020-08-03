@@ -115,6 +115,9 @@ int					ft_ismark(int c);
 int					ft_atoi_base(const char *str, int base);
 void				ft_free_array(int ***as);
 void				ft_free_matrix(char ***as);
-int                 ft_open_read(char *name);
+int					ft_open_read(char *name);
+
+char				*ft_stradd(char *str, char ch);
+char				*ft_strjoin_free(char *s1, char *s2, int indx);
 
 #endif

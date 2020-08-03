@@ -16,19 +16,9 @@ HEAD = -I libft.h
 CC = gcc -Wall -Wextra -Werror
 RM = /bin/rm -f
 
-FILES = ft_abs ft_atoi ft_atoll ft_bzero ft_intlen ft_isalnum ft_isalpha ft_isascii \
-ft_ischar ft_isdigit ft_islower ft_isprint ft_isspace ft_isupper ft_itoa ft_lstadd \
-ft_lstdel ft_lstdelone ft_lstiter ft_lstmap ft_lstnew ft_memalloc ft_memccpy ft_memchr \
-ft_memcmp ft_memcpy ft_memdel ft_memmove ft_memrcpy ft_memset ft_putchar ft_putchar_fd \
-ft_putendl ft_putendl_fd ft_putnbr ft_putnbr_fd ft_putstr ft_putstr_fd ft_range \
-ft_realloc ft_shrinking_gap ft_strcat ft_strchr ft_strclr ft_strcmp ft_strcpy \
-ft_strdel ft_strdup ft_strequ ft_striter ft_striteri ft_strjoin ft_strjoinfree \
-ft_strlcat ft_strlen ft_strmap ft_strmapi ft_strncat ft_strncmp ft_strncpy ft_strnequ \
-ft_strnew ft_strnlen ft_strnstr ft_strplen ft_strrchr ft_strsplit ft_strstr ft_strsub \
-ft_strtrim ft_tolower ft_toupper get_next_line
+CFILES = ft_abs.c ft_arrays.c ft_atoi.c ft_atoi_base.c ft_atoi_long.c ft_atoll.c ft_bzero.c ft_free_array.c ft_free_matrix.c ft_intlen.c ft_isalnum.c ft_isalpha.c ft_isascii.c ft_ischar.c ft_isdigit.c ft_ishex.c ft_ishexlow.c ft_ishexnumber.c ft_ishexup.c ft_islower.c ft_ismark.c ft_isnumber.c ft_ispoint.c ft_isprint.c ft_issign.c ft_isspace.c ft_isupper.c ft_itoa.c ft_itoa_base.c ft_itoa_big.c ft_lstadd.c ft_lstdel.c ft_lstdelone.c ft_lstiter.c ft_lstmap.c ft_lstnew.c ft_memalloc.c ft_memccpy.c ft_memchr.c ft_memcmp.c ft_memcpy.c ft_memdel.c ft_memdup.c ft_memmove.c ft_memrcpy.c ft_memset.c ft_open_read.c ft_putchar.c ft_putchar_fd.c ft_putendl.c ft_putendl_fd.c ft_putnbr.c ft_putnbr_fd.c ft_putstr.c ft_putstr_fd.c ft_range.c ft_realloc.c ft_stradd.c ft_strcat.c ft_strchr.c ft_strclr.c ft_strcmp.c ft_strcount.c ft_strcpy.c ft_strdel.c ft_strdup.c ft_strequ.c ft_strindex.c ft_striter.c ft_striteri.c ft_strjoin.c ft_strjoin_free.c ft_strjoinfree.c ft_strlcat.c ft_strlen.c ft_strlower.c ft_strmap.c ft_strmapi.c ft_strncat.c ft_strncmp.c ft_strncpy.c ft_strnequ.c ft_strnew.c ft_strnlen.c ft_strnstr.c ft_strplen.c ft_strrchr.c ft_strsplit.c ft_strstr.c ft_strsub.c ft_strtrim.c ft_strupper.c ft_swap.c ft_swapi.c ft_tolower.c ft_toupper.c get_next_line.c
 
-#CFILES = $(patsubst %, $(SRCS)%.c, $(FILES))
-OFILES = $(patsubst %, %.o, $(FILES))
+OFILES = $(patsubst %.c, %.o, $(CFILES))
 
 .PHONY: all $(NAME) clean fclean re
 
@@ -38,14 +28,14 @@ all : $(NAME)
 	@$(CC) -c $< -o $@ -I $(HEAD)
 
 $(NAME) : $(OFILES)
-	ar rc $(NAME) $(OFILES)
+	ar -rc $(NAME) $(OFILES)
 	ranlib $(NAME)
 
 %.o: %.c
 	@$(CC) $(INCLUDE) $< -c -o $@
 
-# $(OFILES) :
-# 	$(CC) -c $(CFILES) $(HEAD)
+$(OFILES):
+	$(CC) -c $(CFILES) $(HEAD)
 
 clean :
 	$(RM) $(OFILES)

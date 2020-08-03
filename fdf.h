@@ -32,33 +32,28 @@ typedef struct	s_fdf
 	int zoom;
 	int shift_x;
 	int shift_y;
-
+	int			win_x;
+	int			win_y;
 	void		*mlx_ptr;
 	void		*win_ptr;
 
-	int			win_x;
-	int			win_y;
+	int			is_last;
+	int			scale;
+	int			z_scale;
+	int			is_isometric;
+	double		angle;
+
 }				t_fdf;
 
-//typedef struct	s_dot
-//{
-//	float		x;
-//	float		y;
-//	float		z;
-//	int			is_last;
-//
-//	int			color;
-//	int			scale;
-//	int			z_scale;
-//	int			shift_x;
-//	int			shift_y;
-//	int			is_isometric;
-//	double		angle;
-//	int			win_x;
-//	int			win_y;
-//	void		*mlx_ptr;
-//	void		*win_ptr;
-//}				t_dot;
+typedef struct	s_dot
+{
+	float		x;
+	float		y;
+	float		z;
+	int			color;
+
+
+}				t_dot;
 
 void			read_map(char *file, t_fdf *map);
 int				get_height_and_width(char *file);
