@@ -1,6 +1,6 @@
 #include "fdf.h"
 
-static	int		deal_key(int button, t_fdf *data)
+int		deal_key(int button, t_fdf *data)
 {
 	if (button == 126)// up button
 		data->shift_y -= 10;
@@ -25,7 +25,7 @@ static	int		deal_key(int button, t_fdf *data)
 	return (0);
 }
 
-int				mouse_press(int button, t_fdf *data)
+int		mouse_press(int button, t_fdf *data)
 {
 	if (button == 1 || button == 2)
 	{
@@ -50,7 +50,7 @@ int				mouse_press(int button, t_fdf *data)
 	return (0);
 }
 
-void			set_default(t_fdf *data)
+void	set_default(t_fdf *data)
 {
 	data->zoom = 20;
 	data->z_scale = 1;
@@ -64,7 +64,7 @@ void			set_default(t_fdf *data)
 	data->win_ptr =\
 	mlx_new_window(data->mlx_ptr, data->win_x, data->win_y, "FDF");
 }
-int				main(int argc, char **argv)
+int		main(int argc, char **argv)
 {
 	t_fdf	karta;
 	int		fd;
@@ -108,25 +108,16 @@ int				main(int argc, char **argv)
 	set_default(&karta);
 	karta.mlx_ptr = mlx_init();
 	karta.win_ptr = mlx_new_window(karta.mlx_ptr, 1000, 1000, "FDF");
-	bresenham(10, 10, 500, 300, karta);
+	bresenham(10, 10, 500, 300, &karta);
 	mlx_key_hook(&karta.win_ptr, deal_key, NULL);//data  i.o NULL
 	mlx_loop(&karta.mlx_ptr);
-//	draw(karta);
-//	mlx_mouse_hook(&karta.win_ptr, mouse_press, data);
+	draw(&karta);
+	mlx_mouse_hook(&karta.win_ptr, mouse_press, &karta);
 	mlx_key_hook(karta.win_ptr, deal_key, NULL);
 	ft_free_fdf(&karta);
 	fd = 1;
 	return (0);
-//=======
-//    fdf *data;
-//
-//    if (argc != 2)
-//    {
-//        char *txt;
-//        txt = "Use this command: ./fdf testmap.fdf";
-//        printf("%s\n", txt );
-//        return (0);
-//    }
+
 //    data = (fdf*)malloc(sizeof(fdf));
 //    read_file(argv[1], data);
 //    set_default(data);

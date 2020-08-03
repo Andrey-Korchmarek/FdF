@@ -28,7 +28,7 @@ void bresenham(float x, float y, float x1, float y1, t_fdf *data)
     y1 *= data->zoom;
 
 
-    data->color = (z || z1) ? 0xFFFF00 : 0xFFFFFF;
+    int color = (z || z1) ? 0xFFFF00 : 0xFFFFFF;
 
     isometric(&x, &y, z);
     isometric(&x1, &y1, z1);
@@ -46,7 +46,7 @@ void bresenham(float x, float y, float x1, float y1, t_fdf *data)
     y_step /= max;
     while ((int)(x - x1) || (int)(y-y1))
     {
-        mlx_pixel_put(data->mlx_ptr, data->win_ptr, x, y, data->color);
+        mlx_pixel_put(data->mlx_ptr, data->win_ptr, x, y, color);
         x += x_step;
         y += y_step;
     }
