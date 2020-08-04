@@ -12,12 +12,6 @@
 
 #include "fdf.h"
 
-void	isometric(float *x, float *y, int z)
-{
-	*x = (*x - *y) * cos(0.523599);
-	*y = (*x + *y) * sin(0.523599) - z * 3;
-}
-
 void	draw(t_fdf *data)
 {
 	int		x;

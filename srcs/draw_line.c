@@ -12,6 +12,33 @@
 
 #include "fdf.h"
 
+void	zoom(t_dot *start, t_dot *end, t_fdf *data)
+{
+	start->x *= data->zoom;
+	start->y *= data->zoom;
+	end->x *= data->zoom;
+	end->y *= data->zoom;
+}
+
+int		get_color(t_dot *start, t_dot *end)
+{
+	int	color;
+
+	color = (start->z >= end->z) ? start->color : end->color;
+	color = (color == -1) ? 0xFFFFFF : color;
+	return (color);
+}
+
+void	isometric(t_dot *start, t_dot *end, t_fdf *data)
+{
+	if (!data->is_isometric)
+		return ;
+	start->x = (start->x - start->y) * cos(data->angle);
+	start->y = (start->x + start->y) * sin(data->angle) - start->z * 3;
+	end->x = (end->x - end->y) * cos(data->angle);
+	end->y = (end->x + end->y) * sin(data->angle) - end->z * 3;
+}
+
 void	draw_line(t_dot *start, t_dot *end, t_fdf *data)
 {
 	float	x_step;
@@ -19,14 +46,9 @@ void	draw_line(t_dot *start, t_dot *end, t_fdf *data)
 	int		max;
 	int		color;
 
-	start->x *= data->zoom;
-	start->y *= data->zoom;
-	end->x *= data->zoom;
-	end->y *= data->zoom;
-	color = (start->z >= end->z) ? start->color : end->color;
-	color = (color == -1) ? 0xFFFFFF : color;
-	isometric(&start->x, &start->y, start->z);
-	isometric(&end->x, &end->y, end->z);
+	zoom(start, end, data);
+	color = get_color(start, end);
+	isometric(start, end, data);
 	start->x += data->shift_x;
 	start->y += data->shift_y;
 	end->x += data->shift_x;
