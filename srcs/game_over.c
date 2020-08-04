@@ -25,7 +25,7 @@ void	game_over(int error)
 	else if (error == 4)
 		ft_putstr("All lines must be the same width.");
 	else if (error == 5)
-		ft_putstr("5");
+		ft_putstr("The file must have the extension .fdf");
 	else if (error == 32)
 		ft_putstr("!");
 	else if (error == 32)

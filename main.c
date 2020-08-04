@@ -67,6 +67,7 @@ int		mouse_press(int button, int x, int y, t_fdf *data)
 void	set_default(t_fdf *data)
 {
 	data->zoom = 20;
+	data->angle = 0.523599;
 	data->win_x = 2000;
 	data->win_y = 1000;
 	data->shift_x = data->win_x / 3;
@@ -79,10 +80,12 @@ void	set_default(t_fdf *data)
 int		main(int argc, char **argv)
 {
 	t_fdf	*data;
-	int 	fd;
+	int		fd;
 
 	if (argc != 2)
 		game_over(1);
+	if (!ft_strequ(ft_strstr(argv[1], ".fdf"), ".fdf"))
+		game_over(5);
 	if (!(fd = ft_open_read(argv[1])))
 		game_over(2);
 	close(fd);
