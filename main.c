@@ -14,14 +14,16 @@
 
 int		deal_key(int button, t_fdf *data)
 {
-	if (button == 126)
+	if (button == 126 || button == 13)
 		data->shift_y -= 10;
-	if (button == 125)
+	if (button == 125 || button == 1)
 		data->shift_y += 10;
-	if (button == 123)
+	if (button == 123 || button == 0)
 		data->shift_x -= 10;
-	if (button == 124)
+	if (button == 124 || button == 2)
 		data->shift_x += 10;
+	if (button == 35)
+		data->is_isometric = (data->is_isometric == 0) ? 1 : 0;
 	if (button == 3)
 		new_window(button, data);
 	if (button == 69 || button == 78 || button == 67 || button == 75)
@@ -42,18 +44,16 @@ int		mouse_press(int button, int x, int y, t_fdf *data)
 	if (button == 1 || button == 2)
 	{
 		if (button == 2)
-			data->shift_x += 50;
+			data->angle += 0.1;
 		if (button == 1)
-			if (data->shift_x > 1)
-				data->shift_x -= 50;
+			data->angle -= 0.1;
 	}
 	if (button == 4 || button == 5)
 	{
 		if (button == 4)
-			data->shift_y += 50;
+			data->zoom -= 1;
 		if (button == 5)
-			if (data->shift_y > 1)
-				data->shift_y -= 50;
+			data->zoom += 1;
 	}
 	if (button == 3)
 		new_window(button, data);

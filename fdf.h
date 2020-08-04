@@ -12,10 +12,11 @@
 
 #ifndef FDF_H
 # define FDF_H
-
+# define TEST
+#include <stdio.h>
+# include <math.h>
 # include "libft/libft.h"
 # include "minilibx_macos/mlx.h"
-# include "math.h"
 
 # define MAX1(a, b) (a > b ? a : b)
 # define MOD(a) ((a < 0) ? -a : a)

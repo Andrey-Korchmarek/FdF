@@ -24,8 +24,16 @@ int		get_color(t_dot *start, t_dot *end)
 {
 	int	color;
 
-	color = (start->z >= end->z) ? start->color : end->color;
-	color = (color == -1) ? 0xFFFFFF : color;
+	if (start->z == 0 && end->z == 0)
+		return (0xFFFFFF);
+	else if (start->color == -1 && end->color == -1)
+		return (0xFFFF00);
+	else
+	{
+		color = 0;
+		color = (start->z >= end->z) ? start->color : end->color;
+		color = (color == -1) ? 0xFFFFFF : color;
+	}
 	return (color);
 }
 
