@@ -79,14 +79,13 @@ void	set_default(t_fdf *data)
 int		main(int argc, char **argv)
 {
 	t_fdf	*data;
-	char	*txt;
+	int 	fd;
 
 	if (argc != 2)
-	{
-		txt = "Use this command: ./fdf testmap.fdf";
-		printf("%s\n", txt);
-		return (0);
-	}
+		game_over(1);
+	if (!(fd = ft_open_read(argv[1])))
+		game_over(5);
+	close(fd);
 	data = (t_fdf*)malloc(sizeof(t_fdf));
 	read_map(argv[1], data);
 	set_default(data);
