@@ -84,7 +84,7 @@ int		main(int argc, char **argv)
 	if (argc != 2)
 		game_over(1);
 	if (!(fd = ft_open_read(argv[1])))
-		game_over(5);
+		game_over(2);
 	close(fd);
 	data = (t_fdf*)malloc(sizeof(t_fdf));
 	read_map(argv[1], data);
