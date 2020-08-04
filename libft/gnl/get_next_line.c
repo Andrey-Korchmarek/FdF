@@ -33,6 +33,14 @@ static int	gnl_ifstacknotempty(char **stack, char **line)
 	}
 }
 
+static	int	gnl_isline(char line, char **stack)
+{
+	if (line)
+		return (1);
+	ft_strdel(stack);
+	return (0);
+}
+
 int			get_next_line(const int fd, char **line)
 {
 	static char	*stack;
@@ -59,8 +67,5 @@ int			get_next_line(const int fd, char **line)
 		}
 		*line = ft_strjoinfree(*line, buf, 1, 0);
 	}
-	if (*line[0])
-		return (1);
-	ft_strdel(&stack);
-	return (0);
+	return (gnl_isline(*line[0], &stack));
 }
