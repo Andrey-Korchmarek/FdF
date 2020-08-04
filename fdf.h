@@ -13,6 +13,10 @@
 #ifndef FDF_H
 # define FDF_H
 # define TEST
+# define WHITE 0xFFFFFF
+# define RED 0xFF0000
+# define GREEN 0x00FF00
+# define BLUE 0x0000FF
 #include <stdio.h>
 # include <math.h>
 # include "libft/libft.h"
