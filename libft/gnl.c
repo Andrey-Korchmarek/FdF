@@ -6,7 +6,7 @@
 /*   By: mashley <mashley@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/27 18:42:14 by mashley           #+#    #+#             */
-/*   Updated: 2019/09/28 14:43:26 by mashley          ###   ########.fr       */
+/*   Updated: 2020/08/04 21:17:08 by mashley          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ int			gnl(const int fd, char **line)
 	int			ret;
 	char		*heap;
 
-	if (!line || fd < 0 || BUFF_SIZE < 1)//(read(fd, stack[0], 0) < 0) ||
+	if (!line || fd < 0 || BUFF_SIZE < 1)
 		return (-1);
 	*line = ft_strnew(0);
 	if (stack)

@@ -66,7 +66,7 @@ int		mouse_press(int button, int x, int y, t_fdf *data)
 
 void	set_default(t_fdf *data)
 {
-	data->zoom = 20;
+	data->zoom = 2;
 	data->angle = 0.523599;
 	data->win_x = 2000;
 	data->win_y = 1000;
