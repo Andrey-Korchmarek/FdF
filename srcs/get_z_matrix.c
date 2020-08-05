@@ -20,6 +20,7 @@ static	void	get_z_color(char *line, int i, t_fdf *data)
 
 	nums = ft_strsplit(line, ' ');
 	j = 0;
+	str = NULL;
 	while (j < (*data).width)
 	{
 		if (str)
