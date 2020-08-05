@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../FdF/libft/libft.h"
+#include "libft.h"
 
 static int	gnl_ifstacknotempty(char **stack, char **line)
 {
