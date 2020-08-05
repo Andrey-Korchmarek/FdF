@@ -21,8 +21,8 @@
 # include <limits.h>
 # include <stdio.h>
 # include <fcntl.h>
-#include "get_next_line.h"
-#include "bonus.h"
+# include "get_next_line.h"
+# include "bonus.h"
 
 typedef struct		s_list
 {

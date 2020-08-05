@@ -11,10 +11,10 @@
 /* ************************************************************************** */
 
 #ifndef FDF_BONUS_H
-#define FDF_BONUS_H
+# define FDF_BONUS_H
 
-#include "libft.h"
-#include "get_next_line.h"
+# include "libft.h"
+# include "get_next_line.h"
 # include <stdlib.h>
 # include <unistd.h>
 # include <limits.h>

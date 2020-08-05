@@ -11,11 +11,11 @@
 /* ************************************************************************** */
 
 #ifndef FDF_TMP_H
-#define FDF_TMP_H
+# define FDF_TMP_H
 
-#include "libft.h"
-#include "get_next_line.h"
-#include "bonus.h"
+# include "libft.h"
+# include "get_next_line.h"
+# include "bonus.h"
 
 int	ft_main(void);
 

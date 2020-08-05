@@ -17,7 +17,7 @@
 # define RED 0xFF0000
 # define GREEN 0x00FF00
 # define BLUE 0x0000FF
-#include <stdio.h>
+# include <stdio.h>
 # include <math.h>
 # include "libft/includes/libft.h"
 # include "minilibx_macos/mlx.h"
@@ -70,7 +70,7 @@ int					get_height_and_width(char *file);
 int					ft_spnbrcount(char *str);
 void				game_over(int error);
 void				ft_free_fdf(t_fdf *data);
-int 				get_color(t_dot *start, t_dot *end);
+int					get_color(t_dot *start, t_dot *end);
 void				zoom(t_dot *start, t_dot *end, t_fdf *data);
 
 #endif
