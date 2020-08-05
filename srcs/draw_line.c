@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../fdf.h"
+#include "../includes/fdf.h"
 
 void	zoom(t_dot *start, t_dot *end, t_fdf *data)
 {

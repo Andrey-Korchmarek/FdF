@@ -18,8 +18,8 @@
 # define BLUE 0x0000FF
 # include <stdio.h>
 # include <math.h>
-# include "libft/includes/libft.h"
-# include "minilibx_macos/mlx.h"
+# include "../libft/includes/libft.h"
+# include "../minilibx_macos/mlx.h"
 
 # define MAX1(a, b) (a > b ? a : b)
 # define MOD(a) ((a < 0) ? -a : a)

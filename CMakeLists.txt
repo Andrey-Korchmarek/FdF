@@ -13,7 +13,7 @@ include_directories(libft)
 include_directories(minilibx_macos)
 FILE(GLOB SOURCES *.c srcs/*.c)
 
-add_executable(FdF ${SOURCES} fdf.h )
+add_executable(FdF ${SOURCES} includes/fdf.h)
 
 add_subdirectory(libft)
 target_link_libraries(FdF lib)

@@ -10,23 +10,49 @@
 #                                                                              #
 # **************************************************************************** #
 
+.PHONY: clean fclean re
 NAME = fdf
-SRC = srcs/*.c main.c
-INCS = libft/libft.a minilibx_macos/libmlx.a
+CC = gcc
+CFLAGS = -Werror -Wextra -Wall -g
 FWS = -framework OpenGL -framework AppKit
-FLAGS = -Werror -Wextra -Wall
 
-all:
-	@make -C libft/ all
-	@make -C minilibx_macos/ all
-	@gcc $(SRC) -o $(NAME) $(FLAGS) $(INCS) $(FWS)
+MY_LIB = ./libft/
+MLX_LIB = ./minilibx_macos/
+INC = ./minilibx_macos/ ./libft/includes/ ./includes
+INCLUDES = -I ./minilibx_macos/ -I ./libft/includes/ -I ./includes/
+
+SRC = $(addprefix $(SRC_DIR), $(SRC_NAME))
+OBJ = $(addprefix $(OBJ_DIR)/, $(OBJ_NAME))
+
+SRC_DIR = ./srcs
+OBJ_DIR = ./object
+
+SRC_NAME = draw.c draw_line.c ft_free_fdf.c ft_spnbrcount.c game_over.c get_dot.c get_height_and_width.c \
+get_z_matrix.c hooks.c print_menu.c read_map.c window.c main.c
+OBJ_NAME = $(SRC_NAME:.c=.o)
+
+all: $(NAME)
+
+$(NAME): $(OBJ)
+	@make build_lib
+	@$(CC) $(CFLAGS) -o $(NAME) $(OBJ) -L $(MLX_LIB) -lmlx -L $(MY_LIB) -lft $(INCLUDES) $(FWS)
+
+$(OBJ_DIR)/%.o: $(SRC_DIR)/%.c $(INC)
+	@mkdir -p $(OBJ_DIR)
+	@$(CC) $(CFLAGS) $(INCLUDES) -o $@ -c $<
+
+build_lib:
+	@make -sC $(MY_LIB)
+	@make -sC $(MLX_LIB)
 
 clean:
-	@make -C libft/ clean
-	@make -C minilibx_macos/ clean
+	@/bin/rm -rf $(OBJ_DIR)
+	@make clean -C $(MLX_LIB)
+	@make clean -C $(MY_LIB)
 
-fclean: clean
-	/bin/rm -f $(NAME)
-	@make -C libft/ fclean
+fclean:	clean
+	@make clean
+	@/bin/rm -f $(NAME)
+	@make fclean -C $(MY_LIB)
 
-re: fclean all
+re:	fclean all
