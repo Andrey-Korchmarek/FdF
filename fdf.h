@@ -66,5 +66,7 @@ void				game_over(int error);
 void				ft_free_fdf(t_fdf *data);
 int					get_color(t_dot *start, t_dot *end);
 void				zoom(t_dot *start, t_dot *end, t_fdf *data);
+void				del_dot2(t_dot *dot1, t_dot *dot2);
+void				shift(t_dot *start, t_dot *end, t_fdf *data);
 
 #endif

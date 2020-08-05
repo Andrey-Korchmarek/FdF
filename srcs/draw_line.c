@@ -53,6 +53,14 @@ void	isometric(t_dot *start, t_dot *end, t_fdf *data)
 	end->y = (end->x + end->y) * sin(data->angle) - end->z * 3;
 }
 
+void	shift(t_dot *start, t_dot *end, t_fdf *data)
+{
+	start->x += data->shift_x;
+	start->y += data->shift_y;
+	end->x += data->shift_x;
+	end->y += data->shift_y;
+}
+
 void	draw_line(t_dot *start, t_dot *end, t_fdf *data)
 {
 	float	x_step;
@@ -60,13 +68,12 @@ void	draw_line(t_dot *start, t_dot *end, t_fdf *data)
 	int		max;
 	int		color;
 
+	if (!(start && end))
+		return ;
 	zoom(start, end, data);
 	color = get_color(start, end);
 	isometric(start, end, data);
-	start->x += data->shift_x;
-	start->y += data->shift_y;
-	end->x += data->shift_x;
-	end->y += data->shift_y;
+	shift(start, end, data);
 	x_step = end->x - start->x;
 	y_step = end->y - start->y;
 	max = MAX1(MOD(x_step), MOD(y_step));
@@ -78,4 +85,5 @@ void	draw_line(t_dot *start, t_dot *end, t_fdf *data)
 		start->x += x_step;
 		start->y += y_step;
 	}
+	del_dot2(start, end);
 }

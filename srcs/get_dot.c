@@ -12,6 +12,14 @@
 
 #include "../fdf.h"
 
+void	del_dot2(t_dot *dot1, t_dot *dot2)
+{
+	free(dot1);
+	dot1 = NULL;
+	free(dot2);
+	dot2 = NULL;
+}
+
 t_dot	*get_dot(int x, int y, t_fdf *data)
 {
 	t_dot *point;
