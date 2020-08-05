@@ -18,7 +18,8 @@ void	print_menu(t_fdf txt)
 
 	str = "keyboard -> button 'ESC': exit and force quit the mlx window";
 	mlx_string_put(txt.mlx_ptr, txt.win_ptr, 15, 5, 0xFF0000, str);
-	str = "mouse  click -> right left & centre; -> change the angle of 3D map & Fullscreen";
+	str = "mouse  click -> right left & centre; ->"
+		" change the angle of 3D map & Fullscreen";
 	mlx_string_put(txt.mlx_ptr, txt.win_ptr, 15, 25, 0x00FF00, str);
 	str = "mouse  scroll -> up down -> change zoom of 3D map";
 	mlx_string_put(txt.mlx_ptr, txt.win_ptr, 15, 45, 0x00FF00, str);
