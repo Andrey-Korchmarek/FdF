@@ -14,7 +14,7 @@
 
 void	set_default(t_fdf *data)
 {
-	data->zoom = 10;
+	data->zoom = 5;
 	data->angle = 0.523599;
 	data->win_x = 2000;
 	data->win_y = 1000;
