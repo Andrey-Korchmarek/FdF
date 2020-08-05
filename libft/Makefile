@@ -56,6 +56,8 @@ OFILES = $(patsubst %.c, %.o, $(CFILES))
 
 .PHONY: all $(NAME) clean fclean re
 
+.SILENT: $(OFILES)
+
 all : $(NAME)
 
 $(NAME) : $(OFILES)
