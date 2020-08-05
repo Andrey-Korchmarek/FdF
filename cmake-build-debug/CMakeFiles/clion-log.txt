@@ -1,4 +1,7 @@
 /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /Users/mashley/Desktop/apearl
--- Configuring done
--- Generating done
--- Build files have been written to: /Users/mashley/Desktop/apearl/cmake-build-debug
+CMake Error at CMakeLists.txt:18 (add_subdirectory):
+  add_subdirectory given source "libft" which is not an existing directory.
+
+
+-- Configuring incomplete, errors occurred!
+See also "/Users/mashley/Desktop/apearl/cmake-build-debug/CMakeFiles/CMakeOutput.log".
