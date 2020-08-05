@@ -5,7 +5,7 @@ set(CMAKE_C_STANDARD 11)
 
 include_directories(.)
 
-file(GLOB SRCS "*.c")
-file(GLOB HEAD *.h)
+file(GLOB SRCS srcs/*.c srcs*/*.c)
+file(GLOB HEAD includes/*.h)
 
 add_library(libft STATIC ${SRCS} ${HEAD})

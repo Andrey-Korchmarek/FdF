@@ -13,7 +13,7 @@
 #ifndef FDF_H
 # define FDF_H
 # define TEST
-# include "libft/libft.h"
+# include "libft/includes/libft.h"
 # include "minilibx_macos/mlx.h"
 # include "math.h"
 # define MAX1(a, b) (a > b ? a : b)
