@@ -58,12 +58,12 @@ OFILES = $(patsubst %.c, %.o, $(CFILES))
 
 all : $(NAME)
 
-%.o : %.c $(HEAD)
-	@$(CC) -c $< -o $@ $(INCLUDES)
-
 $(NAME) : $(OFILES)
 	@ar rc $(NAME) $(OFILES)
 	ranlib $(NAME)
+
+%.o : %.c $(HEAD)
+	@$(CC) -c $< -o $@ $(INCLUDES)
 
 clean :
 	@$(RM) $(OFILES)
