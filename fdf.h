@@ -12,7 +12,6 @@
 
 #ifndef FDF_H
 # define FDF_H
-# define TEST
 # define WHITE 0xFFFFFF
 # define RED 0xFF0000
 # define GREEN 0x00FF00
@@ -38,10 +37,6 @@ typedef	struct		s_fdf
 	int				win_y;
 	void			*mlx_ptr;
 	void			*win_ptr;
-
-	int				is_last;
-	int				scale;
-	int				z_scale;
 	int				is_isometric;
 	double			angle;
 
@@ -56,12 +51,11 @@ typedef struct		s_dot
 }					t_dot;
 
 void				draw(t_fdf *data);
-int					mouse_press(int button, int x, int y, t_fdf *data);
+int					mouse_h(int button, int x, int y, t_fdf *data);
 void				print_menu(t_fdf txt);
-int					deal_key(int button, t_fdf *data);
+int					key_h(int button, t_fdf *data);
 void				new_window(int key, t_fdf *data);
 void				isometric(t_dot *start, t_dot *end, t_fdf *data);
-
 void				draw_line(t_dot *start, t_dot *end, t_fdf *data);
 t_dot				*get_dot(int x, int y, t_fdf *data);
 void				read_map(char *file, t_fdf *map);
