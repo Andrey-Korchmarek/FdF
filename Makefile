@@ -11,7 +11,7 @@
 # **************************************************************************** #
 
 NAME = fdf
-SRC = srcs/draw.c srcs/print.c srcs/window.c main.c read_file.c
+SRC = srcs/draw.c srcs/draw_line.c srcs/ft_free_fdf.c srcs/ft_spnbrcount.c srcs/game_over.c srcs/get_dot.c srcs/get_height_and_width.c srcs/get_z_matrix.c srcs/print_menu.c srcs/read_map.c srcs/window.c main.c
 INCS = libft/libft.a minilibx_macos/libmlx.a
 FWS = -framework OpenGL -framework AppKit
 FLAGS = -Werror -Wextra -Wall
