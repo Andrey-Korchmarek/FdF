@@ -10,11 +10,11 @@
 #                                                                              #
 # **************************************************************************** #
 
-NAME=fdf
-SRC=src/*.c
-INCS=libft/libft.a minilibx_macos/libmlx.a
-FWS=-framework OpenGL -framework AppKit
-FLAGS=-Werror -Wextra -Wall
+NAME = fdf
+SRC = srcs/*.c
+INCS = libft/libft.a minilibx_macos/libmlx.a
+FWS = -framework OpenGL -framework AppKit
+FLAGS = -Werror -Wextra -Wall
 
 all:
 	@make -C libft/ all
