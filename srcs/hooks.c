@@ -41,6 +41,8 @@ int		key_h(int button, t_fdf *data)
 
 int		mouse_h(int button, int x, int y, t_fdf *data)
 {
+	(void)x;
+	(void)y;
 	if (button == 1 || button == 2)
 	{
 		if (button == 2)
@@ -59,7 +61,5 @@ int		mouse_h(int button, int x, int y, t_fdf *data)
 		new_window(button, data);
 	mlx_clear_window(data->mlx_ptr, data->win_ptr);
 	draw(data);
-	x = 0;
-	y = 0;
 	return (0);
 }

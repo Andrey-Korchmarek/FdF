@@ -14,12 +14,12 @@
 NAME = fdf
 CC = gcc
 CFLAGS = -Werror -Wextra -Wall -g
-FWS = -framework OpenGL -framework AppKit
+FWS = -lmlx -lXext -lX11 -lm
 
 MY_LIB = ./libft/
-MLX_LIB = ./minilibx_macos/
-INC = ./minilibx_macos/ ./libft/includes/ ./includes
-INCLUDES = -I ./minilibx_macos/ -I ./libft/includes/ -I ./includes/
+MLX_LIB = ./minilibx_linux/
+INC = ./minilibx_linux/ ./libft/includes/ ./includes
+INCLUDES = -I ./minilibx_linux/ -I ./libft/includes/ -I ./includes/
 
 SRC = $(addprefix $(SRC_DIR), $(SRC_NAME))
 OBJ = $(addprefix $(OBJ_DIR)/, $(OBJ_NAME))
