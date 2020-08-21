@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.5.1)
+cmake_minimum_required(VERSION 3.16)
 project(libft C)
 
 set(CMAKE_C_STANDARD 99)
@@ -6,7 +6,7 @@ set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wall -Werror -Wextra")
 
 include_directories(.)
 
-file(GLOB SRCS ./srcs/*.c srcs/*/*.c)
-file(GLOB HEAD ./includes/*.h)
+file(GLOB SRCS srcs/*.c srcs*/*/*.c )
+file(GLOB HEAD includes/*.h)
 
-add_library(libft STATIC ${SRCS} ${HEAD})
+add_library(lib STATIC ${SRCS} ${HEAD})
